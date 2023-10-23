@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 function App() {
-  return <div>App</div>;
+  return <div className="font-roboto">App</div>;
 }
 
 export default App;

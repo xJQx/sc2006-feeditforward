@@ -19,6 +19,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "format": "npx prettier . --write",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -39,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.3"
   }
 }
