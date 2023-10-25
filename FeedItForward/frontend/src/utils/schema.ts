@@ -4,3 +4,9 @@ export interface SampleSchema {
   name: string;
   age: number;
 }
+
+export interface User {
+  name: string;
+  password: string;
+  // TODO...
+}
