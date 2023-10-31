@@ -15,7 +15,7 @@ const FormTextArea: React.FC<FormTextAreaProps> = ({ value, onChange }) => {
   };
 
   return (
-    <div>
+    <div style={{marginBottom: '20px'}}>
     <p> Review</p>
     <TextareaAutosize
       className='textarea-custom'

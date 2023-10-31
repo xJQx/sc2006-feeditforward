@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormImagePicker from "../../components/Form/FormImagePicker";
 import FormTextArea from "../../components/Form/FormTextArea";
 import { ButtonBackNavigation } from "../../components";
+import {Button} from '@mui/material';
 
 export const ReviewAddScreen = () => {
   const [text, setText] = useState('');
@@ -9,6 +10,17 @@ export const ReviewAddScreen = () => {
   const handleTextChange = (newText: string) => {
     setText(newText);
   };
+
+  const submitButtonStyles = {
+    color: 'white',            
+    backgroundColor: '#1BCCCC',
+    minWidth: '100%',
+    
+  };
+
+  const handleSubmitClick = () =>{
+    alert('Submit button clicked');
+  }
 
   return (
     
@@ -19,8 +31,14 @@ export const ReviewAddScreen = () => {
       <FormImagePicker /> 
       <FormTextArea 
       value={text} 
-      onChange={handleTextChange}  
+      onChange={handleTextChange}
       /> 
+      <Button 
+      style={submitButtonStyles} 
+      onClick={handleSubmitClick}
+      >
+        Submit
+        </Button>
        </div>
     </div>
   );
