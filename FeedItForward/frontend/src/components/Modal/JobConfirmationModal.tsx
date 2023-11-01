@@ -19,26 +19,28 @@ export const JobConfirmationModal = () => {
         overlay: {
           position: "fixed",
           top: 0,
-          left: "25%",
-          // marginRight: "auto",
+          left: 0,
           opacity: 1,
-          height: "60%",
-          width: "50%", //need change when testing with mobile
+          height: "45%",
+          width: "100%", //need change when testing with mobile
           overflow: "hidden",
           paddingTop: "5px"
         },
+        content: {
+          overflow: "visible",
+          paddingTop: "4px"
+        }
       }}
     >
-      <button style={{marginLeft: "95%", marginTop: "-5px"}} onClick={closeModal}><RxCrossCircled style={{color: "gray"}}/></button>
+      <button style={{marginLeft: "95%", marginTop: "-10px"}} onClick={closeModal}><RxCrossCircled style={{color: "gray"}}/></button>
       <div style={{fontWeight: "bold", display: "flex"}}><CiLocationOn style={{marginRight: "5px", fontSize: "25px", color: "#26C9DD"}}/>Pick up address</div>
       <br></br>
       <div style={{fontWeight: "bold", display: "flex"}}><CiLocationOn style={{marginRight: "5px", fontSize: "25px"}}/>Delivery address</div>
-      {/* <br></br> */}
-      <div style={{fontSize: "small", color: "gray", paddingLeft: "5px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <br></br>
+      <div style={{fontSize: "small", color: "gray", paddingLeft: "5px", lineHeight: "1.2"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
       <br></br>
       <div style={{color: "#474650", fontWeight: "bold"}}>Do you want to accept this pickup job?</div>
-
-      <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", marginTop: "10px"}}>
+      <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", marginTop: "10px", paddingBottom: "20px"}}>
         <button style={{border: "1px solid", width: "40%", borderRadius: "6px", height: "32px", fontSize: "small"}} onClick={closeModal}>Ignore</button>
         <button style={{border: "1px solid #26C9DD", width: "40%", borderRadius: "6px", height: "32px", fontSize: "small", backgroundColor: "#26C9DD"}}>Accept</button>
       </div>

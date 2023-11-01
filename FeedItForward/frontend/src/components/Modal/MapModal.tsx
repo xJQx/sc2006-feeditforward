@@ -25,9 +25,9 @@ export const MapModal = (props: {
       onRequestClose={closeModal}
       style={{
         overlay: {
-          height: "80%",
+          height: "60%",
           margin: "auto",
-          width: "50%",
+          width: "80%",
           backgroundColor: "#bdeef4",
           opacity: "0.9"
         },
@@ -50,16 +50,17 @@ export const MapModal = (props: {
     >
       <button
         style={{
-          width: "25%",
+          width: "50%",
           backgroundColor: "#26C9DD",
           fontWeight: "bold",
-          marginLeft: "37.5%",
+          marginLeft: "25%",
           fontSize: "small"
         }}
         disabled
       >
         Registered
       </button>
+      <br></br>
       <br></br>
       <div
         style={{ textAlign: "center", fontWeight: "bold", fontSize: "large" }}
@@ -82,11 +83,11 @@ export const MapModal = (props: {
       </div>
       <img
         src="https://via.placeholder.com/640x360"
-        style={{ textAlign: "center", margin: "auto", height: "90%" }}
+        style={{ textAlign: "center", margin: "auto", height: "70%" }} //change according to actual picture size
         alt=""
       ></img>
       <br></br>
-      <div style={{ paddingLeft: "20px" }}>
+      <div style={{ paddingLeft: "10px" }}>
         <div style={{ display: "flex", flex: "row" }}>
           <div style={{ fontWeight: "bold", marginRight: "5px" }}>Contact No.:</div>99999999
         </div>
@@ -96,7 +97,7 @@ export const MapModal = (props: {
         <div style={{ display: "flex", flex: "row" }}>
           <div style={{ fontWeight: "bold", marginRight: "5px" }}>Location: {"  "}</div>
           abcdrxd, Singapore 123456 {"  "}
-          <button><FaLocationArrow style={{color: "#26C9DD", marginLeft: "5px"}}/></button>
+          <button><FaLocationArrow style={{color: "#26C9DD", marginLeft: "0px", marginBottom: "100%"}}/></button>
         </div>
       </div>
       <br></br>
@@ -111,7 +112,7 @@ export const MapModal = (props: {
         <button
           style={{
             border: "1px solid #26C9DD",
-            width: "40%",
+            width: "45%",
             borderRadius: "6px",
             height: "32px",
             // fontSize: "small",
@@ -124,7 +125,7 @@ export const MapModal = (props: {
         <button
           style={{
             border: "1px solid #26C9DD",
-            width: "40%",
+            width: "45%",
             borderRadius: "6px",
             height: "32px",
             // fontSize: "small",
