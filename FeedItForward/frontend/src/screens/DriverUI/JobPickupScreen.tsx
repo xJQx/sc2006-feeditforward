@@ -1,5 +1,6 @@
 import React from "react";
+import { JobConfirmationModal } from "../../components";
 
 export const JobPickupScreen = () => {
-  return <div>JobPickupScreen</div>;
+  return (<JobConfirmationModal></JobConfirmationModal>);
 };

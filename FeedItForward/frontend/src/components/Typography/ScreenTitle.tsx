@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonBackNavigation } from "./ButtonBackNavigation";
+import { ButtonBackNavigation } from "../ButtonBackNavigation";
 
 interface ScreenTitleProps {
   title: string;
