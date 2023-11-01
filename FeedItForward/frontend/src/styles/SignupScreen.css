@@ -1,0 +1,26 @@
+.appName {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: turquoise;
+}
+
+
+.inputName {
+    color: darkblue;
+    text-align: left;
+}
+
+.inputField {
+    width: 25%;
+    border: 2px solid grey;
+}
+
+.inputRole {
+    width: 25%;
+    border: 2px solid grey;
+}
+
+.link {
+    color: turquoise;
+}
