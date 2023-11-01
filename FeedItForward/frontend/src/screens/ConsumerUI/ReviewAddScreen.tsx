@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FormImagePicker from "../../components/Form/FormImagePicker";
 import FormTextArea from "../../components/Form/FormTextArea";
-import { ButtonBackNavigation } from "../../components";
+import { ScreenTitle } from "../../components";
 import {Button} from '@mui/material';
 
 export const ReviewAddScreen = () => {
@@ -25,9 +25,9 @@ export const ReviewAddScreen = () => {
   return (
     
     <div>
-      <ButtonBackNavigation/>
+      <ScreenTitle title = "Add review"/>
       <div style={{padding: '20px'}}>
-      <h1 style={{fontSize :'30px', fontWeight:'bold', textAlign: 'center'}}>Add review</h1>
+      
       <FormImagePicker
       label = "Photo" /> 
       <FormTextArea 

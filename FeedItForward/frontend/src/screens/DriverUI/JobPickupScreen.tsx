@@ -4,6 +4,7 @@ import FormTextArea from "../../components/Form/FormTextArea";
 import { ButtonBackNavigation } from "../../components";
 import {Button} from '@mui/material';
 import {IoChevronBack, IoChevronForward} from "react-icons/io5"
+import { ScreenTitle } from "../../components";
 
 export const JobPickupScreen = () => {
   const [text, setText] = useState('');
@@ -41,8 +42,8 @@ export const JobPickupScreen = () => {
       case 1:
         return (
           <>
-            <h1 style={{ fontSize: '30px', fontWeight: 'bold', textAlign: 'center' }}>Step {currentStep} of {totalSteps}: <br /> Submit proof of pick up</h1>
-            
+            <ScreenTitle title='Step 1 of 2: Submit proof of pick up'/>
+            <div style = {{padding: '20px'}}>
             <FormImagePicker
               label="Attach a picture of the food at pick up location"
               labelFontSize="14px"
@@ -58,20 +59,21 @@ export const JobPickupScreen = () => {
             >
                 Confirm
             </Button>
-            <div style={{ margin: '20px 0' }}></div>
+            </div>
           </>
         );
       case 2:
         return (
           <>
-            <h1 style={{ fontSize: '30px', fontWeight: 'bold', textAlign: 'center' }}>Step {currentStep} of {totalSteps}: <br /> Submit proof of delivery</h1>
+            <ScreenTitle title='Step 2 of 2: Submit proof of delivery'/>
+            <div style = {{padding: '20px'}}>
             <FormImagePicker
               label="Attach a picture of the food at drop off location"
               labelFontSize="14px"
             />
             <FormImagePicker
               label="Attach a picture of the consumer at drop off location"
-              labelFontSize="14px"
+              labelFontSize="13px"
             />
             <Button 
               style={confirmButtonStyles} 
@@ -79,7 +81,7 @@ export const JobPickupScreen = () => {
             >
                 Confirm
             </Button>
-            <div style={{ margin: '20px 0' }}></div>
+            </div>
           </>
         );
       default:
@@ -89,8 +91,6 @@ export const JobPickupScreen = () => {
 
   return (
     <div>
-      <ButtonBackNavigation />
-      <div style={{ padding: '20px', gap: '20px' }}>
         {StepContent()} 
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
           <IoChevronBack size={28} style={{ color: '#CCC', cursor: 'pointer' }} onClick={handlePreviousStep} />
@@ -99,8 +99,7 @@ export const JobPickupScreen = () => {
           </span>
           <IoChevronForward size={28} style={{ color: '#CCC', cursor: 'pointer' }} onClick={handleNextStep} />
         </div>
-      </div>
-    </div>
+        </div>
   );
 
 };

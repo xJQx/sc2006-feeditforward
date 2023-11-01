@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FormImagePicker from "../../components/Form/FormImagePicker";
 import FormTextArea from "../../components/Form/FormTextArea";
-import { ButtonBackNavigation } from "../../components";
+import { ScreenTitle } from "../../components";
 import {Button} from '@mui/material';
 
 export const ReviewEditScreen = () => {
@@ -34,9 +34,8 @@ export const ReviewEditScreen = () => {
   return (
     
     <div>
-      <ButtonBackNavigation/>
+      <ScreenTitle title = "Edit review"/>
       <div style={{padding: '20px'}}>
-      <h1 style={{fontSize :'30px', fontWeight:'bold', textAlign: 'center'}}>Edit review</h1>
       <FormImagePicker
       label = "Photo"
       isEdit /> 
