@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import {
   HomeScreen,
   LoginScreen,
@@ -8,7 +8,15 @@ import {
   MapScreen,
   HawkerListingScreen
 } from "./screens/MainUI";
-import { AdminScreen } from "./screens/AdminUI";
+import {
+  AdminBanUsersScreen,
+  AdminProcessReviewsScreen,
+  AdminScreen,
+  AdminVerifyUsersScreen,
+  AdminVerifySingleUserScreen,
+  AdminProcessSingleReviewScreen,
+  AdminBanSingleUserScreen
+} from "./screens/AdminUI";
 import {
   LeftoverFoodScreen,
   PriorityRequestSubmitScreen,
@@ -17,32 +25,59 @@ import {
 } from "./screens/ConsumerUI";
 import { JobPickupScreen } from "./screens/DriverUI";
 import { LeftoverFoodSubmitScreen } from "./screens/HawkerUI";
+import { AppLayout } from "./components";
 
 export const router = createBrowserRouter([
-  // MainUI
-  { path: "/", element: <HomeScreen /> },
-  { path: "/login", element: <LoginScreen /> },
-  { path: "/signup", element: <SignupScreen /> },
-  { path: "/settings", element: <SettingsScreen /> },
-  { path: "/map", element: <MapScreen /> },
-  { path: "/hawker/listings", element: <HawkerListingScreen /> },
   {
-    path: "/customer-service-support",
-    element: <CustomerServiceSupportScreen />
-  },
+    element: <AppLayout />,
+    children: [
+      // MainUI
+      { path: "/", element: <HomeScreen /> },
+      { path: "/login", element: <LoginScreen /> },
+      { path: "/signup", element: <SignupScreen /> },
+      { path: "/settings", element: <SettingsScreen /> },
+      { path: "/map", element: <MapScreen /> },
+      { path: "/hawker/listings", element: <HawkerListingScreen /> },
+      {
+        path: "/customer-service-support",
+        element: <CustomerServiceSupportScreen />
+      },
 
-  // AdminUI
-  { path: "/admin", element: <AdminScreen /> },
+      // AdminUI
+      { path: "/admin", element: <AdminScreen /> },
+      { path: "/admin/verify-user", element: <AdminVerifyUsersScreen /> },
+      {
+        path: "/admin/verify-user/:userId",
+        element: <AdminVerifySingleUserScreen />
+      },
+      { path: "/admin/ban-users", element: <AdminBanUsersScreen /> },
+      {
+        path: "/admin/ban-user/:userId",
+        element: <AdminBanSingleUserScreen />
+      },
+      {
+        path: "/admin/process-reviews",
+        element: <AdminProcessReviewsScreen />
+      },
+      {
+        path: "/admin/process-review/:reviewId",
+        element: <AdminProcessSingleReviewScreen />
+      },
 
-  //  ConsumerUI
-  { path: "/leftover-food", element: <LeftoverFoodScreen /> },
-  { path: "/request/food-priority", element: <PriorityRequestSubmitScreen /> },
-  { path: "/review/add", element: <ReviewAddScreen /> },
-  { path: "/review/edit/:reviewId", element: <ReviewEditScreen /> },
+      //  ConsumerUI
+      { path: "/leftover-food", element: <LeftoverFoodScreen /> },
+      {
+        path: "/request/food-priority",
+        element: <PriorityRequestSubmitScreen />
+      },
+      { path: "/review/add", element: <ReviewAddScreen /> },
+      { path: "/review/edit/:reviewId", element: <ReviewEditScreen /> },
 
-  // DriverUI
-  { path: "/job-pickup/:jobId", element: <JobPickupScreen /> },
+      // DriverUI
+      { path: "/job-pickup/:jobId", element: <JobPickupScreen /> },
 
-  // HawkerUI
-  { path: "/leftover-food/submit", element: <LeftoverFoodSubmitScreen /> }
+      // HawkerUI
+      { path: "/leftover-food/submit", element: <LeftoverFoodSubmitScreen /> }
+    ]
+  }
 ]);
