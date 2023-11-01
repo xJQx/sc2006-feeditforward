@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  AdminUserDisplayCard,
-  Button,
-  ScreenSubTitle,
-  ScreenTitle
-} from "../../components";
+import { Button, ScreenTitle } from "../../components";
 import { useNavigate, useParams } from "react-router-dom";
 import { reviewsToProcessData } from "../../data/adminData";
 import { Review, UserDisplay } from "../../utils/schema";
@@ -76,10 +71,14 @@ export const AdminProcessSingleReviewScreen = () => {
       <div className="flex flex-row gap-4 justify-center mt-6">
         <Button
           name="Ignore"
-          className="bg-brand-gray"
+          className="!bg-brand-gray"
           onClick={handleIgnore}
         />
-        <Button name="Delete" className="bg-[#F26C6C]" onClick={handleDelete} />
+        <Button
+          name="Delete"
+          className="!bg-[#F26C6C]"
+          onClick={handleDelete}
+        />
       </div>
     </div>
   );

@@ -9,12 +9,13 @@ import {
   HawkerListingScreen
 } from "./screens/MainUI";
 import {
-  AdminBanUserScreen,
+  AdminBanUsersScreen,
   AdminProcessReviewsScreen,
   AdminScreen,
   AdminVerifyUsersScreen,
   AdminVerifySingleUserScreen,
-  AdminProcessSingleReviewScreen
+  AdminProcessSingleReviewScreen,
+  AdminBanSingleUserScreen
 } from "./screens/AdminUI";
 import {
   LeftoverFoodScreen,
@@ -49,13 +50,17 @@ export const router = createBrowserRouter([
         path: "/admin/verify-user/:userId",
         element: <AdminVerifySingleUserScreen />
       },
-      { path: "/admin/ban-user/:userId", element: <AdminBanUserScreen /> },
+      { path: "/admin/ban-users", element: <AdminBanUsersScreen /> },
+      {
+        path: "/admin/ban-user/:userId",
+        element: <AdminBanSingleUserScreen />
+      },
       {
         path: "/admin/process-reviews",
         element: <AdminProcessReviewsScreen />
       },
       {
-        path: "/admin/process-reviews/:reviewId",
+        path: "/admin/process-review/:reviewId",
         element: <AdminProcessSingleReviewScreen />
       },
 

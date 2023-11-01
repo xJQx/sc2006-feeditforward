@@ -25,7 +25,7 @@ export const AdminScreen = () => {
           }}
           title="Ban User"
           description="Ban a user by their user_id for a specified duration"
-          href="/admin/ban-user"
+          href="/admin/ban-users"
         />
         <AdminCard
           img={{

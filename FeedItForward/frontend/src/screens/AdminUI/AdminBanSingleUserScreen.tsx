@@ -9,7 +9,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { UserDisplay } from "../../utils/schema";
 import { userToVerifyData } from "../../data/adminData";
 
-export const AdminBanUserScreen = () => {
+export const AdminBanSingleUserScreen = () => {
   let { userId } = useParams();
   const [user, setUser] = useState<UserDisplay>();
   const navigate = useNavigate();
@@ -53,10 +53,10 @@ export const AdminBanUserScreen = () => {
       <div className="flex flex-row gap-4 justify-center mt-6">
         <Button
           name="Cancel"
-          className="bg-brand-gray"
+          className="!bg-brand-gray"
           onClick={handleCancel}
         />
-        <Button name="Ban" className="bg-[#F26C6C]" onClick={handleBan} />
+        <Button name="Ban" className="!bg-[#F26C6C]" onClick={handleBan} />
       </div>
     </div>
   );

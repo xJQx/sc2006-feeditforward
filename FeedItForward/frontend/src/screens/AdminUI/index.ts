@@ -1,5 +1,6 @@
 export { AdminScreen } from "./AdminScreen";
-export { AdminBanUserScreen } from "./AdminBanUserScreen";
+export { AdminBanUsersScreen } from "./AdminBanUsersScreen";
+export { AdminBanSingleUserScreen } from "./AdminBanSingleUserScreen";
 export { AdminProcessReviewsScreen } from "./AdminProcessReviewsScreen";
 export { AdminVerifyUsersScreen } from "./AdminVerifyUsersScreen";
 export { AdminVerifySingleUserScreen } from "./AdminVerifySingleUserScreen";

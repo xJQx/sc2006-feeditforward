@@ -51,7 +51,7 @@ const ReviewToProcessItem = (props: Review) => {
   const navigate = useNavigate();
 
   const handleOnClick = () => {
-    navigate(`/admin/process-reviews/${reviewId}`);
+    navigate(`/admin/process-review/${reviewId}`);
   };
 
   return (
