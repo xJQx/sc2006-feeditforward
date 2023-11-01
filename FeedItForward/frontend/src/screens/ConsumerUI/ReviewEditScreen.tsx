@@ -13,7 +13,8 @@ export const ReviewEditScreen = () => {
 
   const cancelButtonStyles = {
     color: '#1BCCCC',            
-    minWidth: '45%'
+    minWidth: '45%', 
+    borderColor: '#1BCCCC'
   };
 
   const saveButtonStyles = {
@@ -21,7 +22,7 @@ export const ReviewEditScreen = () => {
     backgroundColor: '#1BCCCC',
     minWidth: '45%'
   };
-
+ 
   const handleCancelClick = () =>{
     alert('Cancel button clicked');
   }
@@ -36,13 +37,16 @@ export const ReviewEditScreen = () => {
       <ButtonBackNavigation/>
       <div style={{padding: '20px'}}>
       <h1 style={{fontSize :'30px', fontWeight:'bold', textAlign: 'center'}}>Edit review</h1>
-      <FormImagePicker /> 
-      {/* add icons for editing to add/edit picture -- use isEdit prop*/}
+      <FormImagePicker
+      label = "Photo"
+      isEdit /> 
+
       <FormTextArea 
       value={text} 
       onChange={handleTextChange}
+      isEdit
       /> 
-      {/* add icon to edit textarea -- add an isEdit prop*/}
+   
 
       <div style={{ display: 'flex', justifyContent: 'space-between'}}>
         <Button 

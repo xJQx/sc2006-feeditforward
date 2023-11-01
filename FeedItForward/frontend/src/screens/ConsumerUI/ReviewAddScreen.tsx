@@ -28,7 +28,8 @@ export const ReviewAddScreen = () => {
       <ButtonBackNavigation/>
       <div style={{padding: '20px'}}>
       <h1 style={{fontSize :'30px', fontWeight:'bold', textAlign: 'center'}}>Add review</h1>
-      <FormImagePicker /> 
+      <FormImagePicker
+      label = "Photo" /> 
       <FormTextArea 
       value={text} 
       onChange={handleTextChange}
@@ -38,7 +39,8 @@ export const ReviewAddScreen = () => {
       onClick={handleSubmitClick}
       >
         Submit
-        </Button>
+      </Button>
+      
        </div>
     </div>
   );
