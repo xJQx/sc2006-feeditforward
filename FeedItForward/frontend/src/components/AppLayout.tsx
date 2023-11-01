@@ -9,7 +9,7 @@ export const AppLayout = () => {
       <nav className="w-full">
         <PhoneNotificationBar />
       </nav>
-      <main className="flex-1 max-h-[calc(100vh-116px)] overflow-y-scroll p-2">
+      <main className="flex-1 max-h-[calc(100vh-116px)] overflow-y-scroll py-2 px-5">
         <Outlet />
       </main>
       <footer className="fixed w-full bottom-0">

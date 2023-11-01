@@ -8,7 +8,12 @@ import {
   MapScreen,
   HawkerListingScreen
 } from "./screens/MainUI";
-import { AdminScreen } from "./screens/AdminUI";
+import {
+  AdminBanUser,
+  AdminProcessReviews,
+  AdminScreen,
+  AdminVerifyUserScreen
+} from "./screens/AdminUI";
 import {
   LeftoverFoodScreen,
   PriorityRequestSubmitScreen,
@@ -37,6 +42,9 @@ export const router = createBrowserRouter([
 
       // AdminUI
       { path: "/admin", element: <AdminScreen /> },
+      { path: "/admin/verify-user", element: <AdminVerifyUserScreen /> },
+      { path: "/admin/ban-user", element: <AdminBanUser /> },
+      { path: "/admin/process-reviews", element: <AdminProcessReviews /> },
 
       //  ConsumerUI
       { path: "/leftover-food", element: <LeftoverFoodScreen /> },
