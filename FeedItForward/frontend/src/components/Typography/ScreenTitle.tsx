@@ -11,7 +11,7 @@ export const ScreenTitle = ({ title }: ScreenTitleProps) => {
       <div className="self-start">
         <ButtonBackNavigation />
       </div>
-      <div className="text-[28px] font-nunito font-bold">{title}</div>
+      <div className="text-[28px] font-nunito font-bold text-center">{title}</div>
     </div>
   );
 };
