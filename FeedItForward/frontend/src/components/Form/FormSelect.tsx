@@ -1,27 +1,30 @@
 import React from "react";
+import { ROLES } from "../../utils/schema";
 
-interface FormInputProps {
+interface FormSelectProps {
   label: string;
-  type: React.HTMLInputTypeAttribute;
   placeholder: string;
   value: any;
   setValue: React.Dispatch<React.SetStateAction<any>>;
 }
 
-export const FormInput = (props: FormInputProps) => {
-  const { label, placeholder, type, value, setValue } = props;
+export const FormSelect = (props: FormSelectProps) => {
+  const { label, placeholder, value, setValue } = props;
 
   return (
     <div>
       <div className="font-bold text-brand-dark text-[18px]">{label}</div>
-      <input
-        id={`${type}-${label}`}
-        type={type}
+      <select
+        id={label}
         placeholder={placeholder}
         value={value}
         onChange={e => setValue(e.target.value)}
         className="w-full border border-brand-darkgray text-[16px] px-3 py-2 rounded-md"
-      />
+      >
+        {ROLES.map(role => (
+          <option key={role} value={role}>{role}</option>
+        ))}
+      </select>
     </div>
   );
 };

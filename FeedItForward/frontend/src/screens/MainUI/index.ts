@@ -5,3 +5,6 @@ export { LoginScreen } from "./LoginScreen";
 export { MapScreen } from "./MapScreen";
 export { SettingsScreen } from "./SettingsScreen";
 export { SignupScreen } from "./SignupScreen";
+export { ProfileScreen } from "./ProfileScreen";
+export { NotificationScreen } from "./NotificationScreen";
+export { LanguageScreen } from "./LanguageScreen";

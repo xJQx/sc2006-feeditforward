@@ -52,11 +52,11 @@ export const AdminBanSingleUserScreen = () => {
       {/* Buttons */}
       <div className="flex flex-row gap-4 justify-center mt-6">
         <Button
-          name="Cancel"
+          label="Cancel"
           className="!bg-brand-gray"
           onClick={handleCancel}
         />
-        <Button name="Ban" className="!bg-[#F26C6C]" onClick={handleBan} />
+        <Button label="Ban" className="!bg-[#F26C6C]" onClick={handleBan} />
       </div>
     </div>
   );

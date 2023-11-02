@@ -24,7 +24,8 @@ export interface UserDisplay {
   // address
 }
 
-export type Role = "Admin" | "Consumer" | "Hawker" | "Driver";
+export const ROLES = ["Admin", "Consumer", "Hawker", "Driver"] as const;
+export type Role = (typeof ROLES)[number];
 
 export interface Review {
   reviewId: string;
