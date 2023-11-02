@@ -76,11 +76,9 @@ const SettingsRowComponent = (props: SettingsRowComponentProps) => {
   const { icon, title, href } = props;
 
   return (
-    <div className="flex gap-3 items-center">
+    <Link to={href} className="flex gap-3 items-center">
       <div className="w-10 h-10">{icon}</div>
-      <Link to={href} className="text-[20px]">
-        {title}
-      </Link>
-    </div>
+      <div className="text-[20px]">{title}</div>
+    </Link>
   );
 };

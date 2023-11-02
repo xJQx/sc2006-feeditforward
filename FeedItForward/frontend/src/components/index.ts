@@ -2,7 +2,7 @@ export { Button } from "./Button";
 export { Navbar } from "./Navbar";
 export { ButtonBackNavigation } from "./ButtonBackNavigation";
 export { Logo } from "./Logo";
-export { PhoneNotificationBar } from "./PhoneNotificationBar";
+export { PhoneNotificationBar, ComingSoonTemplate } from "./Templates";
 export { ScreenTitle, ScreenSubTitle } from "./Typography";
 export {
   FormButton,

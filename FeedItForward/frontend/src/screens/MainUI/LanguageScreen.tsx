@@ -1,5 +1,11 @@
 import React from "react";
+import { ComingSoonTemplate, ScreenTitle } from "../../components";
 
 export const LanguageScreen = () => {
-  return <div>LanguageScreen</div>;
+  return (
+    <div>
+      <ScreenTitle title="Languages" />
+      <ComingSoonTemplate />
+    </div>
+  );
 };

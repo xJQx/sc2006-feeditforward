@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Navbar } from "./Navbar";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { PhoneNotificationBar } from "./PhoneNotificationBar";
+import { PhoneNotificationBar } from "./Templates/PhoneNotificationBar";
 import { useAuthContext } from "../contexts/AuthContext";
 import toast from "react-hot-toast";
 

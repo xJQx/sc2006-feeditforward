@@ -6,22 +6,30 @@ export interface SampleSchema {
 }
 
 export interface User {
+  userId: string;
   name: string;
   password: string;
+  email: string;
   role: Role;
-  // TODO...
+  contactNumber: string;
+  address: string;
+  img: {
+    src: string;
+    alt: string;
+  };
 }
 
 export interface UserDisplay {
   userId: string;
   name: string;
+  email: string;
   role: Role;
+  contactNumber: string;
+  address: string;
   img: {
     src: string;
     alt: string;
   };
-  // TODO...
-  // address
 }
 
 export const ROLES = ["Admin", "Consumer", "Hawker", "Driver"] as const;
