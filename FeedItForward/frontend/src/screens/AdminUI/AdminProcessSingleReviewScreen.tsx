@@ -70,12 +70,12 @@ export const AdminProcessSingleReviewScreen = () => {
       {/* Buttons */}
       <div className="flex flex-row gap-4 justify-center mt-6">
         <Button
-          name="Ignore"
+          label="Ignore"
           className="!bg-brand-gray"
           onClick={handleIgnore}
         />
         <Button
-          name="Delete"
+          label="Delete"
           className="!bg-[#F26C6C]"
           onClick={handleDelete}
         />

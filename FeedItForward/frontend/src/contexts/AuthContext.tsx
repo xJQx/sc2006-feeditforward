@@ -6,14 +6,14 @@ import React, {
   useState,
   useEffect
 } from "react";
-import { User } from "../utils/schema";
+import { UserDisplay } from "../utils/schema";
 
 // Define context type
 interface IAuthContext {
   isLoggedIn: boolean;
   setIsLoggedIn: Dispatch<SetStateAction<boolean>>;
-  user: User | null;
-  setUser: Dispatch<SetStateAction<User | null>>;
+  user: UserDisplay | null;
+  setUser: Dispatch<SetStateAction<UserDisplay | null>>;
 }
 
 // Create context
@@ -52,7 +52,7 @@ export const AuthContextProvider = ({
     );
   }, [isLoggedIn]);
 
-  const [user, setUser] = useState<User | null>(() => {
+  const [user, setUser] = useState<UserDisplay | null>(() => {
     const userStateJson = localStorage.getItem("FeedItForward_userState");
     if (userStateJson) {
       const userState = JSON.parse(userStateJson);

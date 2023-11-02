@@ -6,7 +6,10 @@ import {
   SettingsScreen,
   CustomerServiceSupportScreen,
   MapScreen,
-  HawkerListingScreen
+  HawkerListingScreen,
+  ProfileScreen,
+  NotificationScreen,
+  LanguageScreen
 } from "./screens/MainUI";
 import {
   AdminBanUsersScreen,
@@ -33,9 +36,12 @@ export const router = createBrowserRouter([
     children: [
       // MainUI
       { path: "/", element: <HomeScreen /> },
-      { path: "/login", element: <LoginScreen /> },
-      { path: "/signup", element: <SignupScreen /> },
+      { path: "/auth/login", element: <LoginScreen /> },
+      { path: "/auth/signup", element: <SignupScreen /> },
       { path: "/settings", element: <SettingsScreen /> },
+      { path: "/settings/profile", element: <ProfileScreen /> },
+      { path: "/settings/notification", element: <NotificationScreen /> },
+      { path: "/settings/language", element: <LanguageScreen /> },
       { path: "/map", element: <MapScreen /> },
       { path: "/hawker/listings", element: <HawkerListingScreen /> },
       {

@@ -100,14 +100,14 @@ export const AdminVerifySingleUserScreen = () => {
 
       {/* Buttons */}
       <div className="flex flex-row gap-4 justify-center mt-6">
-        <Button name="Approve" onClick={handleApprove} />
+        <Button label="Approve" onClick={handleApprove} />
         <Button
-          name="Reject"
+          label="Reject"
           className="!bg-[#F26C6C]"
           onClick={handleReject}
         />
         <Button
-          name="Request"
+          label="Request"
           className="!bg-brand-gray"
           onClick={handleRequest}
         />

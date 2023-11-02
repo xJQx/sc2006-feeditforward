@@ -1,13 +1,13 @@
 import React from "react";
 
 interface ButtonProps {
-  name: string;
+  label: string;
   onClick?: React.MouseEventHandler<HTMLDivElement>;
   className?: string;
 }
 
 export const Button = (props: ButtonProps) => {
-  const { name, onClick, className } = props;
+  const { label, onClick, className } = props;
 
   return (
     <div
@@ -17,7 +17,7 @@ export const Button = (props: ButtonProps) => {
       }
       onClick={onClick}
     >
-      <span>{name}</span>
+      <span>{label}</span>
     </div>
   );
 };
