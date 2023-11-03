@@ -1,19 +1,21 @@
 from pydantic import BaseModel
 
 from .food import FoodRequest, HawkerFood
-from .misc import CustomerServiceSupportHistory, Review, PriorityRequest
+from .misc import CustomerServiceSupportHistory, Review, PriorityRequest, Geometry, Image
 
 
 class UserBase(BaseModel):
     name: str
+    email: str
+    password: str
+    contactNumber: str
     address: str
-    singpass: bool
+    img: Image
 
 class User(UserBase):
-    user_id: int
-    username: str
-    password: str
+    userId: int
 
+    role: str
     css_history: 'list[CustomerServiceSupportHistory]' = []
 
     class Config:
@@ -24,16 +26,22 @@ class UserCreate(UserBase):
     password: str
 
 class Admin(User):
-    admin_id: int
+    adminId: int
 
 class Hawker(User):
-    hawker_id: int
-    overall_rating: float
+    hawkerId: int
+    overallRating: float
+    businessName: str
+    operatingHours: str
+    foodType: str
+    geometry: Geometry
+    isRegistered: bool
 
-    hawker_foods: list[HawkerFood] = []
+    hawkerFoods: list[HawkerFood] = []
+    reviews: list[Review] = []
 
 class Driver(User):
-    driver_id: int
+    driverId: int
     vehicle: str
 
     food_requests: list[FoodRequest] = []
@@ -41,13 +49,13 @@ class Driver(User):
     class Config:
         orm_mode = True
 
-class Customer(User):
-    customer_id: int
+class Consumer(User):
+    consumerId: int
     priority: bool = False
 
-    food_requests: list[FoodRequest] = []
+    foodRequests: list[FoodRequest] = []
     reviews: list[Review] = []
-    priority_request: list[PriorityRequest] = []
+    priorityRequest: list[PriorityRequest] = []
 
     class Config:
         orm_mode = True

@@ -20,3 +20,12 @@ class CustomerServiceSupportHistory(BaseModel):
     user_id: int
     admin_id: int
     text_history: str
+
+class Geometry(BaseModel):
+    type: Literal["Point"]
+    latitude: float
+    longitude: float
+
+class Image(BaseModel):
+    src: str
+    alt: str
