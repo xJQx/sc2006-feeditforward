@@ -1,2 +1,2 @@
 export { JobConfirmationModal } from "./JobConfirmationModal";
-export { MapModal } from "./MapModal";
+export { MapHawkerModal } from "./MapHawkerModal";

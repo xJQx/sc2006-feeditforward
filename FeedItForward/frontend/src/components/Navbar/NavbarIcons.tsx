@@ -14,13 +14,15 @@ export const NavbarIcons = () => {
       <div className="flex gap-8">
         <GoHome
           className={`cursor-pointer w-10 h-10 ${
-            path === "/" ? "text-brand-primary" : "text-brand-darkgray"
+            path === "/" ? "text-brand-primary-active" : "text-brand-darkgray"
           }`}
           onClick={() => navigate("/")}
         />
         <IoLocationOutline
           className={`cursor-pointer w-10 h-10 ${
-            path === "/map" ? "text-brand-primary" : "text-brand-darkgray"
+            path === "/map"
+              ? "text-brand-primary-active"
+              : "text-brand-darkgray"
           }`}
           onClick={() => navigate("/map")}
         />
@@ -29,14 +31,16 @@ export const NavbarIcons = () => {
         <AiOutlineMessage
           className={`cursor-pointer w-10 h-10 ${
             path === "/customer-service-support"
-              ? "text-brand-primary"
+              ? "text-brand-primary-active"
               : "text-brand-darkgray"
           }`}
           onClick={() => navigate("/customer-service-support")}
         />
         <IoSettingsOutline
           className={`cursor-pointer w-10 h-10 ${
-            path === "/settings" ? "text-brand-primary" : "text-brand-darkgray"
+            path === "/settings"
+              ? "text-brand-primary-active"
+              : "text-brand-darkgray"
           }`}
           onClick={() => navigate("/settings")}
         />

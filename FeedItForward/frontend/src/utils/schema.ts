@@ -1,10 +1,4 @@
 /* This file contains schemas of all data models */
-export interface SampleSchema {
-  id: string;
-  name: string;
-  age: number;
-}
-
 export interface User {
   userId: string;
   name: string;
@@ -40,4 +34,21 @@ export interface Review {
   userId: string;
   description: string;
   approved: boolean;
+}
+
+interface Geometry {
+  type: "Point";
+  latitude: number;
+  longitude: number;
+}
+
+export interface Hawker extends UserDisplay {
+  hawkerId: string;
+  businessName: string;
+  foodType: string;
+  operatingHours: string;
+  overallRating: number;
+  reviews?: Review[];
+  geometry: Geometry;
+  isRegistered: boolean;
 }

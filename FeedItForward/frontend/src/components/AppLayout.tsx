@@ -19,6 +19,23 @@ export const AppLayout = () => {
     }
   }, [isLoggedIn, location.pathname, navigate]);
 
+  // Make the map cover the whole screeen
+  if (location.pathname === "/map") {
+    return (
+      <div className="h-screen flex flex-col">
+        <nav className="w-full absolute z-10">
+          <PhoneNotificationBar />
+        </nav>
+        <main className="flex-1 max-h-[calc(100vh-88px)] overflow-y-scroll py-0 px-0">
+          <Outlet />
+        </main>
+        <footer className="fixed w-full bottom-0">
+          <Navbar />
+        </footer>
+      </div>
+    );
+  }
+
   return (
     <div className="h-screen flex flex-col">
       <nav className="w-full">
