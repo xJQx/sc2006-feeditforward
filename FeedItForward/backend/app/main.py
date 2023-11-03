@@ -1,17 +1,30 @@
 from typing import Union
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
-from .routers import user, food, misc
-from .database import Base, engine, get_db
+from routers import user, food, misc, hawker
+from database import Base, engine, get_db
 
 app = FastAPI()
 
 Base.metadata.create_all(bind=engine)
 
+origins = ["http://localhost:3000"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 app.include_router(user.router)
 app.include_router(food.router)
 app.include_router(misc.router)
+app.include_router(hawker.router)
 
 @app.get("/")
 def read_root():
