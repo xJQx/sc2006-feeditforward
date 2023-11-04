@@ -4,11 +4,15 @@ import { useCurrentGeoLocation } from "../../hooks";
 import { MapMarkerUser } from "./MapMarkerUser";
 import useFetch from "../../hooks/useFetch";
 import { Hawker } from "../../utils/schema";
-import { MapHawkerModal, MapHawkerSearchModal } from "../Modal";
+import {
+  MapHawkerModal,
+  MapHawkerSearchModal,
+  MapWeatherModal
+} from "../Modal";
 import { MapMarkerHawkerIcon } from "./MapMarkerHawkerIcon";
 import { BiSearchAlt } from "react-icons/bi";
 import { TiWeatherCloudy } from "react-icons/ti";
-import toast from "react-hot-toast";
+import { hawkersData } from "../../data/hawkersData";
 
 export const BaseMap = () => {
   const userLocation = useCurrentGeoLocation();
@@ -17,27 +21,24 @@ export const BaseMap = () => {
   const [hawkerSelected, setHawkerSelected] = useState<Hawker>();
   const [isHawkerModalOpen, setIsHawkerModalOpen] = useState(false);
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+  const [isWeatherModalOpen, setIsWeatherModalOpen] = useState(false);
 
   useEffect(() => {
     const getAllPublicHawkers = async () => {
       const res = await fetch.get("/hawkers/public");
       setHawkersList(res);
 
-      // TODO: Add Registered Hawkers
+      // TODO: Add Registered Hawkers from backend
+      setHawkersList(prev => [...prev, ...hawkersData]);
     };
 
     getAllPublicHawkers();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handlePublicHawkerMarkerOnClick = (hawker: Hawker) => {
+  const handleHawkerMarkerOnClick = (hawker: Hawker) => {
     setHawkerSelected(hawker);
     setIsHawkerModalOpen(true);
-  };
-
-  const handleWeatherQuery = () => {
-    // TODO
-    toast("TODO: handleWeatherQuery");
   };
 
   return (
@@ -72,12 +73,12 @@ export const BaseMap = () => {
           {/* Hawker Markers */}
           {hawkersList?.map(hawker => (
             <Marker
-              icon={MapMarkerHawkerIcon()}
+              icon={MapMarkerHawkerIcon(hawker.isRegistered)}
               key={`${hawker.businessName}-${hawker.geometry.latitude}-${hawker.geometry.longitude}`}
               position={[hawker.geometry.latitude, hawker.geometry.longitude]}
               eventHandlers={{
                 click: () => {
-                  handlePublicHawkerMarkerOnClick(hawker);
+                  handleHawkerMarkerOnClick(hawker);
                 }
               }}
             />
@@ -100,7 +101,7 @@ export const BaseMap = () => {
           />
           <TiWeatherCloudy
             className="bg-brand-tertiary opacity-70 p-[2px] w-[24px] h-[24px] rounded-full"
-            onClick={handleWeatherQuery}
+            onClick={() => setIsWeatherModalOpen(true)}
           />
         </div>
       )}
@@ -120,9 +121,14 @@ export const BaseMap = () => {
           isModalOpen={isHawkerModalOpen}
           setModalOpen={setIsHawkerModalOpen}
           hawker={hawkerSelected}
-          isRegistered={false}
         />
       )}
+
+      {/* Weather Modal */}
+      <MapWeatherModal
+        isWeatherModalOpen={isWeatherModalOpen}
+        setIsWeatherModalOpen={setIsWeatherModalOpen}
+      />
     </>
   );
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
-import { useState, useEffect } from "react";
-import { AiFillStar, AiOutlineClose } from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 import { BiSolidDirectionRight } from "react-icons/bi";
 import { Hawker } from "../../utils/schema";
 import toast from "react-hot-toast";
@@ -13,11 +12,10 @@ interface MapHawkerModalProps {
   hawker: Hawker;
   isModalOpen: boolean;
   setModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  isRegistered: boolean;
 }
 
 export const MapHawkerModal = (props: MapHawkerModalProps) => {
-  const { hawker, isModalOpen, setModalOpen, isRegistered } = props;
+  const { hawker, isModalOpen, setModalOpen } = props;
   const navigate = useNavigate();
 
   const handleDirectionOnClick = () => {
@@ -71,12 +69,12 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
         <div
           className={`absolute -translate-y-1/2 flex justify-center items-center w-max px-2 py-[1px] text-[12px] font-bold rounded 
             ${
-              isRegistered
+              hawker.isRegistered
                 ? "bg-brand-tertiary-active"
                 : "bg-brand-secondary-active"
             }`}
         >
-          {isRegistered ? "Registered" : "Public"}
+          {hawker.isRegistered ? "Registered" : "Public"}
         </div>
 
         {/* Close Button */}
