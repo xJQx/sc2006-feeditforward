@@ -1,17 +1,20 @@
 from sqlalchemy import Column, Integer, String, Boolean, Float, ForeignKey
 from sqlalchemy.orm import relationship,Mapped
 
-from app.database import Base
+from database import Base
 
 class User(Base):
     __tablename__ = "users"
 
     user_id = Column(Integer, primary_key=True, index=True)
-    username = Column(String, unique=True, index=True)
-    password = Column(String)
     name = Column(String)
+    email = Column(String, unique=True, index=True)
+    password = Column(String)
+    contact_number = Column(String)
     address = Column(String)
-    singpass = Column(Boolean)
+    img_src = Column(String)
+    img_alt = Column(String)
+    role = Column(String)
 
     css_history: Mapped[list["CustomerServiceSupportHistory"]] = relationship(back_populates="user")
 
@@ -21,8 +24,16 @@ class Hawker(User):
 
     hawker_id = Column(Integer, ForeignKey('users.user_id'), primary_key=True)
     overall_rating = Column(Float)
+    business_name= Column(String)
+    operating_hours= Column(String)
+    food_type= Column(String)
+    geometry_type= Column(String)
+    geometry_lat= Column(String)
+    geometry_lng= Column(String)
+    is_registered= Column(Boolean)
 
     hawker_foods: Mapped[list["HawkerFood"]] = relationship(back_populates="hawker")
+    # reviews: Mapped[list["Review"]] = relationship(back_populates="hawker")
 
 class Admin(User):
     __tablename__ = "admins"

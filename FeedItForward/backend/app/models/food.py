@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.orm import relationship, Mapped
 
-from app.database import Base
+from database import Base
 
 class Food(Base):
     __tablename__ = "foods"

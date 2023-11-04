@@ -1,0 +1,3885 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" }
+  },
+
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_1",
+        "Description": {
+          "AWARDED_DATE": "17/7/2017",
+          "LANDYADDRESSPOINT": "29650.7",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "50",
+          "DESCRIPTION": "New Replacement Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "15/11/2021",
+          "STATUS Existing (replacement)": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/commercial space",
+          "NAME": "Market Street Hawker Centre",
+          "ADDRESSBUILDINGNAME": "CapitaSpring",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "29874.82",
+          "ADDRESSSTREETNAME": "Market Street",
+          "ADDRESSPOSTALCODE": "48940",
+          "IMPLEMENTATION_DATE": "1/8/2017",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "DB83871D0E006559",
+          "FMEL_UPD_D": 20221017143612
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.850164578087004, 1.2844248503218, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_2",
+        "Description": {
+          "AWARDED_DATE": "4/9/2015",
+          "LANDYADDRESSPOINT": "46139.03",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/mmhc.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "4",
+          "DESCRIPTION": "New Replacement Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "8/11/2017",
+          "STATUS Existing (replacement)": "",
+          "APPROXIMATE_GFA": "3661",
+          "INFO_ON_CO_LOCATORS": "hawker centre/supermarket/shops",
+          "NAME": "Marsiling Mall Hawker Centre",
+          "ADDRESSBUILDINGNAME": "Marsiling Mall",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "22042.51",
+          "ADDRESSSTREETNAME": "Woodlands Street 12",
+          "ADDRESSPOSTALCODE": "738623",
+          "IMPLEMENTATION_DATE": "1/1/2016",
+          "ADDRESS_MYENV": "Blk 4,Woodlands St 12,Singapore�738623",
+          "INC_CRC": "67D9A36B865FC1FB",
+          "FMEL_UPD_D": 20221017143612
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.779784899996002, 1.43353885680037, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_3",
+        "Description": {
+          "AWARDED_DATE": "11/5/2015",
+          "LANDYADDRESSPOINT": "31094.91",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "38A",
+          "DESCRIPTION": "New Replacement Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/3/2022",
+          "STATUS Existing (replacement)": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/branch office/supermarket/shops/flats",
+          "NAME": "Margaret Drive Hawker Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "24816.7",
+          "ADDRESSSTREETNAME": "Margaret Drive",
+          "ADDRESSPOSTALCODE": "142038",
+          "IMPLEMENTATION_DATE": "2/12/2015",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "C80F89698B7A8757",
+          "FMEL_UPD_D": 20221017143612
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.804715225284994, 1.29748567106686, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_4",
+        "Description": {
+          "AWARDED_DATE": "30/7/2018",
+          "LANDYADDRESSPOINT": "41500.77",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "21",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "22/3/2022",
+          "STATUS Existing (new)": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/market/community club",
+          "NAME": "Fernvale Hawker Centre & Market",
+          "ADDRESSBUILDINGNAME": "Fernvale Community Club, Hawker Centre & Market",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "32867.9",
+          "ADDRESSSTREETNAME": "Sengkang West Avenue",
+          "ADDRESSPOSTALCODE": "797650",
+          "IMPLEMENTATION_DATE": "13/8/2018",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "E3AB7D1743979E42",
+          "FMEL_UPD_D": 20221017143612
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.877060478847, 1.39159232727757, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_5",
+        "Description": {
+          "AWARDED_DATE": "8/8/2018",
+          "LANDYADDRESSPOINT": "43336.13",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "1",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "29/4/2022",
+          "STATUS Existing (new)": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/Regional Library/Senior Care Centre/Branch Office/Child Development Centre/Blood Collection Centre/Kidney Dialysis Centre/Childcare Centre",
+          "NAME": "One Punggol Hawker Centre",
+          "ADDRESSBUILDINGNAME": "One Punggol",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "35955.52",
+          "ADDRESSSTREETNAME": "Punggol Drive",
+          "ADDRESSPOSTALCODE": "828629",
+          "IMPLEMENTATION_DATE": "29/8/2018",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "4780858D968F79C9",
+          "FMEL_UPD_D": 20221017143612
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.904805657576006, 1.40818996870647, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_6",
+        "Description": {
+          "AWARDED_DATE": "1/5/2018",
+          "LANDYADDRESSPOINT": "47850.43",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "21",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "27/9/2022",
+          "STATUS Existing (new)": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/Town Sports and Recreational Centre/Primary Care Centre & Senior Care Centre",
+          "NAME": "Bukit Canberra Hawker Centre",
+          "ADDRESSBUILDINGNAME": "Bukit Canberra",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "26794.39",
+          "ADDRESSSTREETNAME": "Canberra Link",
+          "ADDRESSPOSTALCODE": "756973",
+          "IMPLEMENTATION_DATE": "17/5/2018",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "B85FF6B6AA88649C",
+          "FMEL_UPD_D": 20221017143612
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.822484958307001, 1.44901674160031, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_7",
+        "Description": {
+          "AWARDED_DATE": "11/12/2018",
+          "LANDYADDRESSPOINT": "41008.06",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "2",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "28/7/2022",
+          "STATUS Existing (new)": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Senja Hawker Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "19953.85",
+          "ADDRESSSTREETNAME": "Senja Close",
+          "ADDRESSPOSTALCODE": "677632",
+          "IMPLEMENTATION_DATE": "1/3/2019",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "739D3B1889BF778F",
+          "FMEL_UPD_D": 20221017143612
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.761017756803994, 1.38713573069818, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_8",
+        "Description": {
+          "AWARDED_DATE": "18/9/2019",
+          "LANDYADDRESSPOINT": "40482.99",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "72",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "2023",
+          "STATUS Under Construction": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/community club/bus interchange/private residential and commercial units",
+          "NAME": "Buangkok Hawker Centre",
+          "ADDRESSBUILDINGNAME": "Sengkang Grand Mall",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "34575.37",
+          "ADDRESSSTREETNAME": "Compassvale Bow",
+          "ADDRESSPOSTALCODE": "544692",
+          "IMPLEMENTATION_DATE": "29/10/2019",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "0FFF4B5257E65F57",
+          "FMEL_UPD_D": 20221017143612
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.892403203249003, 1.38238755827879, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_9",
+        "Description": {
+          "AWARDED_DATE": "31/12/2020",
+          "LANDYADDRESSPOINT": "37478.45",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "469A",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "2024",
+          "STATUS Under Construction": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/flats",
+          "NAME": "Bukit Batok West Hawker Centre",
+          "ADDRESSBUILDINGNAME": "Harmony Village",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "17817.9",
+          "ADDRESSSTREETNAME": "Bukit Batok West Avenue 9",
+          "ADDRESSPOSTALCODE": "651469",
+          "IMPLEMENTATION_DATE": "21/1/2021",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "E3C2D62809A47B74",
+          "FMEL_UPD_D": 20221017143612
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.741825836535995, 1.35521457121361, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_10",
+        "Description": {
+          "AWARDED_DATE": "29/4/2022",
+          "LANDYADDRESSPOINT": "28414.9",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "78C",
+          "DESCRIPTION": "New Replacement Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "2027",
+          "STATUS Under Construction": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/market/flats",
+          "NAME": "Telok Blangah Hawker Centre & Market",
+          "ADDRESSBUILDINGNAME": "Telok Blangah Beacon",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "25191",
+          "ADDRESSSTREETNAME": "Telok Blangah Drive",
+          "ADDRESSPOSTALCODE": "103078",
+          "IMPLEMENTATION_DATE": "20/5/2022",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "9BBE5ECFD4BA48D6",
+          "FMEL_UPD_D": 20221017143612
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.808078713674007, 1.27324863952078, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_11",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "34887.31",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262227194623.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "538",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/4/1979",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bedok North Street 3 Blk 538",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "3/12/2010",
+          "LANDXADDRESSPOINT": "38185.86",
+          "ADDRESSSTREETNAME": "Bedok North Street 3",
+          "ADDRESSPOSTALCODE": "460538",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 538, Bedok North Street 3, Singapore 460538",
+          "INC_CRC": "F1A5DD5A43FF421C",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.924844235397998, 1.33178125123252, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_12",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "34910.13",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267853253145.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "85",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/6/1977",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bedok North Street 4 Blk 85 (85 Fengshan Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "20/12/2012",
+          "LANDXADDRESSPOINT": "39731.49",
+          "ADDRESSSTREETNAME": "Bedok North Street 4",
+          "ADDRESSPOSTALCODE": "460085",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 85, Bedok North Street 4, Singapore 460085",
+          "INC_CRC": "CFC780A15F1768CE",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.938732580554003, 1.33198706861747, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_13",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "34041.56",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267437914368.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "2",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1974",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "941.5",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Adam Road Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "30/4/2002",
+          "LANDXADDRESSPOINT": "25868.4",
+          "ADDRESSSTREETNAME": "Adam Road",
+          "ADDRESSPOSTALCODE": "289876",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "2, Adam Road, Singapore 289876",
+          "INC_CRC": "EC26BEACF101BAE8",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.814165010384002, 1.32413422253318, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_14",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33656.16",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154437879.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "117",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "15/9/1978",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Aljunied Ave 2 Blk 117 (Blk 117 Aljunied Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "30/11/2005",
+          "LANDXADDRESSPOINT": "33976.33",
+          "ADDRESSSTREETNAME": "Aljunied Ave 2",
+          "ADDRESSPOSTALCODE": "380117",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 117, Aljunied Ave 2, Singapore 380117",
+          "INC_CRC": "AA7744C0AE070F52",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.887019026109996, 1.32064829234987, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_15",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29075",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265968760190.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1983",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "3539",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Amoy Street Food Centre (Telok Ayer Food Centre)",
+          "ADDRESSBUILDINGNAME": "National Development Building",
+          "HUP_COMPLETION_DATE": "17/2/2003",
+          "LANDXADDRESSPOINT": "29478.87",
+          "ADDRESSSTREETNAME": "Telok Ayer Street",
+          "ADDRESSPOSTALCODE": "69111",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "National Development Building, Annex B, Telok Ayer Street, Singapore 069111",
+          "INC_CRC": "81106E05A4877BB2",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.846606784092003, 1.27921844263269, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_16",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "38757.95",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154827180.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "226D",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "13/10/1976",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Ang Mo Kio Ave 1 Blk 226D (Kebun Baru Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "20/1/2010",
+          "LANDXADDRESSPOINT": "28658.02",
+          "ADDRESSSTREETNAME": "Ang Mo Kio Ave 1",
+          "ADDRESSPOSTALCODE": "564226",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 226D, Ang Mo Kio Ave 1, Singapore 564226",
+          "INC_CRC": "0177924BFEEDB123",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.839231344065993, 1.36678764523637, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_17",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "38461.34",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1275538105392.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "341",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "1979",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Ang Mo Kio Ave 1 Blk 341 (Teck Ghee Court)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "1/3/2002",
+          "LANDXADDRESSPOINT": "29662.16",
+          "ADDRESSSTREETNAME": "Ang Mo Kio Ave 1",
+          "ADDRESSPOSTALCODE": "560341",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 341, Ang Mo Kio Ave 1, Singapore 560341",
+          "INC_CRC": "07D7927B914C0CDF",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.848254220437994, 1.36410517096399, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_18",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "38313.59",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1275538704472.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "409",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "31/7/1979",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Ang Mo Kio Ave 10 Blk 409 (Teck Ghee Square)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "28/11/2011",
+          "LANDXADDRESSPOINT": "30454.04",
+          "ADDRESSSTREETNAME": "Ang Mo Kio Ave 10",
+          "ADDRESSPOSTALCODE": "560409",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 409, Ang Mo Kio Ave 10, Singapore 560409",
+          "INC_CRC": "6728AD9499690403",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.855369790045003, 1.36276891777383, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_19",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "38918.61",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1259902043777.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "453A",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "11/4/1979",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Ang Mo Kio Ave 10 Blk 453A (Chong Boon Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "1/1/2002",
+          "LANDXADDRESSPOINT": "30563.28",
+          "ADDRESSSTREETNAME": "Ang Mo Kio Ave 10",
+          "ADDRESSPOSTALCODE": "561453",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 453A, Ang Mo Kio Ave 10, Singapore 561453",
+          "INC_CRC": "D0070B6780E2F7EB",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.856351437414006, 1.36824049310006, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_20",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "39419.45",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265165592824.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "527",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "24/12/1979",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Ang Mo Kio Ave 10 Blk 527 (Cheng San Market and Cooked Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "21/2/2004",
+          "LANDXADDRESSPOINT": "30355.32",
+          "ADDRESSSTREETNAME": "Ang Mo Kio Ave 10",
+          "ADDRESSPOSTALCODE": "560527",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 527, Ang Mo Kio Ave 10, Singapore 560527",
+          "INC_CRC": "46587340BA928880",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.854482811590998, 1.37276992816898, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_21",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "39609.54",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265165416622.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "160/162",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/6/1981",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Ang Mo Kio Ave 4 Blk 160/162 (Mayflower Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "31/12/2008",
+          "LANDXADDRESSPOINT": "28656.12",
+          "ADDRESSSTREETNAME": "Ang Mo Kio Ave 4",
+          "ADDRESSPOSTALCODE": "560160",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 160/162, Ang Mo Kio Ave 4, Singapore 560160/560162",
+          "INC_CRC": "546287EBBB6E50A6",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.839214290038001, 1.37448912101909, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_22",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "40332.23",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/blk-628-ang-mo-kio-ave-4.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "628",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "31/12/1979",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Ang Mo Kio Ave 4 Blk 628 (Ang Mo Kio 628 Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "16/12/2009",
+          "LANDXADDRESSPOINT": "28819.49",
+          "ADDRESSSTREETNAME": "Ang Mo Kio Ave 4",
+          "ADDRESSPOSTALCODE": "560628",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 628, Ang Mo Kio Ave 4, Singapore 560628",
+          "INC_CRC": "CE6A36B49FA5756A",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.840682307297001, 1.38102486670548, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_23",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "39356.14",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155216756.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "724",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "31/1/1980",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Ang Mo Kio Ave 6 Blk 724 (Blk 724 Ang Mo Kio Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "2/1/2008",
+          "LANDXADDRESSPOINT": "29469.07",
+          "ADDRESSSTREETNAME": "Ang Mo Kio Ave 6",
+          "ADDRESSPOSTALCODE": "560724",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 724, Ang Mo Kio Ave 6, Singapore 560724",
+          "INC_CRC": "8285869D56ECB18F",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.846519219268004, 1.37219743270045, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_24",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "38806.88",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1259901689557.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "226H",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/9/1976",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Ang Mo Kio Street 22 Blk 226H (Kebun Baru Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "13/12/2003",
+          "LANDXADDRESSPOINT": "28738.35",
+          "ADDRESSSTREETNAME": "Ang Mo Kio Street 22",
+          "ADDRESSPOSTALCODE": "568226",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 226H, Ang Mo Kio Street 22, Singapore 568226",
+          "INC_CRC": "69908CB70A6BE99E",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.839953165935995, 1.36723014879667, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_25",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33624.11",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265176030572.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "1",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "1971",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "1081.18",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bedok Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "6/2/2005",
+          "LANDXADDRESSPOINT": "41594.72",
+          "ADDRESSSTREETNAME": "Bedok Road",
+          "ADDRESSPOSTALCODE": "469572",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "1, Bedok Road, Singapore 469572",
+          "INC_CRC": "5074BAFFA5D70724",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.955474150677006, 1.32035600765426, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_26",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "34365.56",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154705733.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "216",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "21/8/1979",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bedok North Street 1 Blk 216",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "15/12/2008",
+          "LANDXADDRESSPOINT": "39118.19",
+          "ADDRESSSTREETNAME": "Bedok North Street 1",
+          "ADDRESSPOSTALCODE": "460216",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 216, Bedok North Street 1, Singapore 460216",
+          "INC_CRC": "B8E4DB8CFECEFE61",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.933221544751007, 1.32706240888967, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_27",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "35049.33",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265166047112.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "511",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "16/3/1979",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bedok North Street 3 Blk 511 (Kaki Bukit 511 Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "1/7/2004",
+          "LANDXADDRESSPOINT": "38826.65",
+          "ADDRESSSTREETNAME": "Bedok North Street 3",
+          "ADDRESSPOSTALCODE": "460511",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 511, Bedok North Street 3, Singapore 460511",
+          "INC_CRC": "29D02D343318B565",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.930602144469006, 1.33324627868937, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_28",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "35039.64",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155176127.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "630",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/6/1982",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bedok Reservoir Road Blk 630",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "28/2/2006",
+          "LANDXADDRESSPOINT": "36985",
+          "ADDRESSSTREETNAME": "Bedok Reservoir Road",
+          "ADDRESSPOSTALCODE": "470630",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 630, Bedok Reservoir Road, Singapore 470630",
+          "INC_CRC": "BBA7FF2B158D219A",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.914053888309994, 1.33315924777343, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_29",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33645.7",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267853021378.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "16",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "12/5/1975",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bedok South Road Blk 16",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "20/9/2012",
+          "LANDXADDRESSPOINT": "39376.14",
+          "ADDRESSSTREETNAME": "Bedok South Road",
+          "ADDRESSPOSTALCODE": "460016",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 16, Bedok South Road, Singapore 460016",
+          "INC_CRC": "483F3877C2096482",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.935539096349999, 1.32055216480957, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_30",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33497.85",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262226446535.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "29",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "17/3/1971",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bendemeer Road Blk 29 (Bendemeer Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "31/12/2004",
+          "LANDXADDRESSPOINT": "31305.63",
+          "ADDRESSSTREETNAME": "Bendemeer Road",
+          "ADDRESSPOSTALCODE": "330029",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 29, Bendemeer Road, Singapore 330029",
+          "INC_CRC": "A7DB5A3E6C113EAC",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.863021377530998, 1.31921699786807, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_31",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "30136.92",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267807628554.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "38A",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1965",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "1733.074",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Beo Crescent Market",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "18/1/2010",
+          "LANDXADDRESSPOINT": "27336.64",
+          "ADDRESSSTREETNAME": "Beo Crescent",
+          "ADDRESSPOSTALCODE": "169982",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "38A, Beo Crescent, Singapore 169982",
+          "INC_CRC": "D232402B83EFCDF5",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.827358017197, 1.28882210205212, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_32",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32184.16",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265176120532.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "166",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1975",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "2568.95",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Berseh Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "5/3/2004",
+          "LANDXADDRESSPOINT": "30619.27",
+          "ADDRESSSTREETNAME": "Jalan Besar",
+          "ADDRESSPOSTALCODE": "208877",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "166, Jalan Besar, Singapore 208877",
+          "INC_CRC": "A7CCEB2CE987B820",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.856853966616995, 1.30733651651517, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_33",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "36373.79",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154766447.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "221A/B",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "2/1/1976",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Boon Lay Place Blk 221A/B (Boon Lay Place Market and Food Village)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "1/8/2004",
+          "LANDXADDRESSPOINT": "14587.57",
+          "ADDRESSSTREETNAME": "Boon Lay Place",
+          "ADDRESSPOSTALCODE": "641221",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 221A/B, Boon Lay Place, Singapore 641221/642221",
+          "INC_CRC": "84F8C2B46CAB5C4D",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.712799765872006, 1.3452231627967, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_34",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32059.13",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262156313186.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "665",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "31/10/1980",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Buffalo Road Blk 665 (Tekka Centre/Zhu Jiao Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "30/6/2009",
+          "LANDXADDRESSPOINT": "29915.58",
+          "ADDRESSSTREETNAME": "Buffalo Road",
+          "ADDRESSPOSTALCODE": "210665",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 665, Buffalo Road, Singapore 210665",
+          "INC_CRC": "D09ADF34C362D244",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.850530969624003, 1.30620584090733, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_35",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29569.73",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267851995788.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "163",
+          "DESCRIPTION": "Opted out of HUP",
+          "EST_ORIGINAL_COMPLETION_DATE": "5/5/1980",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bukit Merah Central Blk 163 (Bukit Merah Central Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "26183.03",
+          "ADDRESSSTREETNAME": "Bukit Merah Central",
+          "ADDRESSPOSTALCODE": "150163",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 163, Bukit Merah Central, Singapore 150163",
+          "INC_CRC": "16F0047AA3A7B03C",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.816992390294999, 1.28369258928085, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_36",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29857.81",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267852344747.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "120",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "14/9/1978",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bukit Merah Lane 1 Blk 120 (Alexandra Village Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "15/11/2010",
+          "LANDXADDRESSPOINT": "24791.54",
+          "ADDRESSSTREETNAME": "Bukit Merah Lane 1",
+          "ADDRESSPOSTALCODE": "150120",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 120, Bukit Merah Lane, Singapore 150120",
+          "INC_CRC": "98A3C26DD6CD2F81",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.804489277778998, 1.28629777221659, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_37",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29770.11",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267851251303.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "115",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "29/3/1973",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bukit Merah View Blk 115 (Blk 115 Bukit Merah View Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "28/2/2012",
+          "LANDXADDRESSPOINT": "26745.83",
+          "ADDRESSSTREETNAME": "Bukit Merah View",
+          "ADDRESSPOSTALCODE": "151115",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 115, Bukit Merah View, Singapore 151115",
+          "INC_CRC": "7A2BDBF5830376A7",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.822049361292002, 1.28550478314618, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_38",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "39953.67",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/bukit-panjang-hawker-centre.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "2",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "31/7/2015",
+          "STATUS Existing (new)": "",
+          "APPROXIMATE_GFA": "4500",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bukit Panjang Hawker Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "21230.49",
+          "ADDRESSSTREETNAME": "Bukit Panjang Ring Road",
+          "ADDRESSPOSTALCODE": "679947",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "2 Bukit Panjang Ring Road, Singapore 679947",
+          "INC_CRC": "2FEB0DCC8CCF59D4",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.772489583205996, 1.37760053528611, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_39",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "35726.98",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265176195262.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "51",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1975",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "3310.64",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Bukit Timah Market",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "2/1/2003",
+          "LANDXADDRESSPOINT": "21620.5",
+          "ADDRESSSTREETNAME": "Upper Bukit Timah Road",
+          "ADDRESSPOSTALCODE": "588215",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "51, Upper Bukit Timah Road, Singapore 588215",
+          "INC_CRC": "FD4DDC8C07732176",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.775995008012003, 1.33937596351523, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_40",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33159.8",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265166819326.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "41A",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "18/12/1981",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Cambridge Road Blk 41A (Pek Kio Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "7/3/2003",
+          "LANDXADDRESSPOINT": "29881.53",
+          "ADDRESSSTREETNAME": "Cambridge Road",
+          "ADDRESSPOSTALCODE": "211041",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 41A, Cambridge Road, Singapore 211041",
+          "INC_CRC": "FBD170F30CEE818F",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.850225081030999, 1.31615991374589, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_41",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "41231.42",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267846802175.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "2&3",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "12/11/1975",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Changi Village Blk 2 and 3",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "28/12/2012",
+          "LANDXADDRESSPOINT": "45241.4",
+          "ADDRESSSTREETNAME": "Changi Village Road",
+          "ADDRESSPOSTALCODE": "500002",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 2/3, Changi Village Road, Singapore 500002/500003",
+          "INC_CRC": "DC5973E8A24B7C85",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.988245749103001, 1.38915172065006, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_42",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "38475",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155330191.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "20",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1972",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "613.55",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Chomp Chomp Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "31/3/2004",
+          "LANDXADDRESSPOINT": "31696.72",
+          "ADDRESSSTREETNAME": "Kensington Park Road",
+          "ADDRESSPOSTALCODE": "557269",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "20, Kensington Park Road, Singapore 557269",
+          "INC_CRC": "FD83AAB0BD194D68",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.866536130298996, 1.36422852315868, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_43",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "39713.52",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/ci-yuan-hawker-centre.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "51",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "2/7/2015",
+          "STATUS Existing (new)": "",
+          "APPROXIMATE_GFA": "2047.29",
+          "INFO_ON_CO_LOCATORS": "hawker centre/community club/family medicine clinic/senior care centre",
+          "NAME": "Ci Yuan Hawker Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "33526.48",
+          "ADDRESSSTREETNAME": "Hougang Avenue 9",
+          "ADDRESSPOSTALCODE": "538776",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "51 Hougang Avenue 9, Singapore 538776",
+          "INC_CRC": "2AA90E9CB7222D3A",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.882977999396999, 1.37542896666561, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_44",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "34297.67",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1280824598.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "79/79A",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "31/3/1971",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Circuit Road Blk 79/79A",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "11/5/2010",
+          "LANDXADDRESSPOINT": "33756.46",
+          "ADDRESSSTREETNAME": "Circuit Road",
+          "ADDRESSPOSTALCODE": "370079",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 79/79A, Circuit Road, Singapore 370079/371079",
+          "INC_CRC": "B1F15E00F852A8E2",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.885043500018995, 1.32644992167231, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_45",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "34452.44",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262153912521.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "80",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "1/9/1967",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Circuit Road Blk 80 (80 Circuit Road Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "22/2/2003",
+          "LANDXADDRESSPOINT": "33988.5",
+          "ADDRESSSTREETNAME": "Circuit Road",
+          "ADDRESSPOSTALCODE": "370080",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 80, Circuit Road, Singapore 370080",
+          "INC_CRC": "3BE7F742CBA359E0",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.887128535136995, 1.32784956142548, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_46",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33965.43",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154127554.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "89",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1/9/1967",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Circuit Road Blk 89",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "8/4/2009",
+          "LANDXADDRESSPOINT": "33801.62",
+          "ADDRESSSTREETNAME": "Circuit Road",
+          "ADDRESSPOSTALCODE": "370089",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 89, Circuit Road, Singapore 370089",
+          "INC_CRC": "4EDE2CCE7F5DCE1F",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.885449224256007, 1.32344525333847, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_47",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32961.71",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267847852167.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "353",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "26/1/1978",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Clementi Ave 2 Blk 353 (Clementi Ave 2 Market/Cooked Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "25/10/2012",
+          "LANDXADDRESSPOINT": "21046.37",
+          "ADDRESSSTREETNAME": "Clementi Ave 2",
+          "ADDRESSPOSTALCODE": "120353",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 353, Clementi Ave 2, Singapore 120353",
+          "INC_CRC": "42176A300DC70AF6",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.770836740842995, 1.31436772839327, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_48",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32839.78",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267848308255.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "448",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "12/1/1980",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Clementi Ave 3 Blk 448",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "29/10/2010",
+          "LANDXADDRESSPOINT": "20342.32",
+          "ADDRESSSTREETNAME": "Clementi Ave 3",
+          "ADDRESSPOSTALCODE": "120448",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 448, Clementi Ave 3, Singapore 120448",
+          "INC_CRC": "FDAC6B27AB208E31",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.764510533077996, 1.31326486994113, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_49",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "31791.21",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155262246.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "726",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "29/11/1980",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Clementi West Street 2 Blk 726",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "26/11/2009",
+          "LANDXADDRESSPOINT": "20314.9",
+          "ADDRESSSTREETNAME": "Clementi West Street 2",
+          "ADDRESSPOSTALCODE": "120726",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 726, Clementi West Street 2, Singapore 120726",
+          "INC_CRC": "3B5F054B925A30B9",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.764264410292995, 1.3037819726711, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_50",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32135.05",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265167388780.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "31",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "1965",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "3040.58",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Commonwealth Crescent Market",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "18/8/2004",
+          "LANDXADDRESSPOINT": "24332.33",
+          "ADDRESSSTREETNAME": "Commonwealth Crescent",
+          "ADDRESSPOSTALCODE": "149644",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "31, Commonwealth Crescent, Singapore 149644",
+          "INC_CRC": "35C408FD216C2404",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.800362825516999, 1.3068922760844, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_51",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "31341.24",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/commonwealth.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "1A/2A/3A",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "16/11/1981",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Commonwealth Drive Blk 1A/2A/3A (Tanglin Halt Food Centre/Commonwealth Drive Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "15/1/2010",
+          "LANDXADDRESSPOINT": "24055.5",
+          "ADDRESSSTREETNAME": "Commonwealth Drive",
+          "ADDRESSPOSTALCODE": "141001",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 1A/ 2A/ 3A, Commonwealth Drive, Singapore 140001/140002/140003",
+          "INC_CRC": "B823DC7764C2C957",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.797875477439007, 1.29971330531884, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_52",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32413.99",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155459807.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "271",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1974",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "984",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Dunman Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "3/12/2002",
+          "LANDXADDRESSPOINT": "35624.14",
+          "ADDRESSSTREETNAME": "Onan Road",
+          "ADDRESSPOSTALCODE": "424768",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "271, Onan Road, Singapore 424768",
+          "INC_CRC": "5924E489E4CEB0EB",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.901825147210005, 1.30941418731185, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_53",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32112.26",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155504536.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "1220",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "1978",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "3600.16",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "East Coast Lagoon Food Village",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "10/12/2003",
+          "LANDXADDRESSPOINT": "39318.07",
+          "ADDRESSSTREETNAME": "East Coast Parkway",
+          "ADDRESSPOSTALCODE": "468960",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "1220, East Coast Parkway, Singapore 468960",
+          "INC_CRC": "1D6E51B4E1D233F8",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.935016747248994, 1.30668431820832, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_54",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33169.3",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262152572393.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "7",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "26/3/1976",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Empress Road Blk 7 (Empress Road Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "2/12/2008",
+          "LANDXADDRESSPOINT": "24919.24",
+          "ADDRESSSTREETNAME": "Empress Road",
+          "ADDRESSPOSTALCODE": "260007",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 7, Empress Road, Singapore 260007",
+          "INC_CRC": "2DAAEFC7E956D1E6",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.805636386821007, 1.31624573118373, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_55",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33746.13",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/blk-69-geylang-bahru.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "69",
+          "DESCRIPTION": "Opted out of HUP",
+          "EST_ORIGINAL_COMPLETION_DATE": "16/1/1974",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Geylang Bahru Blk 69 (Blk 69 Geylang Bahru Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "32082.77",
+          "ADDRESSSTREETNAME": "Geylang Bahru",
+          "ADDRESSPOSTALCODE": "330069",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 69, Geylang Bahru, Singapore 330069",
+          "INC_CRC": "1CDA7137229B703E",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.870004415151996, 1.32146226027018, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_56",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33222.72",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155542468.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "3/7/2009",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "11534.9",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Geylang Serai Market",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "3/7/2009",
+          "LANDXADDRESSPOINT": "35223.38",
+          "ADDRESSSTREETNAME": "Geylang Serai",
+          "ADDRESSPOSTALCODE": "402001",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "1, Geylang Serai, Singapore 402001",
+          "INC_CRC": "A247BF61CE06DAC1",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.898224315880995, 1.3167281476983, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_57",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32588.87",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267848628803.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "20",
+          "DESCRIPTION": "Opted out of HUP",
+          "EST_ORIGINAL_COMPLETION_DATE": "24/1/1977",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Ghim Moh Road Blk 20",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "22982.14",
+          "ADDRESSSTREETNAME": "Ghim Moh Road",
+          "ADDRESSPOSTALCODE": "270020",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 20, Ghim Moh Road, Singapore 270020",
+          "INC_CRC": "8A5C1B4701C41095",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.788230657144993, 1.31099627311591, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_58",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "31690.89",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155571228.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "505",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1975",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "6249.229",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Golden Mile Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "4/7/2002",
+          "LANDXADDRESSPOINT": "31401.57",
+          "ADDRESSSTREETNAME": "Beach Road",
+          "ADDRESSPOSTALCODE": "199583",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "505, Beach Road, Singapore 199583",
+          "INC_CRC": "68D21092867E51D3",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.863883249984994, 1.30287548090781, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_59",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33047.33",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267848993155.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "13/14",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/7/1977",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Haig Road Blk 13/14 (Haig Road Market and Cooked Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "4/8/2010",
+          "LANDXADDRESSPOINT": "34932.38",
+          "ADDRESSSTREETNAME": "Haig Road",
+          "ADDRESSPOSTALCODE": "430013",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 13/14, Haig Road, Singapore 430013/430014",
+          "INC_CRC": "110148A55D9E2AFA",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.895609494854995, 1.3151420505272, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_60",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "30043.3",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262152823428.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "22A/B",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "16/11/1969",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Havelock Road Blk 22A/B (Havelock Road Cooked Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "27/4/2007",
+          "LANDXADDRESSPOINT": "27589.14",
+          "ADDRESSSTREETNAME": "Havelock Road",
+          "ADDRESSPOSTALCODE": "161022",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 22A/B, Havelock Road, Singapore 161022/162022",
+          "INC_CRC": "1CFBA3CB00902F92",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.829626834636997, 1.28797543998733, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_61",
+        "Description": {
+          "AWARDED_DATE": "7/5/2014",
+          "LANDYADDRESSPOINT": "37328.97",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/our-tampines-hub.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "1",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "6/8/2016",
+          "STATUS Existing (new)": "",
+          "APPROXIMATE_GFA": "2241",
+          "INFO_ON_CO_LOCATORS": "hawker centre/ community club  offices/regional library/heritage centre/swimming complex/sports facilities/branch hawker centre/office/national arts council/hometeam ns clubhouse/family medical centre/senior care centre",
+          "NAME": "Hawker Centre @ Our Tampines Hub",
+          "ADDRESSBUILDINGNAME": "Our Tampines Hub",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "39841.96",
+          "ADDRESSSTREETNAME": "Tampines Walk",
+          "ADDRESSPOSTALCODE": "528523",
+          "IMPLEMENTATION_DATE": "1/8/2013",
+          "ADDRESS_MYENV": "1 Tampines Walk, Singapore 528523",
+          "INC_CRC": "17E2D59B253CC806",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.939726160039001, 1.35386211773287, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_62",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "37123.63",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1259901832200.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "320",
+          "DESCRIPTION": "Not eligible for HUP",
+          "EST_ORIGINAL_COMPLETION_DATE": "25/5/2000",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Shunfu Road Blk 320 (Shunfu Mart)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "28413.24",
+          "ADDRESSSTREETNAME": "Shunfu Road",
+          "ADDRESSPOSTALCODE": "570320",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 320, Shunfu Road, Singapore 570320",
+          "INC_CRC": "93EF4005B9CA475E",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.837031803822995, 1.35200744198417, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_63",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33261.95",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262153128123.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "49",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "20/9/1976",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Sims Place Blk 49 (Sims Vista Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "15/11/2006",
+          "LANDXADDRESSPOINT": "33130.31",
+          "ADDRESSSTREETNAME": "Sims Place",
+          "ADDRESSPOSTALCODE": "380049",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 49, Sims Place, Singapore 380049",
+          "INC_CRC": "87604B5A2F6B6C68",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.879417030672997, 1.31708335109103, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_64",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29408.57",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265168178798.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "335",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "31/5/1983",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Smith Street Blk 335 (Chinatown Complex Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "30/4/2008",
+          "LANDXADDRESSPOINT": "29097.23",
+          "ADDRESSSTREETNAME": "Smith Street",
+          "ADDRESSPOSTALCODE": "50335",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 335, Smith Street, Singapore 050335",
+          "INC_CRC": "B4A7F7D0E5A23171",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.843177616296003, 1.28223514826381, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_65",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "35197.91",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262156147897.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "3",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "23/3/2005",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "7770.3",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Taman Jurong Market and Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "23/3/2005",
+          "LANDXADDRESSPOINT": "15557.97",
+          "ADDRESSSTREETNAME": "Yung Sheng Road",
+          "ADDRESSPOSTALCODE": "618499",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "3, Yung Sheng Road, Singapore 618499",
+          "INC_CRC": "45EB3EEBFB324214",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.721519868629002, 1.33458935951076, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_66",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "36419.78",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154543785.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "137",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/11/1982",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Tampines Street 11 Blk 137 (Tampines Round Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "8/1/2006",
+          "LANDXADDRESSPOINT": "40387.13",
+          "ADDRESSSTREETNAME": "Tampines Street 11",
+          "ADDRESSPOSTALCODE": "521137",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 137, Tampines Street 11, Singapore 521137",
+          "INC_CRC": "F6017D5F9EB547CC",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.944624481150996, 1.3456395210229, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_67",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "31460.22",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262156211794.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "48A",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1964",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "2030.92",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Tanglin Halt Market",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "1/10/2003",
+          "LANDXADDRESSPOINT": "24027.71",
+          "ADDRESSSTREETNAME": "Tanglin Halt Road",
+          "ADDRESSPOSTALCODE": "148813",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "48A, Tanglin Halt Road, Singapore 148813",
+          "INC_CRC": "74052054E3CC3AB3",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.797625756738, 1.30078931480841, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_68",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "28787.08",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/blk-6-tanjong-pagar-plaza.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "6",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "18/4/1977",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Tanjong Pagar Plaza Blk 6 (Blk 6 Tanjong Pagar Plaza Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "27/12/2013",
+          "LANDXADDRESSPOINT": "29096.05",
+          "ADDRESSSTREETNAME": "Tanjong Pagar Plaza",
+          "ADDRESSPOSTALCODE": "81006",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 6, Tanjong Pagar Plaza, Singapore 081006",
+          "INC_CRC": "90C2DF392AE4A99D",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.843166992137995, 1.27661461066321, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_69",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33678.4",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262153022672.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "37A",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "1/11/1976",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Teban Gardens Road Blk 37A (Teban Gardens Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "3/1/2008",
+          "LANDXADDRESSPOINT": "17936.37",
+          "ADDRESSSTREETNAME": "Teban Gardens Road",
+          "ADDRESSPOSTALCODE": "601037",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 37A, Teban Garden Road, Singapore 601037",
+          "INC_CRC": "D50987C77B5B66E7",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.742891623681004, 1.32084835041654, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_70",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "28870.26",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267876741836.gif",
+          "ADDRESSBLOCKHOUSENUMBER": "11",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "19/10/1974",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Telok Blangah Crescent Blk 11 (11 Telok Blangah Crescent Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "15/1/2010",
+          "LANDXADDRESSPOINT": "26366.58",
+          "ADDRESSSTREETNAME": "Telok Blangah Crescent",
+          "ADDRESSPOSTALCODE": "90011",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 11, Telok Blangah Crescent, Singapore 090011",
+          "INC_CRC": "917DDC2ADEC4B825",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.818641695105995, 1.27736683810318, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_71",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33621.21",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267873497497.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "4A",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "7/7/2000",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Eunos Crescent Blk 4A",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "30/3/2012",
+          "LANDXADDRESSPOINT": "35895.18",
+          "ADDRESSSTREETNAME": "Eunos Crescent",
+          "ADDRESSPOSTALCODE": "402004",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 4A, Eunos Crescent, Singapore 402004",
+          "INC_CRC": "E0DC5CBB7B498031",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.904260878989007, 1.32033178221424, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_72",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "28428.13",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262153497855.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "79",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/5/1977",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Telok Blangah Drive Blk 79 (Telok Blangah Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "20/8/2005",
+          "LANDXADDRESSPOINT": "25140.71",
+          "ADDRESSSTREETNAME": "Telok Blangah Drive",
+          "ADDRESSPOSTALCODE": "100079",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 79, Telok Blangah Drive, Singapore 100079",
+          "INC_CRC": "47E27FD727EB0084",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.807626838953993, 1.27336828250285, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_73",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "30526.15",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267879560483.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "70",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1976",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "1421.31",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Zion Riverside Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "5/3/2003",
+          "LANDXADDRESSPOINT": "27763.03",
+          "ADDRESSSTREETNAME": "Zion Road",
+          "ADDRESSPOSTALCODE": "247792",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "70, Zion Road, Singapore 247792",
+          "INC_CRC": "41709ABE04DAC74D",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.831189303545997, 1.29234216757957, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_74",
+        "Description": {
+          "AWARDED_DATE": "30/6/2017",
+          "LANDYADDRESSPOINT": "35773.4",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "202C",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "2023",
+          "STATUS Under Construction": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/flats/bus interchange",
+          "NAME": "Woodleigh Village Hawker Centre",
+          "ADDRESSBUILDINGNAME": "Woodleigh Village",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "32314.87",
+          "ADDRESSSTREETNAME": "Woodleigh Link",
+          "ADDRESSPOSTALCODE": "363202",
+          "IMPLEMENTATION_DATE": "21/7/2017",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "7729E118EFF3ED34",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.872090241566994, 1.3397961360031, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_75",
+        "Description": {
+          "AWARDED_DATE": "27/4/2018",
+          "LANDYADDRESSPOINT": "42089.26",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "339",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "2023",
+          "STATUS Under Construction": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/supermarket/shops/flats",
+          "NAME": "Anchorvale Village Hawker Centre",
+          "ADDRESSBUILDINGNAME": "Anchorvale Village",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "34139.8",
+          "ADDRESSSTREETNAME": "Anchorvale Road",
+          "ADDRESSPOSTALCODE": "540339",
+          "IMPLEMENTATION_DATE": "28/5/2018",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "F50A43DB6145A0FA",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.888489618777001, 1.39691417603694, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_76",
+        "Description": {
+          "AWARDED_DATE": "8/8/2019",
+          "LANDYADDRESSPOINT": "44041.27",
+          "PHOTOURL": "",
+          "ADDRESSBLOCKHOUSENUMBER": "",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "2024",
+          "STATUS Under Construction": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "hawker centre/community club/bus interchange/childcare centre/JTC industrial units",
+          "NAME": "Punggol Digital District Hawker Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "36339.12",
+          "ADDRESSSTREETNAME": "Ponggol Seventeenth Avenue",
+          "ADDRESSPOSTALCODE": "",
+          "IMPLEMENTATION_DATE": "21/8/2019",
+          "ADDRESS_MYENV": "",
+          "INC_CRC": "9EA0132CAE64DE82",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.908252830308996, 1.41456688638677, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_77",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32270.57",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267849222112.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "44",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "31/1/1999",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Holland Drive Blk 44 (Holland Drive Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "31/3/2014",
+          "LANDXADDRESSPOINT": "23487.74",
+          "ADDRESSSTREETNAME": "Holland Drive",
+          "ADDRESSPOSTALCODE": "270044",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 44, Holland Drive, Singapore 270044",
+          "INC_CRC": "A15ED2B9558FE12C",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.792773765462996, 1.30811775909823, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_78",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32579.1",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267415509849.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "1",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "Pre-War",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "1512.38",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Holland Village Market and Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "12/12/2005",
+          "LANDXADDRESSPOINT": "23720.25",
+          "ADDRESSSTREETNAME": "Lorong Mambong",
+          "ADDRESSPOSTALCODE": "277700",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "1, Lorong Mambong, Singapore 277700",
+          "INC_CRC": "69A5ED122EAF38CA",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.794862936127004, 1.31090802808558, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_79",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "37326.05",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1259901634108.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "105",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/6/1982",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Hougang Ave 1 Blk 105 (Hougang 105 Hainanese Village Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "11/11/2005",
+          "LANDXADDRESSPOINT": "34317.02",
+          "ADDRESSSTREETNAME": "Hougang Ave 1",
+          "ADDRESSPOSTALCODE": "530105",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 105, Hougang Ave 1, Singapore 530105",
+          "INC_CRC": "47665F144FEA20A5",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.890081064952994, 1.35383739101169, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_80",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "37910.1",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267849628846.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "209",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/9/1983",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Hougang Street 21 Blk 209 (Kovan Hougang Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "24/1/2011",
+          "LANDXADDRESSPOINT": "33860.34",
+          "ADDRESSSTREETNAME": "Hougang Street 21",
+          "ADDRESSPOSTALCODE": "530209",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 209, Hougang Street 21, Singapore 530209",
+          "INC_CRC": "5F6AEDB70E5BFDB0",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.885977616903006, 1.35911942212642, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_81",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "31640.43",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267874223880.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "4A",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "3/1/1969",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Jalan Batu Blk 4A (Blk 4A Jalan Batu Hawker Centre/Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "16/2/2012",
+          "LANDXADDRESSPOINT": "33633.77",
+          "ADDRESSSTREETNAME": "Jalan Batu",
+          "ADDRESSPOSTALCODE": "432004",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 4A, Jalan Batu, Singapore 432004",
+          "INC_CRC": "551478E0E33D084E",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.883940580219999, 1.30241881353449, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_82",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29161.95",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267874698833.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "112",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1/1/1969",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Jalan Bukit Merah Blk 112 (Blk 112 Jalan Bukit Merah Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "28/11/2013",
+          "LANDXADDRESSPOINT": "27186.98",
+          "ADDRESSSTREETNAME": "Jalan Bukit Merah",
+          "ADDRESSPOSTALCODE": "160112",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 112, Jalan Bukit Merah, Singapore 160112",
+          "INC_CRC": "F6CA40B9C1F55859",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.826013285715007, 1.28000481198881, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_83",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29930.23",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267760203.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "6",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "11/10/1974",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Jalan Bukit Merah Blk 6 (ABC Brickworks Market/Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "11/8/2006",
+          "LANDXADDRESSPOINT": "25196.5",
+          "ADDRESSSTREETNAME": "Jalan Bukit Merah",
+          "ADDRESSPOSTALCODE": "150006",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 6, Jalan Bukit Merah, Singapore 150006",
+          "INC_CRC": "D9BD256F984769CE",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.808127999318003, 1.28695275198944, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_84",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "30071.51",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267874440744.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "1",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "21/1/1969",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Jalan Kukoh Blk 1 (Kukoh 21 Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "4/10/2010",
+          "LANDXADDRESSPOINT": "28737.57",
+          "ADDRESSSTREETNAME": "Jalan Kukoh",
+          "ADDRESSPOSTALCODE": "161001",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 1, Jalan Kukoh, Singapore 161001",
+          "INC_CRC": "8943084A09FFC63A",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.839945947185996, 1.28823055540002, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_85",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "36383.57",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1275537901886.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "347",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "17/10/1984",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Jurong East Ave 1 Blk 347 (Yuhua Market and Hawker Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "31/12/2002",
+          "LANDXADDRESSPOINT": "16677.58",
+          "ADDRESSSTREETNAME": "Jurong East Ave 1",
+          "ADDRESSPOSTALCODE": "600347",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 347, Jurong East Ave 1, Singapore 600347",
+          "INC_CRC": "6C864243765870B9",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.731579747132002, 1.34531247026793, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_86",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "36176.73",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265167615307.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "254",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/4/1983",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Jurong East Street 24 Blk 254 (Yuhua Village Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "5/7/2006",
+          "LANDXADDRESSPOINT": "17367.73",
+          "ADDRESSSTREETNAME": "Jurong East Street 24",
+          "ADDRESSPOSTALCODE": "600254",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 254, Jurong East Street 24, Singapore 600254",
+          "INC_CRC": "037A6F1EA418B88F",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.737781231485002, 1.34344213770991, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_87",
+        "Description": {
+          "AWARDED_DATE": "23/9/2015",
+          "LANDYADDRESSPOINT": "35935.62",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/jurong-west-hawker-centre.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "50",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "28/7/2017",
+          "STATUS Under Construction": "",
+          "APPROXIMATE_GFA": "2987",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Jurong West Hawker Centre",
+          "ADDRESSBUILDINGNAME": "Jurong West Hawker Centre",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "12874.19",
+          "ADDRESSSTREETNAME": "Jurong West Street 61",
+          "ADDRESSPOSTALCODE": "648202",
+          "IMPLEMENTATION_DATE": "15/10/2015",
+          "ADDRESS_MYENV": "Blk 50, Jurong West St 61, Singapore 648202",
+          "INC_CRC": "A85BCE9D8344CCD9",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.697404254467003, 1.3412597060095, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_88",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "36862.4",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155040710.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "505",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "16/1/1985",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Jurong West Street 52 Blk 505",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "2/1/2009",
+          "LANDXADDRESSPOINT": "15216.13",
+          "ADDRESSSTREETNAME": "Jurong West Street 52",
+          "ADDRESSPOSTALCODE": "640505",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 505, Jurong West Street 52, Singapore 640505",
+          "INC_CRC": "0AE38DCC13D11E52",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.718447543630006, 1.34964224318434, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_89",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32190.8",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155698415.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "17",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1959",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "2629.19",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Kallang Estate Fresh Market and Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "31/10/2003",
+          "LANDXADDRESSPOINT": "33654.86",
+          "ADDRESSSTREETNAME": "Old Airport Road",
+          "ADDRESSPOSTALCODE": "397972",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "17, Old Airport Road, Singapore 397972",
+          "INC_CRC": "2F0C2533A9564FAF",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.884130183314994, 1.30739616009942, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_90",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29972.02",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262153717849.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "85",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "4/4/1972",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Redhill Lane Blk 85 (Redhill Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "17/6/2005",
+          "LANDXADDRESSPOINT": "26332.89",
+          "ADDRESSSTREETNAME": "Redhill Lane",
+          "ADDRESSPOSTALCODE": "150085",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 85, Redhill Lane, Singapore 150085",
+          "INC_CRC": "1D515CA5BF8C1199",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.818338919994005, 1.28733076703987, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_91",
+        "Description": {
+          "AWARDED_DATE": "17/10/2014",
+          "LANDYADDRESSPOINT": "46846",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/kampung-admiralty-hawker-centre.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "676",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "8/5/2017",
+          "STATUS Existing (new)": "",
+          "APPROXIMATE_GFA": "3440",
+          "INFO_ON_CO_LOCATORS": "studio apartments/supermarket/shops/specialist centre/senior care centre/child care centre/senior activity centre",
+          "NAME": "Kampung Admiralty Hawker Centre",
+          "ADDRESSBUILDINGNAME": "Kampung Admiralty",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "24369.66",
+          "ADDRESSSTREETNAME": "Woodlands Drive 71",
+          "ADDRESSPOSTALCODE": "730676",
+          "IMPLEMENTATION_DATE": "1/4/2014",
+          "ADDRESS_MYENV": "Blk 676, Woodlands Drive 71, Singapore 730676",
+          "INC_CRC": "8E56FA1F3FFB53FC",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.800696448528996, 1.43993283228134, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_92",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "31625.71",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267875360164.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "84",
+          "DESCRIPTION": "Opted out of HUP",
+          "EST_ORIGINAL_COMPLETION_DATE": "23/8/1976",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Marine Parade Central Blk 84 (84 Marine Parade Central Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "36126.46",
+          "ADDRESSSTREETNAME": "Marine Parade Central",
+          "ADDRESSPOSTALCODE": "440084",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 84, Marine Parade Central, Singapore 440084",
+          "INC_CRC": "069C7A0AFC199D59",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.906338526157001, 1.30228513841822, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_93",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32011.65",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262153165514.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "50A",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "3/3/1975",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Marine Terrace Blk 50A (50A Marine Terrace)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "22/12/2008",
+          "LANDXADDRESSPOINT": "37175.19",
+          "ADDRESSSTREETNAME": "Marine Terrace",
+          "ADDRESSPOSTALCODE": "441050",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 50A, Marine Terrace, Singapore 441050",
+          "INC_CRC": "6834B4900CE3CB58",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.915761950556998, 1.30577514781108, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_94",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "47282.71",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262152527264.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "20/21",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "15/9/1975",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Marsiling Lane Blk 20/21",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "2/3/2009",
+          "LANDXADDRESSPOINT": "21755.23",
+          "ADDRESSSTREETNAME": "Marsiling Lane",
+          "ADDRESSPOSTALCODE": "730020",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 20/21, Marsiling Lane, Singapore 730020/730021",
+          "INC_CRC": "F48BB5AA17D51CAD",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.777203165702005, 1.44388181695611, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_95",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29173.83",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155734465.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "1",
+          "DESCRIPTION": "Upgraded prior to HUP",
+          "EST_ORIGINAL_COMPLETION_DATE": "1935",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "3365.392",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Maxwell Food Centre (Kim Hua Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "29280.89",
+          "ADDRESSSTREETNAME": "Kadayanallur Street",
+          "ADDRESSPOSTALCODE": "69184",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "1, Kadayanallur Street, Singapore 069184",
+          "INC_CRC": "FE75522D9D2BF902",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.844827863123001, 1.28011223513205, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_96",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "30625.03",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154581891.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "159",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "12/10/1970",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Mei Chin Road Blk 159 (Mei Chin Road Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "8/5/2009",
+          "LANDXADDRESSPOINT": "24615.11",
+          "ADDRESSSTREETNAME": "Mei Chin Road",
+          "ADDRESSPOSTALCODE": "140159",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 159, Mei Chin Road, Singapore 140159",
+          "INC_CRC": "58C10BCC40715F33",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.802903901115997, 1.29323622090658, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_97",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29713.3",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265168123284.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "32",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1965",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "New Market Road Blk 32 (People's Park Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "27/12/2005",
+          "LANDXADDRESSPOINT": "29030.58",
+          "ADDRESSSTREETNAME": "New Market Road",
+          "ADDRESSPOSTALCODE": "50032",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 32, New Market Road, Singapore 050032",
+          "INC_CRC": "431889D3F61E7C5D",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.842578750106995, 1.28499102169498, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_98",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "34108.62",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/bedok-interchange-hawker-centre.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "208B",
+          "DESCRIPTION": "New Replacement Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "15/11/2014",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "New Upper Changi Road Blk 208B",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "38822.05",
+          "ADDRESSSTREETNAME": "New Upper Changi Road",
+          "ADDRESSPOSTALCODE": "462208",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 208B, New Upper Changi Road, Singapore 462208",
+          "INC_CRC": "03BAD66584E9FC8A",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.930560478230007, 1.32473884451035, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_99",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "34047.74",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262153263293.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "58",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "27/2/1978",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "New Upper Changi Road Blk 58",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "16/9/2008",
+          "LANDXADDRESSPOINT": "39998.6",
+          "ADDRESSSTREETNAME": "New Upper Changi Road",
+          "ADDRESSPOSTALCODE": "461058",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 58, New Upper Changi Road, Singapore 461058",
+          "INC_CRC": "57B99402D52B3692",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.941132372618995, 1.32418782817919, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_100",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32687.91",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155777485.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "500",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1971",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "3252.75",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Newton Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "12/6/2006",
+          "LANDXADDRESSPOINT": "28694.91",
+          "ADDRESSSTREETNAME": "Clemenceau Ave North",
+          "ADDRESSPOSTALCODE": "229495",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "500, Clemenceau Ave North, Singapore 229495",
+          "INC_CRC": "A3E97849375282EC",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.839562687644005, 1.31189235691653, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_101",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32010.44",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155297184.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "861",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "1973",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "3004.63",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "North Bridge Road Market",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "17/10/2005",
+          "LANDXADDRESSPOINT": "31402.43",
+          "ADDRESSSTREETNAME": "North Bridge Road",
+          "ADDRESSPOSTALCODE": "198783",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "861, North Bridge Road, Singapore 198783",
+          "INC_CRC": "3B33AC4CC5C80AFA",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.863891012338001, 1.30576537802761, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_102",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32285.39",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262153198645.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "51",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "17/2/1973",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Old Airport Road Blk 51 (51 Old Airport Road Food Centre and Shopping Mall)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "12/6/2007",
+          "LANDXADDRESSPOINT": "33844.39",
+          "ADDRESSSTREETNAME": "Old Airport Road",
+          "ADDRESSPOSTALCODE": "390051",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 51, Old Airport Road, Singapore 390051",
+          "INC_CRC": "49DC3EB42D0CB0BF",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.885833217726997, 1.30825156309798, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_103",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "28708.93",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155813373.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "121",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1978",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "1115.71",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Pasir Panjang Food Centre",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "20/5/2002",
+          "LANDXADDRESSPOINT": "23335.09",
+          "ADDRESSSTREETNAME": "Pasir Panjang Road",
+          "ADDRESSPOSTALCODE": "118543",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "121, Pasir Panjang Road, Singapore 118543",
+          "INC_CRC": "311FCFFE66613E9B",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.791402660553004, 1.27590752450201, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_104",
+        "Description": {
+          "AWARDED_DATE": "15/7/2015",
+          "LANDYADDRESSPOINT": "39493.21",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/pasir-ris-central-hawker-centre.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "110",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "16/10/2017",
+          "STATUS Existing (new)": "",
+          "APPROXIMATE_GFA": "4771",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Pasir Ris Central Hawker Centre",
+          "ADDRESSBUILDINGNAME": "Pasir Ris Central Hawker Centre",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "41156.94",
+          "ADDRESSSTREETNAME": "Pasir Ris Central",
+          "ADDRESSPOSTALCODE": "519641",
+          "IMPLEMENTATION_DATE": "29/7/2015",
+          "ADDRESS_MYENV": "Blk 110, Pasir Ris Central, Singapore 519641",
+          "INC_CRC": "0EC198F965C801F8",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.951543034782006, 1.37343413973246, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_105",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "31483.66",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267850253199.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "270",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "7/8/1978",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Queen Street Blk 270 (Albert Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "26/11/2009",
+          "LANDXADDRESSPOINT": "30325.21",
+          "ADDRESSSTREETNAME": "Queen Street",
+          "ADDRESSPOSTALCODE": "180270",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 270, Queen Street, Singapore 180270",
+          "INC_CRC": "0906CEDCBAD31312",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.854211645499007, 1.30100146521405, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_106",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "30030.33",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262153664347.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "79",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "1/1/1969",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Redhill Lane Blk 79 (Redhill Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "28/6/2005",
+          "LANDXADDRESSPOINT": "26339.98",
+          "ADDRESSSTREETNAME": "Redhill Lane",
+          "ADDRESSPOSTALCODE": "150079",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 79, Redhill Lane, Singapore 150079",
+          "INC_CRC": "ECAC58C7BB3929B3",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.818402623449003, 1.2878581025663, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_107",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "39376.87",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262155861677.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "590",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "1974",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "884.38",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Sembawang Hills Food Centre (Jalan Leban Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "26/2/2003",
+          "LANDXADDRESSPOINT": "27518.75",
+          "ADDRESSSTREETNAME": "Upper Thomson Road",
+          "ADDRESSPOSTALCODE": "574419",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "590, Upper Thomson Road, Singapore 574419",
+          "INC_CRC": "6CC20791CC952192",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.828994204341996, 1.37238494002145, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_108",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "38356.53",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262156095817.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "49A",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "1957",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "2448.2",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Serangoon Garden Market",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "26/9/2002",
+          "LANDXADDRESSPOINT": "31719.13",
+          "ADDRESSSTREETNAME": "Serangoon Garden Way",
+          "ADDRESSPOSTALCODE": "555945",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "49A, Serangoon Garden Way, Singapore 555945",
+          "INC_CRC": "F3EA4B58E3B63FF8",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.866737484645995, 1.3631571201113, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_109",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "28488.45",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262153608307.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "82",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "30/5/1977",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Telok Blangah Drive Blk 82 (Telok Blangah Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "29/11/2011",
+          "LANDXADDRESSPOINT": "25175.96",
+          "ADDRESSSTREETNAME": "Telok Blangah Drive",
+          "ADDRESSPOSTALCODE": "100082",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 82, Telok Blangah Drive, Singapore 100082",
+          "INC_CRC": "1EB09A22FB8BD4BB",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.807943567416004, 1.27391379857001, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_110",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "28355.97",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267858653663.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "36",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "29/10/1975",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Telok Blangah Rise Blk 36 (Telok Blangah Rise Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "20/10/2010",
+          "LANDXADDRESSPOINT": "26753.38",
+          "ADDRESSSTREETNAME": "Telok Blangah Rise",
+          "ADDRESSPOSTALCODE": "90036",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 36, Telok Blangah Rise, Singapore 090036",
+          "INC_CRC": "336A650EE6B762D3",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.82211725658, 1.27271579716508, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_111",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29724.05",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262156378375.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "30",
+          "DESCRIPTION": "HUP Rebuilding",
+          "EST_ORIGINAL_COMPLETION_DATE": "",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "10630.72",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Tiong Bahru Market",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "10/2/2006",
+          "LANDXADDRESSPOINT": "27892.07",
+          "ADDRESSSTREETNAME": "Seng Poh Road",
+          "ADDRESSPOSTALCODE": "168898",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "30, Seng Poh Road, Singapore 168898",
+          "INC_CRC": "0FAB58D0996CF88C",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.832348785334005, 1.28508825756819, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_112",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "35585.01",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154499803.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "127",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "11/3/1969",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Toa Payoh Lorong 1 Blk 127 (Toa Payoh West Market and Food Court)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "11/12/2003",
+          "LANDXADDRESSPOINT": "29270.15",
+          "ADDRESSSTREETNAME": "Lorong 1 Toa Payoh",
+          "ADDRESSPOSTALCODE": "310127",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 127, Lorong 1 Toa Payoh, Singapore 310127",
+          "INC_CRC": "ED2DB7B7A4CF487C",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.844731621959994, 1.33809268551386, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_113",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "35193.08",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262226848493.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "74",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "9/9/1968",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Toa Payoh Lorong 4 Blk 74 (Toa Payoh Vista Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "1/11/2004",
+          "LANDXADDRESSPOINT": "30078.95",
+          "ADDRESSSTREETNAME": "Lorong 4 Toa Payoh",
+          "ADDRESSPOSTALCODE": "310074",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 74, Lorong 4 Toa Payoh, Singapore 310074",
+          "INC_CRC": "0F387A4AD86AAD3F",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.851999137527002, 1.33454816495637, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_114",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "35627.26",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154305312.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "93",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "19/7/1967",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Toa Payoh Lorong 4 Blk 93",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "20/7/2009",
+          "LANDXADDRESSPOINT": "29802.32",
+          "ADDRESSSTREETNAME": "Lorong 4 Toa Payoh",
+          "ADDRESSPOSTALCODE": "310093",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 93, Lorong 4 Toa Payoh, Singapore 310093",
+          "INC_CRC": "8ED7D817636ABBB7",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.849513484035, 1.3384747524617, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_115",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "35357.91",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267878144152.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "75",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "5/2/1968",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Toa Payoh Lorong 5 Blk 75",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "21/11/2012",
+          "LANDXADDRESSPOINT": "30183.83",
+          "ADDRESSSTREETNAME": "Lorong 5 Toa Payoh",
+          "ADDRESSPOSTALCODE": "310075",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 75, Lorong 5 Toa Payoh, Singapore 310075",
+          "INC_CRC": "83FB95F6510F538F",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.852941556274999, 1.33603882157063, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_116",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "35268.64",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265168256123.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "22",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "2/3/1970",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Toa Payoh Lorong 7 Blk 22 (Kim Keat Palm Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "16/7/2004",
+          "LANDXADDRESSPOINT": "30639.5",
+          "ADDRESSSTREETNAME": "Lorong 7 Toa Payoh",
+          "ADDRESSPOSTALCODE": "310022",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 22, Lorong 7 Toa Payoh, Singapore 310022",
+          "INC_CRC": "E43A2111E04577EC",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.857036007166002, 1.33523145909678, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_117",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "35824.76",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267876959422.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "210",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "27/8/1974",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Toa Payoh Lorong 8 Blk 210",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "30/9/2011",
+          "LANDXADDRESSPOINT": "30345.61",
+          "ADDRESSSTREETNAME": "Lorong 8 Toa Payoh",
+          "ADDRESSPOSTALCODE": "310210",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 210, Lorong 8 Toa Payoh, Singapore 310210",
+          "INC_CRC": "AD6CE850859DDDC3",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.854395279214003, 1.3402608349586, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_118",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33034.67",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262226056435.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "17",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "28/2/1974",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Upper Boon Keng Road Blk 17 (Blk 17 Upper Boon Keng Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "13/1/2009",
+          "LANDXADDRESSPOINT": "32262.61",
+          "ADDRESSSTREETNAME": "Upper Boon Keng Road",
+          "ADDRESSPOSTALCODE": "380017",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 17, Upper Boon Keng Road, Singapore 380017",
+          "INC_CRC": "5A26A7AC50F3A9B5",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.871620273635003, 1.31502804429519, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_119",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "29741.54",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267878882405.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "531A",
+          "DESCRIPTION": "HUP Reconfiguration",
+          "EST_ORIGINAL_COMPLETION_DATE": "28/1/1978",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Upper Cross Street Blk 531A (Hong Lim Food Centre and Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "9/3/2011",
+          "LANDXADDRESSPOINT": "29391.18",
+          "ADDRESSSTREETNAME": "Upper Cross Street",
+          "ADDRESSPOSTALCODE": "51531",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 531A, Upper Cross Street, Singapore 051531",
+          "INC_CRC": "A6069393A97212DA",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.845818885585004, 1.28524640047048, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_120",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32687.74",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265168297394.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "502",
+          "DESCRIPTION": "Not eligible for HUP",
+          "EST_ORIGINAL_COMPLETION_DATE": "19/1/1995",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "West Coast Drive Blk 502 (Ayer Rajah Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "19747.53",
+          "ADDRESSSTREETNAME": "West Coast Drive",
+          "ADDRESSPOSTALCODE": "120502",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 502, West Coast Drive, Singapore 120502",
+          "INC_CRC": "2DBB0A9FC85826E3",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.759166093857999, 1.31188972115897, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_121",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "32678.15",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1265168322420.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "503",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "26/3/1979",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "West Coast Drive Blk 503 (Ayer Rajah Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "15/12/2002",
+          "LANDXADDRESSPOINT": "19812.66",
+          "ADDRESSSTREETNAME": "West Coast Drive",
+          "ADDRESSPOSTALCODE": "120503",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 503, West Coast Drive, Singapore 120503",
+          "INC_CRC": "7A27983404FB5BA2",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.759751321018996, 1.31180301004196, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_122",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33909.85",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154207158.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "90",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "26/8/1976",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Whampoa Drive Blk 90 (Whampoa Drive Makan Place/Whampoa Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "25/10/2007",
+          "LANDXADDRESSPOINT": "30428.25",
+          "ADDRESSSTREETNAME": "Whampoa Drive",
+          "ADDRESSPOSTALCODE": "320090",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 90, Whampoa Drive, Singapore 320090",
+          "INC_CRC": "16F08FA02D2A5DE5",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.855137696534996, 1.32294306204189, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_123",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "33962.78",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1262154257763.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "91/92",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "3/1/1973",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Whampoa Drive Blk 91/92 (Whampoa Drive Makan Place/Whampoa Market)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "25/10/2007",
+          "LANDXADDRESSPOINT": "30309.21",
+          "ADDRESSSTREETNAME": "Whampoa Drive",
+          "ADDRESSPOSTALCODE": "320091",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 91/92, Whampoa Drive, Singapore 320091/320092",
+          "INC_CRC": "38A4F531F9CF7A4C",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.854068062859994, 1.32342175143826, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_124",
+        "Description": {
+          "AWARDED_DATE": "23/10/2015",
+          "LANDYADDRESSPOINT": "45196.73",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/yishun-hawker-centre.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "51",
+          "DESCRIPTION": "New Centre",
+          "EST_ORIGINAL_COMPLETION_DATE": "3/7/2017",
+          "STATUS Existing (new)": "",
+          "APPROXIMATE_GFA": "3364",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Yishun Park Hawker Centre",
+          "ADDRESSBUILDINGNAME": "Yishun Park Hawker Centre",
+          "HUP_COMPLETION_DATE": "",
+          "LANDXADDRESSPOINT": "29271.88",
+          "ADDRESSSTREETNAME": "Yishun Avenue 11",
+          "ADDRESSPOSTALCODE": "768867",
+          "IMPLEMENTATION_DATE": "25/11/2015",
+          "ADDRESS_MYENV": "Blk 51, Yishun Avenue 11, Singapore 768867",
+          "INC_CRC": "2676B659B081726B",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.844747581861, 1.42501763803265, 0.0]
+        }
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "kml_125",
+        "Description": {
+          "AWARDED_DATE": "",
+          "LANDYADDRESSPOINT": "45907.73",
+          "PHOTOURL": "http://www.nea.gov.sg/images/default-source/Hawker-Centres-Division/resize_1267438077554.jpg",
+          "ADDRESSBLOCKHOUSENUMBER": "104/105",
+          "DESCRIPTION": "HUP Standard Upgrading",
+          "EST_ORIGINAL_COMPLETION_DATE": "31/3/1984",
+          "STATUS Existing": "",
+          "APPROXIMATE_GFA": "",
+          "INFO_ON_CO_LOCATORS": "",
+          "NAME": "Yishun Ring Road Blk 104/105 (Chong Pang Market and Food Centre)",
+          "ADDRESSBUILDINGNAME": "",
+          "HUP_COMPLETION_DATE": "4/8/2003",
+          "LANDXADDRESSPOINT": "27467.95",
+          "ADDRESSSTREETNAME": "Yishun Ring Road",
+          "ADDRESSPOSTALCODE": "760104",
+          "IMPLEMENTATION_DATE": "",
+          "ADDRESS_MYENV": "Blk 104/105, Yishun Ring Road, Singapore 760104/760105",
+          "INC_CRC": "A75CB1D5E4C5BBE2",
+          "FMEL_UPD_D": 20221012163049
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [103.828537609942003, 1.43144768831222, 0.0]
+        }
+      }
+    }
+  ]
+}

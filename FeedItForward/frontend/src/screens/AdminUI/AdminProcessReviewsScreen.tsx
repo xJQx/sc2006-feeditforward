@@ -9,11 +9,19 @@ import { usersData } from "../../data/usersData";
 export const AdminProcessReviewsScreen = () => {
   // TODO: fetch data from backend
 
+  const handleSearchReviews = (searchKey: string) => {
+    // TODO: Search for reviews
+    console.log(`Search for reviews with searchKey ${searchKey}`);
+  };
+
   return (
     <div>
       <ScreenTitle title="Process Review" />
       <div className="flex flex-col justify-center mt-12 gap-10">
-        <SearchBar searchItemPlaceholder="reviews" />
+        <SearchBar
+          searchItemPlaceholder="reviews"
+          handleSearch={handleSearchReviews}
+        />
         <ReviewsToProcess reviewsToProcessData={reviewsToProcessData} />
       </div>
     </div>
@@ -31,10 +39,10 @@ const ReviewsToProcess = (props: ReviewsToProcessProps) => {
   return (
     <div className="border-2 border-brand-darkgray rounded-lg max-h-[25rem] min-h-[22rem] overflow-y-auto">
       <ul className="list-none">
-        {reviewsToProcessData.map(user => {
+        {reviewsToProcessData.map(review => {
           return (
-            !user.approved && (
-              <ReviewToProcessItem key={user.userId} {...user} />
+            review.flagged && (
+              <ReviewToProcessItem key={review.userId} {...review} />
             )
           );
         })}

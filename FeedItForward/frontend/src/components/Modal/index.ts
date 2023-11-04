@@ -1,2 +1,5 @@
 export { JobConfirmationModal } from "./JobConfirmationModal";
-export { MapModal } from "./MapModal";
+export { MapHawkerModal } from "./MapHawkerModal";
+export { ModalCloseButton } from "./ModalCloseButton";
+export { MapHawkerSearchModal } from "./MapHawkerSearchModal";
+export { MapWeatherModal } from "./MapWeatherModal";
