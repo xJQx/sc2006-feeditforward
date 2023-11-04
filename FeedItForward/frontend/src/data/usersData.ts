@@ -31,7 +31,20 @@ export const usersData: UserDisplay[] = [
     role: "Hawker",
     email: "jane@gmail.com",
     contactNumber: "62671571",
-    address: "BLK 166 WOODLANDS STREET 13, #01-551",
+    address: "60 Nanyang Cres, Blk 20A #03-02, Singapore 636957",
+    img: {
+      src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=987&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      alt: "profile pic"
+    }
+  },
+  {
+    userId: "4",
+    name: "James",
+    role: "Hawker",
+    email: "james@gmail.com",
+    contactNumber: "6747OOOO",
+    address:
+      "76 Nanyang Drive, N2.1, #02-03, Nanyang Technological University, 637331",
     img: {
       src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=987&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       alt: "profile pic"

@@ -33,7 +33,11 @@ export interface Review {
   reviewId: string;
   userId: string;
   description: string;
-  approved: boolean;
+  rating: number;
+  photos?: string[];
+
+  flagged: boolean;
+  flaggedReason?: string;
 }
 
 interface Geometry {
