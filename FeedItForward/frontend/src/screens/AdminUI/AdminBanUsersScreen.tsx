@@ -8,11 +8,19 @@ import { usersData } from "../../data/usersData";
 export const AdminBanUsersScreen = () => {
   // TODO: fetch data from backend
 
+  const handleSearchUsersToBan = (searchKey: string) => {
+    // TODO: Search for users to ban
+    console.log(`Search for users to ban with searchKey ${searchKey}`);
+  };
+
   return (
     <div>
       <ScreenTitle title="Ban Users" />
       <div className="flex flex-col justify-center mt-12 gap-10">
-        <SearchBar searchItemPlaceholder="user to ban" />
+        <SearchBar
+          searchItemPlaceholder="user to ban"
+          handleSearch={handleSearchUsersToBan}
+        />
         <UserListItems usersData={usersData} />
       </div>
     </div>

@@ -8,11 +8,19 @@ import { userToVerifyData } from "../../data/adminData";
 export const AdminVerifyUsersScreen = () => {
   // TODO: fetch data from backend
 
+  const handleSearchUsersToVerify = (searchKey: string) => {
+    // TODO: Search for users to verify
+    console.log(`Search for users to verify with searchKey ${searchKey}`);
+  };
+
   return (
     <div>
       <ScreenTitle title="Verify User" />
       <div className="flex flex-col justify-center mt-12 gap-10">
-        <SearchBar searchItemPlaceholder="user" />
+        <SearchBar
+          searchItemPlaceholder="user"
+          handleSearch={handleSearchUsersToVerify}
+        />
         <VerifyUserListItems userToVerifyData={userToVerifyData} />
       </div>
     </div>

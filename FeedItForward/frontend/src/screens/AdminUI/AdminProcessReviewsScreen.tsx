@@ -9,11 +9,19 @@ import { usersData } from "../../data/usersData";
 export const AdminProcessReviewsScreen = () => {
   // TODO: fetch data from backend
 
+  const handleSearchReviews = (searchKey: string) => {
+    // TODO: Search for reviews
+    console.log(`Search for reviews with searchKey ${searchKey}`);
+  };
+
   return (
     <div>
       <ScreenTitle title="Process Review" />
       <div className="flex flex-col justify-center mt-12 gap-10">
-        <SearchBar searchItemPlaceholder="reviews" />
+        <SearchBar
+          searchItemPlaceholder="reviews"
+          handleSearch={handleSearchReviews}
+        />
         <ReviewsToProcess reviewsToProcessData={reviewsToProcessData} />
       </div>
     </div>

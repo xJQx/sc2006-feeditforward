@@ -4,7 +4,7 @@ import { useCurrentGeoLocation } from "../../hooks";
 import { MapMarkerUser } from "./MapMarkerUser";
 import useFetch from "../../hooks/useFetch";
 import { Hawker } from "../../utils/schema";
-import { MapHawkerModal } from "../Modal";
+import { MapHawkerModal, MapHawkerSearchModal } from "../Modal";
 import { MapMarkerHawkerIcon } from "./MapMarkerHawkerIcon";
 import { BiSearchAlt } from "react-icons/bi";
 import { TiWeatherCloudy } from "react-icons/ti";
@@ -13,14 +13,17 @@ import toast from "react-hot-toast";
 export const BaseMap = () => {
   const userLocation = useCurrentGeoLocation();
   const fetch = useFetch();
-  const [publicHawkers, setPublicHawkers] = useState<Hawker[]>();
+  const [hawkersList, setHawkersList] = useState<Hawker[]>([]);
   const [hawkerSelected, setHawkerSelected] = useState<Hawker>();
   const [isHawkerModalOpen, setIsHawkerModalOpen] = useState(false);
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
 
   useEffect(() => {
     const getAllPublicHawkers = async () => {
       const res = await fetch.get("/hawkers/public");
-      setPublicHawkers(res);
+      setHawkersList(res);
+
+      // TODO: Add Registered Hawkers
     };
 
     getAllPublicHawkers();
@@ -32,10 +35,6 @@ export const BaseMap = () => {
     setIsHawkerModalOpen(true);
   };
 
-  const handleSearch = () => {
-    // TODO
-    toast("TODO: handleSearch");
-  };
   const handleWeatherQuery = () => {
     // TODO
     toast("TODO: handleWeatherQuery");
@@ -71,7 +70,7 @@ export const BaseMap = () => {
           />
 
           {/* Hawker Markers */}
-          {publicHawkers?.map(hawker => (
+          {hawkersList?.map(hawker => (
             <Marker
               icon={MapMarkerHawkerIcon()}
               key={`${hawker.businessName}-${hawker.geometry.latitude}-${hawker.geometry.longitude}`}
@@ -97,7 +96,7 @@ export const BaseMap = () => {
         <div className="absolute z-20 bottom-[88px] my-2 mx-3 flex gap-1">
           <BiSearchAlt
             className="bg-brand-tertiary opacity-70 p-[2px] w-[24px] h-[24px] rounded-full"
-            onClick={handleSearch}
+            onClick={() => setIsSearchModalOpen(true)}
           />
           <TiWeatherCloudy
             className="bg-brand-tertiary opacity-70 p-[2px] w-[24px] h-[24px] rounded-full"
@@ -105,6 +104,15 @@ export const BaseMap = () => {
           />
         </div>
       )}
+
+      {/* Hawker Search Modal */}
+      <MapHawkerSearchModal
+        hawkersList={hawkersList}
+        isSearchModalOpen={isSearchModalOpen}
+        setIsSearchModalOpen={setIsSearchModalOpen}
+        setHawkerSelected={setHawkerSelected}
+        setIsHawkerModalOpen={setIsHawkerModalOpen}
+      />
 
       {/* Hawker Modal */}
       {hawkerSelected && (

@@ -7,6 +7,7 @@ import { Hawker } from "../../utils/schema";
 import toast from "react-hot-toast";
 import { Button } from "../Button";
 import { useNavigate } from "react-router-dom";
+import { ModalCloseButton } from "./ModalCloseButton";
 
 interface MapHawkerModalProps {
   hawker: Hawker;
@@ -79,12 +80,7 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
         </div>
 
         {/* Close Button */}
-        <div
-          className="absolute right-0 top-0 pt-3 pr-3 text-brand-primary-active"
-          onClick={() => setModalOpen(false)}
-        >
-          <AiOutlineClose />
-        </div>
+        <ModalCloseButton setIsModalOpen={setModalOpen} />
 
         {/* Main Body Content */}
         <div className="flex flex-col py-[12px] px-4">
