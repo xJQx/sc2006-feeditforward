@@ -23,22 +23,22 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
     toast("TODO: Show Directions");
   };
   const handleAddReview = () => {
-    if (hawker.hawkerId === "0") {
+    if (hawker.hawker_id === "0") {
       return toast.error(
-        `Sorry. ${hawker.businessName} is not registered with FeedItForward.`
+        `Sorry. ${hawker.business_name} is not registered with FeedItForward.`
       );
     }
 
-    navigate(`/review/add/${hawker.hawkerId}`);
+    navigate(`/review/add/${hawker.hawker_id}`);
   };
   const handleViewReviews = () => {
-    if (hawker.hawkerId === "0") {
+    if (hawker.hawker_id === "0") {
       return toast.error(
-        `Sorry. ${hawker.businessName} is not registered with FeedItForward.`
+        `Sorry. ${hawker.business_name} is not registered with FeedItForward.`
       );
     }
 
-    navigate(`/reviews/${hawker.hawkerId}`);
+    navigate(`/reviews/${hawker.hawker_id}`);
   };
 
   return (
@@ -69,12 +69,12 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
         <div
           className={`absolute -translate-y-1/2 flex justify-center items-center w-max px-2 py-[1px] text-[12px] font-bold rounded 
             ${
-              hawker.isRegistered
+              hawker.is_registered
                 ? "bg-brand-tertiary-active"
                 : "bg-brand-secondary-active"
             }`}
         >
-          {hawker.isRegistered ? "Registered" : "Public"}
+          {hawker.is_registered ? "Registered" : "Public"}
         </div>
 
         {/* Close Button */}
@@ -84,18 +84,18 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
         <div className="flex flex-col py-[12px] px-4">
           {/* Title - Business Name */}
           <div className="text-center font-bold text-[24px] leading-tight mt-[12px]">
-            {hawker.businessName}
+            {hawker.business_name}
           </div>
 
           {/* Subtitle - Type of Food */}
           <div className="text-center italic text-[12px]">
-            {hawker.foodType}
+            {hawker.food_type}
           </div>
 
           {/* Ratings */}
           <div className="flex flex-row justify-center items-center gap-1 mb-2">
             <div className="font-bold text-[14px]">
-              {hawker.overallRating.toFixed(1)}
+              {hawker.overall_rating.toFixed(1)}
             </div>
             <AiFillStar className="text-[#ffbe10] w-4 h-4" />
             <div className="font-light text-[12px]">
@@ -106,11 +106,11 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
           {/* Image */}
           <img
             src={
-              hawker.img.src
-                ? hawker.img.src
+              hawker.profile_picture
+                ? hawker.profile_picture
                 : "https://placehold.co/600x400/EEE/31343C?text=No Photo"
             }
-            alt={hawker.img.alt}
+            alt={`${hawker.name}'s pic`}
             className="h-[200px] w-full m-auto object-cover rounded-sm"
           />
 
@@ -118,7 +118,7 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
           <div className="flex flex-col mt-3 text-[14px]">
             <div className="flex gap-1">
               <div className="font-bold">Contact No.:</div>
-              <span>{hawker.contactNumber}</span>
+              <span>{hawker.contact_number}</span>
             </div>
             <div className="flex gap-1">
               <div className="font-bold">Email:</div>

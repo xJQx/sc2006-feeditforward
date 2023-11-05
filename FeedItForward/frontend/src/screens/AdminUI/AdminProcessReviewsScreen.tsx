@@ -42,7 +42,7 @@ const ReviewsToProcess = (props: ReviewsToProcessProps) => {
         {reviewsToProcessData.map(review => {
           return (
             review.flagged && (
-              <ReviewToProcessItem key={review.userId} {...review} />
+              <ReviewToProcessItem key={review.user_id} {...review} />
             )
           );
         })}
@@ -52,14 +52,14 @@ const ReviewsToProcess = (props: ReviewsToProcessProps) => {
 };
 
 const ReviewToProcessItem = (props: Review) => {
-  const { reviewId, userId, description } = props;
-  const { name, role, img } = usersData.filter(
-    user => user.userId === userId
+  const { review_id, user_id, description } = props;
+  const { name, role, profile_picture } = usersData.filter(
+    user => user.user_id === user_id
   )[0];
   const navigate = useNavigate();
 
   const handleOnClick = () => {
-    navigate(`/admin/process-review/${reviewId}`);
+    navigate(`/admin/process-review/${review_id}`);
   };
 
   return (
@@ -71,8 +71,12 @@ const ReviewToProcessItem = (props: Review) => {
         {/* Photo */}
         <div className="bg-gray-300 w-14 h-14 rounded-full flex justify-center items-center">
           <img
-            src={img?.src ? img.src : "https://picsum.photos/id/237/200/300"}
-            alt={img?.alt ? img.alt : "profile pic"}
+            src={
+              profile_picture
+                ? profile_picture
+                : "https://picsum.photos/id/237/200/300"
+            }
+            alt={profile_picture ? `${name}'s profile pic` : "profile pic"}
             className="w-12 aspect-square rounded-full object-cover object-center"
           />
         </div>

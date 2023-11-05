@@ -5,7 +5,7 @@ import schemas.user as schemas
 
 
 def get_user_by_id(db: Session, user_id: int):
-    return db.query(models.User).filter(models.User.id == user_id).first()
+    return db.query(models.User).filter(models.User.user_id == user_id).first()
 
 
 def get_all_users(db: Session, skip: int = 0, limit: int = 100):
@@ -13,7 +13,7 @@ def get_all_users(db: Session, skip: int = 0, limit: int = 100):
 
 
 def create_user(db: Session, user: schemas.UserCreate):
-    db_user = models.User(*user)
+    db_user = models.User(**user.model_dump())
     db.add(db_user)
     db.commit()
     db.refresh(db_user)

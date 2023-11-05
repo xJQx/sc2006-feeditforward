@@ -1,6 +1,6 @@
 import json
 
-from schemas.user import Hawker
+from schemas.hawker import Hawker
 
 class UserController:
   def getAllPublicHawkers():
@@ -15,29 +15,26 @@ class UserController:
           hawker_json["properties"]["Description"]["ADDRESSPOSTALCODE"]
         
         hawker: Hawker = {
-          "userId": "0",
+          "user_id": "0",
           "name": "Public Hawker",
           "password": "-",
           "email": "-",
-          "contactNumber": "-",
+          "contact_number": "-",
           "address": address,
-          "img": {
-            "src": hawker_json["properties"]["Description"]["PHOTOURL"],
-            "alt": "photo of hawker center"
-          },
+          "profile_picture":  hawker_json["properties"]["Description"]["PHOTOURL"],
 
           "role": "Hawker",
-          "hawkerId": "0",
-          "overallRating": 5.0,
-          "businessName": hawker_json["properties"]["Description"]["NAME"],
-          "operatingHours": "Unknown",
-          "foodType": "Unknown Food Type",
+          "hawker_id": "0",
+          "overall_rating": 5.0,
+          "business_name": hawker_json["properties"]["Description"]["NAME"],
+          "operating_hours": "Unknown",
+          "food_type": "Unknown Food Type",
           "geometry": {
             "type": hawker_json["properties"]["geometry"]["type"],
             "latitude": hawker_json["properties"]["geometry"]["coordinates"][1],
             "longitude": hawker_json["properties"]["geometry"]["coordinates"][0],
           },
-          "isRegistered": False
+          "is_registered": False
         }
         publicHawkers.append(hawker)
       

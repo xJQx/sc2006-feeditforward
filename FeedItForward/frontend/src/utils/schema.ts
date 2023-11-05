@@ -1,43 +1,37 @@
 /* This file contains schemas of all data models */
 export interface User {
-  userId: string;
+  user_id: string;
   name: string;
   password: string;
   email: string;
   role: Role;
-  contactNumber: string;
+  contact_number: string;
   address: string;
-  img: {
-    src: string;
-    alt: string;
-  };
+  profile_picture: string;
 }
 
 export interface UserDisplay {
-  userId: string;
+  user_id: string;
   name: string;
   email: string;
   role: Role;
-  contactNumber: string;
+  contact_number: string;
   address: string;
-  img: {
-    src: string;
-    alt: string;
-  };
+  profile_picture: string;
 }
 
 export const ROLES = ["Admin", "Consumer", "Hawker", "Driver"] as const;
 export type Role = (typeof ROLES)[number];
 
 export interface Review {
-  reviewId: string;
-  userId: string;
+  review_id: string;
+  user_id: string;
   description: string;
   rating: number;
   photos?: string[];
 
   flagged: boolean;
-  flaggedReason?: string;
+  flagged_reason?: string;
 }
 
 interface Geometry {
@@ -47,12 +41,14 @@ interface Geometry {
 }
 
 export interface Hawker extends UserDisplay {
-  hawkerId: string;
-  businessName: string;
-  foodType: string;
-  operatingHours: string;
-  overallRating: number;
-  reviews?: Review[];
+  hawker_id: string;
+  business_name: string;
+  food_type: string;
+  operating_hours: string;
+  overall_rating: number;
   geometry: Geometry;
-  isRegistered: boolean;
+  is_registered: boolean;
+
+  // hawker_foods: HawkerFood[];
+  reviews?: Review[];
 }

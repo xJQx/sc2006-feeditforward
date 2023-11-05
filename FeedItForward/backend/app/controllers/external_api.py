@@ -2,7 +2,7 @@ import httpx
 import json
 from datetime import datetime, time
 
-class ExternalAPIController():
+class ExternalAPIController:
   def getWeatherForecast24Hr(date: str):
     '''
     @param date: YYY-YMM-DD

@@ -27,7 +27,5 @@ def get_all_users(skip: int = 0,
 
 @router.post("/users/", response_model=user_schemas.User)
 def create_user(user: user_schemas.UserCreate, db: Session = Depends(get_db)):
-    db_user = user_services.get_user_by_id(db, user_id=user.id)
-    if db_user:
-        raise HTTPException(status_code=400, detail="User already exists!")
+    # TODO: check if email already exist
     return user_services.create_user(db=db, user=user)

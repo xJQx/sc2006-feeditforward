@@ -14,12 +14,12 @@ export const AdminProcessSingleReviewScreen = () => {
   useEffect(() => {
     // TODO: Fetch data from Backend
     const review: Review = reviewsToProcessData.filter(
-      review => review.reviewId === reviewId
+      review => review.review_id === reviewId
     )[0];
     setReview(review);
 
     const user: UserDisplay = usersData.filter(
-      user => user.userId === review?.userId
+      user => user.user_id === review?.user_id
     )[0];
     setUser(user);
   }, [reviewId]);
@@ -44,11 +44,15 @@ export const AdminProcessSingleReviewScreen = () => {
             <div className="bg-gray-300 w-12 h-12 rounded-full flex justify-center items-center">
               <img
                 src={
-                  user?.img?.src
-                    ? user?.img.src
+                  user?.profile_picture
+                    ? user?.profile_picture
                     : "https://picsum.photos/id/237/200/300"
                 }
-                alt={user?.img?.alt ? user?.img.alt : "profile pic"}
+                alt={
+                  user?.profile_picture
+                    ? `${user?.profile_picture}'s profile pic`
+                    : "profile pic"
+                }
                 className="w-10 aspect-square rounded-full object-cover object-center"
               />
             </div>
