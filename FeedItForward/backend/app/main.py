@@ -4,7 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from routers import user, food, misc, hawker, weather
-from database import Base, engine, get_db
+from database import Base, engine
 
 app = FastAPI()
 
