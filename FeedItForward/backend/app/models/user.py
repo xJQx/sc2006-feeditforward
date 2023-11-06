@@ -1,7 +1,8 @@
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Enum, ForeignKey
 from sqlalchemy.orm import relationship, Mapped
 
 from database import Base
+from schemas.user import Role
 
 class User(Base):
     __tablename__ = "users"
@@ -13,6 +14,11 @@ class User(Base):
     contact_number = Column(String)
     address = Column(String)
     profile_picture = Column(String)
-    role = Column(String)
+    role = Column(Enum(Role))
+
+    admin: Mapped["Admin"] = relationship("Admin", back_populates="user")
+    consumer: Mapped["Consumer"] = relationship("Consumer", back_populates="user")
+    driver: Mapped["Driver"] = relationship("Driver", back_populates="user")
+    hawker: Mapped["Hawker"] = relationship("Hawker", back_populates="user")
 
     # css_history: Mapped[list["CustomerServiceSupportHistory"]] = relationship("CustomerServiceSupportHistory", back_populates="user")

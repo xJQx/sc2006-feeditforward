@@ -3,7 +3,7 @@ from typing import Union
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from routers import auth, user, food, misc, hawker, weather
+from routers import auth, user, admin, consumer, driver, food, misc, hawker, weather
 from database import Base, engine
 
 app = FastAPI()
@@ -22,6 +22,9 @@ app.add_middleware(
 
 app.include_router(auth.router)
 app.include_router(user.router)
+app.include_router(admin.router)
+app.include_router(consumer.router)
+app.include_router(driver.router)
 app.include_router(food.router)
 app.include_router(misc.router)
 app.include_router(hawker.router)

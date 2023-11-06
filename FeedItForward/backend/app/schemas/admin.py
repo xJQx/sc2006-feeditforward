@@ -1,10 +1,20 @@
-from .user import User, UserCreate
+from pydantic import BaseModel
 
-class AdminCreate(UserCreate):
-    pass
+from .user import User, UserCreate, UserUpdate, Role
 
-class Admin(User):
+class Admin(BaseModel):
     admin_id: int
+    
+    user_id: int
+    user: User
 
     class Config:
         orm_mode = True
+
+class AdminCreate(UserCreate):
+    role: Role = Role.ADMIM
+    pass
+
+class AdminUpdate(UserUpdate):
+    admin_id: int
+    pass
