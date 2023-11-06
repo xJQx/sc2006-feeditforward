@@ -1,11 +1,12 @@
 import httpx
 import json
 from datetime import datetime, time
+from fastapi import HTTPException
 
 class ExternalAPIController:
   def getWeatherForecast24Hr(date: str):
     '''
-    @param date: YYY-YMM-DD
+    @param date: YYYY-YMM-DD
     '''
     # weatherApi for new day only updates after 6am in the morning. So `day-1` to get the latest weather forecast
     if datetime.now().time() < time(6,0,0):
@@ -34,6 +35,9 @@ class ExternalAPIController:
         "generalForecast": latest_weather_json["general"]["forecast"],
         "periods": periods
       }
+
+      if weather_data is None:
+        raise HTTPException(status_code=404, detail="24 Hour Weather Forecast not available")
 
       return weather_data
 
@@ -76,5 +80,8 @@ class ExternalAPIController:
           },
         ]
       }
+
+      if weather_data_4_day is None:
+        raise HTTPException(status_code=404, detail="4 Day Weather Forecast not available")
 
       return weather_data_4_day
