@@ -1,5 +1,5 @@
 import React from "react";
-import { ROLES } from "../../utils/schema";
+import { ROLES } from "../../schemas/user";
 
 interface FormSelectProps {
   label: string;
@@ -22,7 +22,9 @@ export const FormSelect = (props: FormSelectProps) => {
         className="w-full border border-brand-darkgray text-[16px] px-3 py-2 rounded-md"
       >
         {ROLES.map(role => (
-          <option key={role} value={role}>{role}</option>
+          <option key={role} value={role}>
+            {role}
+          </option>
         ))}
       </select>
     </div>

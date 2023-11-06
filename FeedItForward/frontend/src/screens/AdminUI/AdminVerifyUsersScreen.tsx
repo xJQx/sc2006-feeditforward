@@ -1,7 +1,7 @@
 import React from "react";
 import { ScreenTitle } from "../../components";
 import { SearchBar } from "../../components";
-import { UserDisplay } from "../../utils/schema";
+import { UserDisplay } from "../../schemas/user";
 import { useNavigate } from "react-router-dom";
 import { userToVerifyData } from "../../data/adminData";
 

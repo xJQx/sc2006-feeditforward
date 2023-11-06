@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { useCurrentGeoLocation } from "../../hooks";
 import { MapMarkerUser } from "./MapMarkerUser";
 import useFetch from "../../hooks/useFetch";
-import { Hawker } from "../../utils/schema";
+import { Hawker } from "../../schemas/hawker";
 import {
   MapHawkerModal,
   MapHawkerSearchModal,

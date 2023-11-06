@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { SearchBar } from "../SearchBar";
 import { GoDotFill } from "react-icons/go";
 import { simpleSearch } from "../../utils/search";
-import { Hawker } from "../../utils/schema";
+import { Hawker } from "../../schemas/hawker";
 import { ModalCloseButton } from "./ModalCloseButton";
 
 interface MapHawkerSearchModalProps {

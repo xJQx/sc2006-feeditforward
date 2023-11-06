@@ -10,7 +10,7 @@ import {
 } from "../../components";
 import toast from "react-hot-toast";
 import { useAuthContext } from "../../contexts/AuthContext";
-import { UserDisplay } from "../../utils/schema";
+import { UserDisplay } from "../../schemas/user";
 import { usersData } from "../../data/usersData";
 
 export const LoginScreen = () => {

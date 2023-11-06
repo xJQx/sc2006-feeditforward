@@ -1,5 +1,5 @@
 import React from "react";
-import { UserDisplay } from "../utils/schema";
+import { UserDisplay } from "../schemas/user";
 
 interface AdminUserDisplayCardProps {
   user: UserDisplay;

@@ -7,7 +7,7 @@ import {
 } from "../../components";
 import { useParams } from "react-router-dom";
 import { userToVerifyData } from "../../data/adminData";
-import { UserDisplay } from "../../utils/schema";
+import { UserDisplay } from "../../schemas/user";
 
 export const AdminVerifySingleUserScreen = () => {
   let { userId } = useParams();

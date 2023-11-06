@@ -1,7 +1,7 @@
 import React from "react";
 import { ScreenTitle } from "../../components";
 import { SearchBar } from "../../components";
-import { Review } from "../../utils/schema";
+import { Review } from "../../schemas/review";
 import { useNavigate } from "react-router-dom";
 import { reviewsToProcessData } from "../../data/adminData";
 import { usersData } from "../../data/usersData";

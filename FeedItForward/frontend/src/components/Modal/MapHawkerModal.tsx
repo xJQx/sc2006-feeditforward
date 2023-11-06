@@ -2,7 +2,7 @@ import React from "react";
 import Modal from "react-modal";
 import { AiFillStar } from "react-icons/ai";
 import { BiSolidDirectionRight } from "react-icons/bi";
-import { Hawker } from "../../utils/schema";
+import { Hawker } from "../../schemas/hawker";
 import toast from "react-hot-toast";
 import { Button } from "../Button";
 import { useNavigate } from "react-router-dom";

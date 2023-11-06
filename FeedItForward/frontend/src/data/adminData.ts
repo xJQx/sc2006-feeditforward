@@ -1,4 +1,5 @@
-import { Review, UserDisplay } from "../utils/schema";
+import { UserDisplay } from "../schemas/user";
+import { Review } from "../schemas/review";
 import { usersData } from "./usersData";
 
 export const userToVerifyData: UserDisplay[] = usersData;

@@ -1,4 +1,4 @@
-import { Hawker } from "../utils/schema";
+import { Hawker } from "../schemas/hawker";
 
 export const hawkersData: Hawker[] = [
   {

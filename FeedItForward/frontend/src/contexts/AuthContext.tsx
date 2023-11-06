@@ -6,7 +6,7 @@ import React, {
   useState,
   useEffect
 } from "react";
-import { UserDisplay } from "../utils/schema";
+import { UserDisplay } from "../schemas/user";
 
 // Define context type
 interface IAuthContext {

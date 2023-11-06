@@ -1,4 +1,4 @@
-import { UserDisplay } from "../utils/schema";
+import { UserDisplay } from "../schemas/user";
 
 export const usersData: UserDisplay[] = [
   {

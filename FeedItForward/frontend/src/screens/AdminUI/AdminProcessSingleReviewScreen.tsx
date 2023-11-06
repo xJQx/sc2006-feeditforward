@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Button, ScreenTitle } from "../../components";
 import { useNavigate, useParams } from "react-router-dom";
 import { reviewsToProcessData } from "../../data/adminData";
-import { Review, UserDisplay } from "../../utils/schema";
+import { UserDisplay } from "../../schemas/user";
+import { Review } from "../../schemas/review";
 import { usersData } from "../../data/usersData";
 
 export const AdminProcessSingleReviewScreen = () => {
