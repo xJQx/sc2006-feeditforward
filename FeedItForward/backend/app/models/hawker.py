@@ -19,4 +19,4 @@ class Hawker(Base):
     user: Mapped["User"] = relationship("User", back_populates="hawker")
 
     leftover_foods: Mapped[list["LeftoverFood"]] = relationship("LeftoverFood", back_populates="hawker")
-    # reviews: Mapped[list["Review"]] = relationship("Review", back_populates="hawker")
+    reviews: Mapped[list["Review"]] = relationship("Review", back_populates="hawker")

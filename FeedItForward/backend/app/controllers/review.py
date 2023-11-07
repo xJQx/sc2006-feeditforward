@@ -17,6 +17,12 @@ class ReviewController:
         if review is None:
             raise HTTPException(status_code=404, detail="No review found for queried consumer id")
         return review
+    
+    def getReviewsByHawkerId(db: Session, hawker_id: int):
+        review = review_services.get_reviews_by_hawker_id(db, hawker_id=hawker_id)
+        if review is None:
+            raise HTTPException(status_code=404, detail="No review found for queried hawker id")
+        return review
 
     def getAllReviews(db: Session, skip: int, limit: int):
         reviews = review_services.get_all_reviews(db, skip=skip, limit=limit)

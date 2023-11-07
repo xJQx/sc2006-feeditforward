@@ -16,3 +16,6 @@ class Review(Base):
 
     consumer_id = Column(Integer, ForeignKey('consumers.consumer_id'))
     consumer: Mapped["Consumer"] = relationship("Consumer", back_populates="reviews")
+
+    hawker_id = Column(Integer, ForeignKey('hawkers.hawker_id'))
+    hawker: Mapped["Hawker"] = relationship("Hawker", back_populates="reviews")

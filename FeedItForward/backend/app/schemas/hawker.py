@@ -3,7 +3,6 @@ from typing import Optional
 
 from .user import User, UserCreate, UserUpdate, Role
 from .misc import Geometry
-from .review import Review
 
 class Hawker(BaseModel):
     hawker_id: int
@@ -16,8 +15,6 @@ class Hawker(BaseModel):
 
     user_id: int
     user: User
-
-    # reviews: list[Review] = []
 
     class Config:
         orm_mode = True

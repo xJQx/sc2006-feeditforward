@@ -22,6 +22,10 @@ async def get_review_by_review_id(review_id: str, db: Session = Depends(get_db))
 async def get_reviews_by_consumer_id(consumer_id: str, db: Session = Depends(get_db)):
     return ReviewController.getReviewsByConsumerId(db, consumer_id)
 
+@router.get('/reviews/hawkerid/{hawker_id}', response_model=list[review_schemas.Review])
+async def get_reviews_by_hawker_id(hawker_id: str, db: Session = Depends(get_db)):
+    return ReviewController.getReviewsByHawkerId(db, hawker_id)
+
 @router.post("/review/new", response_model=review_schemas.Review)
 def create_review(review: review_schemas.ReviewCreate, db: Session = Depends(get_db)):
     return ReviewController.createReview(db, review)
