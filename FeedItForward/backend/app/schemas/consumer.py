@@ -2,7 +2,6 @@ from pydantic import BaseModel
 from typing import Optional
 
 from .user import User, UserCreate, UserUpdate, Role
-from .review import Review
 from .request import FoodRequest, PriorityRequest
 
 class Consumer(BaseModel):
@@ -13,7 +12,6 @@ class Consumer(BaseModel):
     user: User
 
     # food_requests: list[FoodRequest] = []
-    # reviews: list[Review] = []
     # priority_request: list[PriorityRequest] = []
 
     class Config:

@@ -1,18 +1,35 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from typing import Optional
 
-class ReviewBase(BaseModel):
-    user_id: int
-    description: int
-    rating: int
+from .consumer import Consumer
+
+class Review(BaseModel):
+    review_id: int
+    description: str
+    rating: float
     photos: list[str]
     flagged: bool
+    flagged_reason: Optional[str] = ""
 
-class Review(ReviewBase):
-    review_id: int
-    flaggedReason: str
+    consumer_id: int
+    consumer: Consumer
 
     class Config:
         orm_mode = True
 
-class ReviewCreate(ReviewBase):
-    flaggedReason: str
+class ReviewCreate(BaseModel):
+    description: str
+    rating: float
+    photos: list[str]
+
+    consumer_id: int
+
+class ReviewUpdate(BaseModel):
+    review_id: int
+    description: str
+    rating: float
+    photos: list[str]
+    flagged: bool
+    flagged_reason: str
+
+    consumer_id: int
