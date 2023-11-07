@@ -2,7 +2,7 @@ import { UserDisplay } from "../schemas/user";
 
 export const usersData: UserDisplay[] = [
   {
-    user_id: "1",
+    user_id: 1,
     name: "John",
     role: "Consumer",
     email: "john@gmail.com",
@@ -12,7 +12,7 @@ export const usersData: UserDisplay[] = [
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=987&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    user_id: "2",
+    user_id: 2,
     name: "Tess",
     role: "Driver",
     email: "tess@gmail.com",
@@ -22,7 +22,7 @@ export const usersData: UserDisplay[] = [
       "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?auto=format&fit=crop&q=80&w=987&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    user_id: "3",
+    user_id: 3,
     name: "Jane",
     role: "Hawker",
     email: "jane@gmail.com",
@@ -32,7 +32,7 @@ export const usersData: UserDisplay[] = [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=987&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
-    user_id: "4",
+    user_id: 4,
     name: "James",
     role: "Hawker",
     email: "james@gmail.com",

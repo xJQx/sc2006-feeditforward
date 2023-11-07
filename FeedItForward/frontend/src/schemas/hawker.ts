@@ -1,9 +1,9 @@
 import { Review } from "./review";
-import { UserDisplay } from "./user";
+import { UserCreate, UserDisplay, UserUpdate } from "./user";
 import { Geometry } from "./misc";
 
-export interface Hawker extends UserDisplay {
-  hawker_id: string;
+export interface Hawker {
+  hawker_id: number;
   business_name: string;
   food_type: string;
   operating_hours: string;
@@ -11,6 +11,24 @@ export interface Hawker extends UserDisplay {
   geometry: Geometry;
   is_registered: boolean;
 
+  user_id: number;
+  user: UserDisplay;
+
   // hawker_foods: HawkerFood[];
   reviews?: Review[];
+}
+
+export interface HawkerCreate extends UserCreate {
+  business_name: string;
+  operating_hours: string;
+  food_type: string;
+  geometry: Geometry;
+}
+
+export interface HawkerUpdate extends UserUpdate {
+  hawker_id: number;
+  business_name: string;
+  operating_hours: string;
+  food_type: string;
+  geometry: Geometry;
 }

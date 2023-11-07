@@ -13,7 +13,7 @@ export interface User {
 }
 
 export interface UserDisplay {
-  user_id: string;
+  user_id: number;
   name: string;
   email: string;
   role: Role;

@@ -1,6 +1,6 @@
 export interface Review {
-  review_id: string;
-  user_id: string;
+  review_id: number;
+  user_id: number;
   description: string;
   rating: number;
   photos?: string[];

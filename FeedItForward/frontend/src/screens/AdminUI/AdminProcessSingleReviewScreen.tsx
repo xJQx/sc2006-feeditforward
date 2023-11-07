@@ -15,7 +15,7 @@ export const AdminProcessSingleReviewScreen = () => {
   useEffect(() => {
     // TODO: Fetch data from Backend
     const review: Review = reviewsToProcessData.filter(
-      review => review.review_id === reviewId
+      review => review.review_id.toString() === reviewId
     )[0];
     setReview(review);
 

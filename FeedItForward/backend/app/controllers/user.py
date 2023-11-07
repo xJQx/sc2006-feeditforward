@@ -39,16 +39,19 @@ class UserController:
           hawker_json["properties"]["Description"]["ADDRESSPOSTALCODE"]
         
         hawker: hawker_schemas.Hawker = {
-          "user_id": "0",
-          "name": "Public Hawker",
-          "password": "-",
-          "email": "-",
-          "contact_number": "-",
-          "address": address,
-          "profile_picture":  hawker_json["properties"]["Description"]["PHOTOURL"],
+          "user_id": 0,
+          "user": {
+            "user_id": 0,
+            "name": "Public Hawker",
+            "password": "-",
+            "email": "-",
+            "contact_number": "-",
+            "address": address,
+            "profile_picture":  hawker_json["properties"]["Description"]["PHOTOURL"],
+            "role": user_schemas.Role.HAWKER,
+          },
 
-          "role": "Hawker",
-          "hawker_id": "0",
+          "hawker_id": 0,
           "overall_rating": 5.0,
           "business_name": hawker_json["properties"]["Description"]["NAME"],
           "operating_hours": "Unknown",

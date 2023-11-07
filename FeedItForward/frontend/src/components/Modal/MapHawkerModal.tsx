@@ -23,7 +23,7 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
     toast("TODO: Show Directions");
   };
   const handleAddReview = () => {
-    if (hawker.hawker_id === "0") {
+    if (hawker.hawker_id === 0) {
       return toast.error(
         `Sorry. ${hawker.business_name} is not registered with FeedItForward.`
       );
@@ -32,7 +32,7 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
     navigate(`/review/add/${hawker.hawker_id}`);
   };
   const handleViewReviews = () => {
-    if (hawker.hawker_id === "0") {
+    if (hawker.hawker_id === 0) {
       return toast.error(
         `Sorry. ${hawker.business_name} is not registered with FeedItForward.`
       );
@@ -106,11 +106,11 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
           {/* Image */}
           <img
             src={
-              hawker.profile_picture
-                ? hawker.profile_picture
+              hawker.user.profile_picture
+                ? hawker.user.profile_picture
                 : "https://placehold.co/600x400/EEE/31343C?text=No Photo"
             }
-            alt={`${hawker.name}'s pic`}
+            alt={`${hawker.user.name}'s pic`}
             className="h-[200px] w-full m-auto object-cover rounded-sm"
           />
 
@@ -118,16 +118,16 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
           <div className="flex flex-col mt-3 text-[14px]">
             <div className="flex gap-1">
               <div className="font-bold">Contact No.:</div>
-              <span>{hawker.contact_number}</span>
+              <span>{hawker.user.contact_number}</span>
             </div>
             <div className="flex gap-1">
               <div className="font-bold">Email:</div>
-              <span>{hawker.email}</span>
+              <span>{hawker.user.email}</span>
             </div>
             <div id="address">
               <span className="font-bold">Address:</span>
               <span className="ml-1 leading-tight text-[12px]">
-                {hawker.address}
+                {hawker.user.address}
               </span>
               <span
                 className="ml-1 translate-y-[3px] inline-block"
