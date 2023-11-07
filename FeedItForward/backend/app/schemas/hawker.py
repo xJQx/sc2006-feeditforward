@@ -2,7 +2,6 @@ from pydantic import BaseModel
 from typing import Optional
 
 from .user import User, UserCreate, UserUpdate, Role
-from .food import HawkerFood
 from .misc import Geometry
 from .review import Review
 
@@ -18,7 +17,6 @@ class Hawker(BaseModel):
     user_id: int
     user: User
 
-    # hawker_foods: list[HawkerFood] = []
     # reviews: list[Review] = []
 
     class Config:
@@ -30,8 +28,6 @@ class HawkerCreate(UserCreate):
     operating_hours: str
     food_type: str
     geometry: Geometry
-    
-    # hawker_foods: list[HawkerFood]
 
 class HawkerUpdate(UserUpdate):
     hawker_id: int
@@ -39,5 +35,3 @@ class HawkerUpdate(UserUpdate):
     operating_hours: str
     food_type: str
     geometry: Geometry
-    
-    # hawker_foods: list[HawkerFood]

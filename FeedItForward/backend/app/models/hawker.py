@@ -18,5 +18,5 @@ class Hawker(Base):
     user_id = Column(Integer, ForeignKey("users.user_id"))
     user: Mapped["User"] = relationship("User", back_populates="hawker")
 
-    # hawker_foods: Mapped[list["HawkerFood"]] = relationship("HawkerFood", back_populates="hawker")
+    leftover_foods: Mapped[list["LeftoverFood"]] = relationship("LeftoverFood", back_populates="hawker")
     # reviews: Mapped[list["Review"]] = relationship("Review", back_populates="hawker")
