@@ -14,5 +14,5 @@ class Consumer(Base):
     user: Mapped["User"] = relationship("User", back_populates="consumer")
 
     reviews: Mapped[list["Review"]] = relationship("Review", back_populates="consumer")
-    # food_requests: Mapped[list["FoodRequest"]] = relationship("FoodRequest", back_populates="consumer")
+    pickup_jobs: Mapped[list["PickupJob"]] = relationship("PickupJob", back_populates="consumer")
     # priority_request: Mapped["PriorityRequest"] = relationship("PriorityRequest", back_populates="consumer")
