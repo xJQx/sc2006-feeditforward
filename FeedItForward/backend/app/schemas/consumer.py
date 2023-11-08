@@ -2,7 +2,6 @@ from pydantic import BaseModel
 from typing import Optional
 
 from .user import User, UserCreate, UserUpdate, Role
-from .request import FoodRequest, PriorityRequest
 
 class Consumer(BaseModel):
     consumer_id: int
@@ -10,9 +9,6 @@ class Consumer(BaseModel):
 
     user_id: int
     user: User
-
-    # food_requests: list[FoodRequest] = []
-    # priority_request: list[PriorityRequest] = []
 
     class Config:
         orm_mode = True

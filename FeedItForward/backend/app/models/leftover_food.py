@@ -18,4 +18,3 @@ class LeftoverFood(Base):
     hawker: Mapped["Hawker"] = relationship("Hawker", back_populates="leftover_foods")
 
     pickup_jobs: Mapped[list["PickupJob"]] = relationship("PickupJob", back_populates="leftover_food")
-    # food_requests: Mapped[list["FoodRequest"]] = relationship("FoodRequest", back_populates="availability")

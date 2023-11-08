@@ -15,4 +15,3 @@ class Driver(Base):
     user: Mapped["User"] = relationship("User", back_populates="driver")
     
     pickup_jobs: Mapped[list["PickupJob"]] = relationship("PickupJob", back_populates="driver")
-    # food_requests: Mapped[list["FoodRequest"]] = relationship("FoodRequest", back_populates="driver")

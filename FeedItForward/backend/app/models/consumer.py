@@ -15,4 +15,4 @@ class Consumer(Base):
 
     reviews: Mapped[list["Review"]] = relationship("Review", back_populates="consumer")
     pickup_jobs: Mapped[list["PickupJob"]] = relationship("PickupJob", back_populates="consumer")
-    # priority_request: Mapped["PriorityRequest"] = relationship("PriorityRequest", back_populates="consumer")
+    priority_requests: Mapped[list["PriorityRequest"]] = relationship("PriorityRequest", back_populates="consumer")

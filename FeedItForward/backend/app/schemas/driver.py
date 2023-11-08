@@ -1,7 +1,6 @@
 from pydantic import BaseModel
 
 from .user import User, UserCreate, UserUpdate, Role
-from .request import FoodRequest
 
 class Driver(BaseModel):
     driver_id: int
@@ -10,8 +9,6 @@ class Driver(BaseModel):
 
     user_id: int
     user: User
-
-    # food_requests: list[FoodRequest] = []
 
     class Config:
         orm_mode = True
