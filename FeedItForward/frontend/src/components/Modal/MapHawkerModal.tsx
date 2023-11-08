@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Modal from "react-modal";
 import { AiFillStar } from "react-icons/ai";
 import { BiSolidDirectionRight } from "react-icons/bi";
@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { Button } from "../Button";
 import { useNavigate } from "react-router-dom";
 import { ModalCloseButton } from "./ModalCloseButton";
+import { reviewData } from "../../data/reviewData";
 
 interface MapHawkerModalProps {
   hawker: Hawker;
@@ -17,6 +18,11 @@ interface MapHawkerModalProps {
 export const MapHawkerModal = (props: MapHawkerModalProps) => {
   const { hawker, isModalOpen, setModalOpen } = props;
   const navigate = useNavigate();
+
+  // To Remove
+  const hawkerReviewsCount = reviewData.filter(
+    review => review.hawker_id === hawker.hawker_id
+  ).length;
 
   const handleDirectionOnClick = () => {
     // TODO
@@ -99,7 +105,7 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
             </div>
             <AiFillStar className="text-[#ffbe10] w-4 h-4" />
             <div className="font-light text-[12px]">
-              ({hawker.reviews ? `${hawker.reviews.length}+` : 0})
+              ({hawkerReviewsCount ? `${hawkerReviewsCount}+` : 0})
             </div>
           </div>
 

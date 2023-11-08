@@ -20,7 +20,7 @@ export const AdminProcessSingleReviewScreen = () => {
     setReview(review);
 
     const user: UserDisplay = usersData.filter(
-      user => user.user_id === review?.user_id
+      user => user.user_id === review?.consumer.user_id
     )[0];
     setUser(user);
   }, [reviewId]);

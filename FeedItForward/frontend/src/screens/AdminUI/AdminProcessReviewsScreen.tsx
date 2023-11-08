@@ -42,7 +42,7 @@ const ReviewsToProcess = (props: ReviewsToProcessProps) => {
         {reviewsToProcessData.map(review => {
           return (
             review.flagged && (
-              <ReviewToProcessItem key={review.user_id} {...review} />
+              <ReviewToProcessItem key={review.consumer_id} {...review} />
             )
           );
         })}
@@ -52,9 +52,9 @@ const ReviewsToProcess = (props: ReviewsToProcessProps) => {
 };
 
 const ReviewToProcessItem = (props: Review) => {
-  const { review_id, user_id, description } = props;
+  const { review_id, consumer, description } = props;
   const { name, role, profile_picture } = usersData.filter(
-    user => user.user_id === user_id
+    user => user.user_id === consumer.user_id
   )[0];
   const navigate = useNavigate();
 

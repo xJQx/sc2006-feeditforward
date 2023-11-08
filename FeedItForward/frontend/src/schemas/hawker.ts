@@ -13,9 +13,6 @@ export interface Hawker {
 
   user_id: number;
   user: UserDisplay;
-
-  // hawker_foods: HawkerFood[];
-  reviews?: Review[];
 }
 
 export interface HawkerCreate extends UserCreate {

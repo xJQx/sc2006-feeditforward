@@ -19,22 +19,6 @@ export const hawkersData: Hawker[] = [
     food_type: "Modern Mala",
     operating_hours: "9am - 5pm",
     overall_rating: 4.4,
-    reviews: [
-      {
-        review_id: 1,
-        flagged: false,
-        user_id: 1,
-        description: "Delicious!",
-        rating: 4.4
-      },
-      {
-        review_id: 2,
-        flagged: false,
-        user_id: 2,
-        description: "Highly recommended :)",
-        rating: 4.4
-      }
-    ],
     geometry: {
       type: "Point",
       latitude: 1.35397,
@@ -61,22 +45,6 @@ export const hawkersData: Hawker[] = [
     food_type: "Cai Fan",
     operating_hours: "8am - 8pm",
     overall_rating: 3.8,
-    reviews: [
-      {
-        review_id: 3,
-        flagged: false,
-        user_id: 1,
-        description: "Expensive...",
-        rating: 3.8
-      },
-      {
-        review_id: 4,
-        flagged: false,
-        user_id: 2,
-        description: "Portion is quite big",
-        rating: 3.8
-      }
-    ],
     geometry: {
       type: "Point",
       latitude: 1.34713,
