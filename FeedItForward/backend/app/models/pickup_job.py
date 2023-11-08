@@ -13,6 +13,7 @@ class PickupJob(Base):
     end_location = Column(String)
     description = Column(String)
     status = Column(Enum(PickupJobStatus))
+    photo_proofs = Column(String)
 
     leftover_food_id = Column(Integer, ForeignKey('leftover_foods.leftover_food_id'))
     leftover_food: Mapped["LeftoverFood"] = relationship("LeftoverFood", back_populates="pickup_jobs")

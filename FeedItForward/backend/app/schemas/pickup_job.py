@@ -12,14 +12,14 @@ class PickupJobStatus(Enum):
     IN_PROGRESS = "In Progress"
     COMPLETED = "Completed"
 
-class PickupJobBase(BaseModel):
+class PickupJob(BaseModel):
+    pickup_job_id: int
+
     start_location: Geometry
     end_location: Geometry
     description: str
     status: PickupJobStatus
-
-class PickupJob(PickupJobBase):
-    pickup_job_id: int
+    photo_proofs: list[str]
 
     leftover_food_id: int
     leftover_food: LeftoverFood
@@ -33,10 +33,21 @@ class PickupJob(PickupJobBase):
     class Config:
         orm_mode = True
 
-class PickupJobCreate(PickupJobBase):
+class PickupJobCreate(BaseModel):
+    start_location: Geometry
+    end_location: Geometry
+    description: str
+    status: PickupJobStatus
+
     leftover_food_id: int
     consumer_id: int
 
-class PickupJobUpdate(PickupJobBase):
+class PickupJobUpdate(BaseModel):
     pickup_job_id: int
+    start_location: Geometry
+    end_location: Geometry
+    description: str
+    status: PickupJobStatus
+    photo_proofs: list[str]
+
     driver_id: int

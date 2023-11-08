@@ -11,53 +11,64 @@ from models.leftover_food import LeftoverFood
 def get_pickup_job_by_pickup_job_id(db: Session, pickup_job_id: int):
     db_pickup_job = db.query(PickupJob).filter(PickupJob.pickup_job_id == pickup_job_id).first()
     
-    # convert geometry json to dict
     if db_pickup_job:
+        # convert geometry json to dict
         db_pickup_job.start_location = json.loads(db_pickup_job.start_location)
         db_pickup_job.end_location = json.loads(db_pickup_job.end_location)
 
         if db_pickup_job.leftover_food and db_pickup_job.leftover_food.hawker:
             db_pickup_job.leftover_food.hawker.geometry = json.loads(db_pickup_job.leftover_food.hawker.geometry)
-
+        
+        # Convert photo_proofs to array
+        db_pickup_job.photo_proofs = db_pickup_job.photo_proofs.split(",") if db_pickup_job.photo_proofs else []
 
     return db_pickup_job
 
 def get_pickup_jobs_by_driver_id(db: Session, driver_id: int):
     db_pickup_jobs = db.query(PickupJob).filter(PickupJob.driver_id == driver_id)
 
-    # convert geometry json to dict
     for db_pickup_job in db_pickup_jobs:
+        # convert geometry json to dict
         db_pickup_job.start_location = json.loads(db_pickup_job.start_location)
         db_pickup_job.end_location = json.loads(db_pickup_job.end_location)
 
         if db_pickup_job.leftover_food and db_pickup_job.leftover_food.hawker and not isinstance(db_pickup_job.leftover_food.hawker.geometry, dict):
             db_pickup_job.leftover_food.hawker.geometry = json.loads(db_pickup_job.leftover_food.hawker.geometry)
+        
+        # Convert photo_proofs to array
+        db_pickup_job.photo_proofs = db_pickup_job.photo_proofs.split(",") if db_pickup_job.photo_proofs else []
 
     return db_pickup_jobs
 
 def get_all_available_pickup_jobs(db: Session, skip: int = 0, limit: int = 100):
     db_pickup_jobs = db.query(PickupJob).filter(PickupJob.status == pickup_job_schemas.PickupJobStatus.AVAILABLE).offset(skip).limit(limit).all()
 
-    # convert geometry json to dict
     for db_pickup_job in db_pickup_jobs:
+        # convert geometry json to dict
         db_pickup_job.start_location = json.loads(db_pickup_job.start_location)
         db_pickup_job.end_location = json.loads(db_pickup_job.end_location)
 
         if db_pickup_job.leftover_food and db_pickup_job.leftover_food.hawker and not isinstance(db_pickup_job.leftover_food.hawker.geometry, dict):
             db_pickup_job.leftover_food.hawker.geometry = json.loads(db_pickup_job.leftover_food.hawker.geometry)
+
+        # Convert photo_proofs to array
+        db_pickup_job.photo_proofs = db_pickup_job.photo_proofs.split(",") if db_pickup_job.photo_proofs else []
 
     return db_pickup_jobs
 
 def get_all_pickup_jobs(db: Session, skip: int = 0, limit: int = 100):
     db_pickup_jobs = db.query(PickupJob).offset(skip).limit(limit).all()
 
-    # convert geometry json to dict
     for db_pickup_job in db_pickup_jobs:
+        # convert geometry json to dict
         db_pickup_job.start_location = json.loads(db_pickup_job.start_location)
         db_pickup_job.end_location = json.loads(db_pickup_job.end_location)
 
         if db_pickup_job.leftover_food and db_pickup_job.leftover_food.hawker and not isinstance(db_pickup_job.leftover_food.hawker.geometry, dict):
             db_pickup_job.leftover_food.hawker.geometry = json.loads(db_pickup_job.leftover_food.hawker.geometry)
+
+        # Convert photo_proofs to array
+        db_pickup_job.photo_proofs = db_pickup_job.photo_proofs.split(",") if db_pickup_job.photo_proofs else []
 
     return db_pickup_jobs
 
@@ -77,6 +88,7 @@ def create_pickup_job(db: Session, pickup_job: pickup_job_schemas.PickupJobCreat
         status=pickup_job.status,
         leftover_food_id=pickup_job.leftover_food_id,
         consumer_id=pickup_job.consumer_id,
+        photo_proofs=""
     )
     
     db.add(db_pickup_job)
@@ -89,6 +101,9 @@ def create_pickup_job(db: Session, pickup_job: pickup_job_schemas.PickupJobCreat
 
     if db_pickup_job.leftover_food and db_pickup_job.leftover_food.hawker:
         db_pickup_job.leftover_food.hawker.geometry = json.loads(db_pickup_job.leftover_food.hawker.geometry)
+
+    # Convert photo_proofs to array
+    db_pickup_job.photo_proofs = []
 
     return db_pickup_job
 
@@ -106,6 +121,8 @@ def update_pickup_job(db: Session, updated_pickup_job: pickup_job_schemas.Pickup
     for key, value in updated_pickup_job_data.items():
         if key.lower() == "start_location" or key.lower() == "end_location":
             setattr(db_pickup_job, key, json.dumps(value))
+        elif key.lower() == "photo_proofs":
+            setattr(db_pickup_job, key, ",".join(value))
         else:
             setattr(db_pickup_job, key, value)
     
@@ -119,5 +136,8 @@ def update_pickup_job(db: Session, updated_pickup_job: pickup_job_schemas.Pickup
 
     if db_pickup_job.leftover_food and db_pickup_job.leftover_food.hawker:
         db_pickup_job.leftover_food.hawker.geometry = json.loads(db_pickup_job.leftover_food.hawker.geometry)
+    
+    # Convert photo_proofs to array
+    db_pickup_job.photo_proofs = db_pickup_job.photo_proofs.split(",")
 
     return db_pickup_job
