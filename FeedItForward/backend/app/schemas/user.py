@@ -2,8 +2,6 @@ from pydantic import BaseModel
 from typing import Optional
 from enum import Enum
 
-from .customer_service_support import CustomerServiceSupportHistory
-
 class Role(Enum):
     ADMIM = "Admin"
     CONSUMER = "Consumer"
@@ -20,8 +18,6 @@ class User(UserBase):
     user_id: int
     profile_picture: Optional[str] = ""
     role: Role
-
-    css_history: 'list[CustomerServiceSupportHistory]' = []
 
     class Config:
         orm_mode = True

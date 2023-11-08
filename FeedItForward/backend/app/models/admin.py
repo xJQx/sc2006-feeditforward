@@ -13,5 +13,4 @@ class Admin(Base):
     user: Mapped["User"] = relationship("User", back_populates="admin")
 
     notifications: Mapped["Notification"] = relationship("Notification", back_populates="admin")
-
-    # css_history: Mapped[list["CustomerServiceSupportHistory"]] = relationship("CustomerServiceSupportHistory", back_populates="admin")
+    css_history: Mapped[list["CustomerServiceSupportHistory"]] = relationship("CustomerServiceSupportHistory", back_populates="admin")
