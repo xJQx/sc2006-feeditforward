@@ -20,5 +20,7 @@ class User(Base):
     consumer: Mapped["Consumer"] = relationship("Consumer", back_populates="user")
     driver: Mapped["Driver"] = relationship("Driver", back_populates="user")
     hawker: Mapped["Hawker"] = relationship("Hawker", back_populates="user")
+    
+    notifications: Mapped["Notification"] = relationship("Notification", back_populates="receiver")
 
     # css_history: Mapped[list["CustomerServiceSupportHistory"]] = relationship("CustomerServiceSupportHistory", back_populates="user")

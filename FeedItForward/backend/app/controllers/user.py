@@ -94,3 +94,8 @@ class UserController:
   def flagReview(db: Session, review_id: int):
     # TODO
     return None
+  
+  # ----- Notification ----- #
+  def getNotifications(db: Session, user_id: int):
+    # TODO
+    return None

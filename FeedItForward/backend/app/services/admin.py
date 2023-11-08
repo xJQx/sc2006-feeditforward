@@ -22,7 +22,7 @@ def create_admin(db: Session, user: admin_schemas.AdminCreate):
         contact_number=user.contact_number,
         address=user.address,
         password=user.password,
-        role=user_schemas.Role.CONSUMER
+        role=user_schemas.Role.ADMIM
     )
     db_user = user_services.create_user(db, user_to_create)
     
