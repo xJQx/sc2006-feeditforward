@@ -10,16 +10,17 @@ import {
 } from "../../components";
 import toast from "react-hot-toast";
 import { useAuthContext } from "../../contexts/AuthContext";
-import { UserDisplay } from "../../schemas/user";
-import { usersData } from "../../data/usersData";
+import { UserDisplay, UserLogin } from "../../schemas/user";
+import useFetch from "../../hooks/useFetch";
 
 export const LoginScreen = () => {
   const navigate = useNavigate();
+  const fetch = useFetch();
   const authContext = useAuthContext();
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
-  const handleEmailLogin = () => {
+  const handleEmailLogin = async () => {
     // Input fields validation
     if (!password || !email) {
       return toast.error("Please enter your email and password!");
@@ -28,19 +29,38 @@ export const LoginScreen = () => {
       return toast.error("Password must be at least 8 characters long!");
     }
 
-    // TODO: link to backend
+    try {
+      const requestBody: UserLogin = {
+        email: email,
+        password: password
+      };
+      const user_response = await fetch.post("/auth/login", requestBody);
+      console.log(user_response);
 
-    console.log(email);
-    console.log(password);
-    const user: UserDisplay = usersData[0]; // TO CHANGE
-    const success = true; // TO CHANGE
-    if (success) {
-      // Add user to context
-      authContext.setIsLoggedIn(true);
-      authContext.setUser(user);
+      if (user_response && user_response.user) {
+        const user: UserDisplay = {
+          user_id: user_response.user.user_id,
+          name: user_response.user.name,
+          email: user_response.user.email,
+          contact_number: user_response.user.contact_number,
+          address: user_response.user.address,
+          profile_picture: user_response.user.profile_picture,
+          role: user_response.user.role,
+          ban: user_response.user.ban
+        };
 
-      toast.success("Log in successfully");
-      navigate("/");
+        // Add user to auth context
+        authContext.setIsLoggedIn(true);
+        authContext.setUser(user);
+
+        toast.success("Log in successfully");
+        navigate("/");
+      } else {
+        toast.error("Failed to login");
+      }
+    } catch (e: any) {
+      console.log(e);
+      toast.error(e.detail);
     }
   };
 

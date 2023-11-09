@@ -41,3 +41,8 @@ export interface UserUpdate {
   address: string;
   profile_picture?: string;
 }
+
+export interface UserLogin {
+  email: string;
+  password: string;
+}
