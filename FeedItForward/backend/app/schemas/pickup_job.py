@@ -7,6 +7,11 @@ from .consumer import Consumer
 from .driver import Driver
 from .misc import Geometry
 
+class PickupJobAction(Enum):
+    ACCEPT = "Accept"
+    IGNORE = "Ignore"
+    COMPLETE = "Complete"
+
 class PickupJobStatus(Enum):
     AVAILABLE = "Available"
     IN_PROGRESS = "In Progress"
@@ -50,4 +55,4 @@ class PickupJobUpdate(BaseModel):
     status: PickupJobStatus
     photo_proofs: list[str]
 
-    driver_id: int
+    driver_id: Optional[int] = None

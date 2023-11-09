@@ -18,6 +18,7 @@ class User(UserBase):
     user_id: int
     profile_picture: Optional[str] = ""
     role: Role
+    ban: Optional[bool] = False
 
     class Config:
         orm_mode = True
@@ -25,10 +26,12 @@ class User(UserBase):
 class UserCreate(UserBase):
     password: str
     role: Role
+    ban: Optional[bool] = False
 
 class UserUpdate(UserBase):
     user_id: int
     profile_picture: Optional[str] = ""
+    ban: bool
 
 class UserLogin(BaseModel):
     email: str

@@ -14,7 +14,7 @@ class CustomerServiceSupportController:
         chats = css_history_services.get_all_customer_service_support_histories(db, skip=skip, limit=limit)
         return chats
 
-    def startChat(db: Session, css_history: css_history_schemas.CustomerServiceSupportHistoryCreate):
+    def startNewChat(db: Session, css_history: css_history_schemas.CustomerServiceSupportHistoryCreate):
         db_css_history = css_history_services.create_customer_service_support_history(db, css_history=css_history);
         return db_css_history
     

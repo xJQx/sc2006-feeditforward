@@ -3,6 +3,9 @@ import { Driver } from "./driver";
 import { LeftoverFood } from "./leftoverFood";
 import { Geometry } from "./misc";
 
+export const PICKUP_JOB_ACTION = ["Accept", "Ignore", "Complete"] as const;
+export type PickupJobAction = (typeof PICKUP_JOB_ACTION)[number];
+
 export const PICKUP_JOB_STATUS = [
   "Available",
   "In Progress",

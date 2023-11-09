@@ -5,6 +5,9 @@ import services.pickup_job as pickup_job_services
 import schemas.pickup_job as pickup_job_schemas
 
 class PickupJobController:
+    # --------------------------------------------------------------- #
+    # -------------------- PickupJob (CRUD) ------------------------- #
+    # --------------------------------------------------------------- #
     # ----- PickupJob ----- #
     def getPickupJobByPickupJobId(db: Session, pickup_job_id: int):
         pickup_job = pickup_job_services.get_pickup_job_by_pickup_job_id(db, pickup_job_id=pickup_job_id)

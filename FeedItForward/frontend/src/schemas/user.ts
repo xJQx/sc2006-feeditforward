@@ -10,6 +10,7 @@ export interface User {
   contact_number: string;
   address: string;
   profile_picture: string;
+  ban: boolean;
 }
 
 export interface UserDisplay {
@@ -20,6 +21,7 @@ export interface UserDisplay {
   contact_number: string;
   address: string;
   profile_picture: string;
+  ban: boolean;
 }
 
 export interface UserCreate {

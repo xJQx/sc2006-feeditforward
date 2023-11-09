@@ -31,6 +31,8 @@ class AuthController:
     db_user = user_services.login_user(db, user)
     if not db_user:
         raise HTTPException(status_code=400, detail="Invalid login credentials")
+    if db_user.ban:
+        raise HTTPException(status_code=403, detail="Forbidden. User has been banned")
     
     match db_user.role:
         case user_schemas.Role.ADMIM:

@@ -5,6 +5,9 @@ import services.leftover_food as leftover_food_services
 import schemas.leftover_food as leftover_food_schemas
 
 class LeftoverFoodController:
+    # ------------------------------------------------------------------ #
+    # -------------------- LeftoverFood (CRUD) ------------------------- #
+    # ------------------------------------------------------------------ #
     # ----- LeftoverFood ----- #
     def getLeftoverFoodByLeftoverFoodId(db: Session, leftover_food_id: int):
         leftover_food = leftover_food_services.get_leftover_food_by_leftover_food_id(db, leftover_food_id=leftover_food_id)

@@ -10,6 +10,9 @@ from models.hawker import Hawker
 def get_review_by_review_id(db: Session, review_id: int):
     db_review = db.query(Review).filter(Review.review_id == review_id).first()
 
+    if not db_review:
+        raise HTTPException(status_code=400, detail="Invalid review_id")
+
     # Load photos for response
     if db_review:
         db_review.photos = db_review.photos.split(",")
@@ -70,7 +73,7 @@ def create_review(db: Session, review: review_schemas.ReviewCreate):
         rating=review.rating,
         photos=",".join(review.photos),
         flagged=False,
-        flagged_reason=".",
+        flagged_reason="",
         consumer_id=review.consumer_id,
         hawker_id=review.hawker_id
     )
@@ -106,6 +109,10 @@ def update_review(db: Session, updated_review: review_schemas.ReviewUpdate):
         else:
             setattr(db_review, key, value)
     
+    # convert geometry to json for storing into database
+    if db_review.hawker:
+        db_review.hawker.geometry = json.dumps(db_review.hawker.geometry)
+
     db.add(db_review)
     db.commit()
     db.refresh(db_review)
@@ -118,3 +125,17 @@ def update_review(db: Session, updated_review: review_schemas.ReviewUpdate):
         db_review.hawker.geometry = json.loads(db_review.hawker.geometry)
 
     return db_review
+
+def delete_review(db: Session, review_id: int) -> bool:
+    db_review = db.query(Review).filter(Review.review_id == review_id).first()
+
+    if not db_review:
+        raise HTTPException(status_code=400, detail="Invalid review_id")
+    
+    if db_review.hawker and isinstance(db_review.hawker.geometry, dict):
+        db_review.hawker.geometry = json.dumps(db_review.hawker.geometry)
+
+    db.delete(db_review)
+    db.commit()
+
+    return True

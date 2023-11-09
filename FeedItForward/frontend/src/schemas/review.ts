@@ -1,6 +1,9 @@
 import { Consumer } from "./consumer";
 import { Hawker } from "./hawker";
 
+export const REVIEW_ACTION = ["Delete", "Ignore", "Cancel"] as const;
+export type ReviewActionEnum = (typeof REVIEW_ACTION)[number];
+
 export interface Review {
   review_id: number;
 

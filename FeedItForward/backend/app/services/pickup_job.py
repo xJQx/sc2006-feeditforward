@@ -10,6 +10,9 @@ from models.leftover_food import LeftoverFood
 
 def get_pickup_job_by_pickup_job_id(db: Session, pickup_job_id: int):
     db_pickup_job = db.query(PickupJob).filter(PickupJob.pickup_job_id == pickup_job_id).first()
+
+    if not db_pickup_job:
+        raise HTTPException(status_code=400, detail="Invalid pickup_job_id")
     
     if db_pickup_job:
         # convert geometry json to dict
@@ -126,6 +129,9 @@ def update_pickup_job(db: Session, updated_pickup_job: pickup_job_schemas.Pickup
         else:
             setattr(db_pickup_job, key, value)
     
+    if db_pickup_job.leftover_food and db_pickup_job.leftover_food.hawker and isinstance(db_pickup_job.leftover_food.hawker.geometry, dict):
+        db_pickup_job.leftover_food.hawker.geometry = json.dumps(db_pickup_job.leftover_food.hawker.geometry)
+
     db.add(db_pickup_job)
     db.commit()
     db.refresh(db_pickup_job)

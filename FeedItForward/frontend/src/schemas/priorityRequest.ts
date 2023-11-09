@@ -1,5 +1,14 @@
 import { Consumer } from "./consumer";
 
+export const PRIORITY_REQUEST_ACTION = [
+  "Approve",
+  "Request",
+  "Reject",
+  "Cancel"
+] as const;
+export type PriorityRequestActionEnum =
+  (typeof PRIORITY_REQUEST_ACTION)[number];
+
 export const PRIORITY_REQUEST_STATUS = [
   "Pending",
   "Approved",

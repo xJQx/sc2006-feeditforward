@@ -9,6 +9,7 @@ export const hawkersData: Hawker[] = [
       role: "Hawker",
       email: "jane@gmail.com",
       contact_number: "62671571",
+      ban: false,
       address: "60 Nanyang Cres, Blk 20A #03-02, Singapore 636957",
       profile_picture:
         "https://lh3.googleusercontent.com/p/AF1QipMTNLIY1JY3IsAQm5PVoY379BayeFqvaO4e3KRp=s680-w680-h510"
@@ -34,6 +35,7 @@ export const hawkersData: Hawker[] = [
       role: "Hawker",
       email: "james@gmail.com",
       contact_number: "6747OOOO",
+      ban: false,
       address:
         "76 Nanyang Drive, N2.1, #02-03, Nanyang Technological University, 637331",
       profile_picture:

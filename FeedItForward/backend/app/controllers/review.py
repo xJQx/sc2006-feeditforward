@@ -5,6 +5,9 @@ import services.review as review_services
 import schemas.review as review_schemas
 
 class ReviewController:
+    # ------------------------------------------------------------ #
+    # -------------------- Review (CRUD) -------------------------- #
+    # ------------------------------------------------------------ #
     # ----- Review ----- #
     def getReviewByReviewId(db: Session, review_id: int):
         review = review_services.get_review_by_review_id(db, review_id=review_id)
@@ -40,3 +43,6 @@ class ReviewController:
         if review is None:
             raise HTTPException(status_code=404, detail="Review not found")
         return review
+    
+    def deleteReview(db: Session, review_id: int) -> bool:
+        return review_services.delete_review(db, review_id)

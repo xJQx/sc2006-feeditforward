@@ -3,9 +3,21 @@ from sqlalchemy.orm import Session
 import json
 
 import services.hawker as hawker_services
+import services.leftover_food as leftover_food_services
+
 import schemas.hawker as hawker_schemas
+import schemas.leftover_food as leftover_food_schemas
 
 class HawkerController:
+  # -------------------------------------------------------- #
+  # -------------------- Business Logic -------------------- #
+  # -------------------------------------------------------- #
+  def submitLeftoverFood(db: Session, leftover_food: leftover_food_schemas.LeftoverFoodCreate):
+    return leftover_food_services.create_leftover_food(db, leftover_food)
+  
+  # ------------------------------------------------------------ #
+  # -------------------- Hawker (CRUD) ------------------------- #
+  # ------------------------------------------------------------ #
   # ----- Hawker ----- #
   def getHawkerByUserId(db: Session, user_id: int):
     hawker = hawker_services.get_hawker_by_user_id(db, user_id=user_id)

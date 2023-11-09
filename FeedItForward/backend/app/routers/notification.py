@@ -8,24 +8,34 @@ import schemas.notification as notification_schemas
 
 router = APIRouter()
 
-@router.get("/notifications", response_model=list[notification_schemas.Notification])
+tags_metadata = [
+    {
+        "name": "Notification (CRUD)",
+        "description": "API CRUD Endpoints for Notification Model"
+    },
+]
+
+# ------------------------------------------------------------------ #
+# -------------------- Notification (CRUD) ------------------------- #
+# ------------------------------------------------------------------ #
+@router.get("/notifications", response_model=list[notification_schemas.Notification], tags=["Notification (CRUD)"])
 def get_all_notifications(skip: int = 0,
                   limit: int = 100,
                   db: Session = Depends(get_db)):
     return NotificationController.getAllNotifications(db, skip, limit)
 
-@router.get('/notification/{notification_id}', response_model=notification_schemas.Notification)
+@router.get('/notification/{notification_id}', response_model=notification_schemas.Notification, tags=["Notification (CRUD)"])
 async def get_notification_by_notification_id(notification_id: str, db: Session = Depends(get_db)):
     return NotificationController.getNotificationByNotificationId(db, notification_id)
 
-@router.get('/notifications/adminid/{admin_id}', response_model=list[notification_schemas.Notification])
+@router.get('/notifications/adminid/{admin_id}', response_model=list[notification_schemas.Notification], tags=["Notification (CRUD)"])
 async def get_notifications_by_admin_id(admin_id: str, db: Session = Depends(get_db)):
     return NotificationController.getNotificationsByAdminId(db, admin_id)
 
-@router.get('/notifications/receiver-userid/{receiver_user_id}', response_model=list[notification_schemas.Notification])
+@router.get('/notifications/receiver-userid/{receiver_user_id}', response_model=list[notification_schemas.Notification], tags=["Notification (CRUD)"])
 async def get_notifications_by_receiver_user_id(receiver_user_id: str, db: Session = Depends(get_db)):
     return NotificationController.getNotificationsByReceiverUserId(db, receiver_user_id)
 
-@router.post("/notifications/new", response_model=notification_schemas.Notification)
+@router.post("/notifications/new", response_model=notification_schemas.Notification, tags=["Notification (CRUD)"])
 def create_notification(notification: notification_schemas.NotificationCreate, db: Session = Depends(get_db)):
     return NotificationController.createNotification(db, notification)

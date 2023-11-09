@@ -4,6 +4,12 @@ from enum import Enum
 
 from .consumer import Consumer
 
+class PriorityRequestActionEnum(Enum):
+    APPROVE = "Approve"
+    REQUEST = "Request"
+    REJECT = "Reject"
+    CANCEL = "Cancel"
+
 class PriorityRequestStatusEnum(Enum):
     PENDING = "Pending"
     APPROVED = "Approved"

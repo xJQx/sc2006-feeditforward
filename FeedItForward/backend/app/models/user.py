@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Enum, ForeignKey
+from sqlalchemy import Column, Integer, String, Enum, Boolean
 from sqlalchemy.orm import relationship, Mapped
 
 from database import Base
@@ -15,6 +15,7 @@ class User(Base):
     address = Column(String)
     profile_picture = Column(String)
     role = Column(Enum(Role))
+    ban = Column(Boolean)
 
     admin: Mapped["Admin"] = relationship("Admin", back_populates="user")
     consumer: Mapped["Consumer"] = relationship("Consumer", back_populates="user")

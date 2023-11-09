@@ -1,8 +1,14 @@
 from pydantic import BaseModel, Field
 from typing import Optional
+from enum import Enum
 
 from .consumer import Consumer
 from .hawker import Hawker
+
+class ReviewAction(Enum):
+    DELETE = "Delete"
+    IGNORE = "Ignore"
+    CANCEL = "Cancel"
 
 class Review(BaseModel):
     review_id: int
