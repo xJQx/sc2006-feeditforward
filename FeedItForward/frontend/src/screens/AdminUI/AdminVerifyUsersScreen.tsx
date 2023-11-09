@@ -1,7 +1,7 @@
 import React from "react";
 import { ScreenTitle } from "../../components";
 import { SearchBar } from "../../components";
-import { UserDisplay } from "../../utils/schema";
+import { UserDisplay } from "../../schemas/user";
 import { useNavigate } from "react-router-dom";
 import { userToVerifyData } from "../../data/adminData";
 
@@ -39,7 +39,7 @@ const VerifyUserListItems = (props: VerifyUserListItemsProps) => {
     <div className="border-2 border-brand-darkgray rounded-lg max-h-[25rem] min-h-[22rem] overflow-y-auto">
       <ul className="list-none">
         {userToVerifyData.map(user => (
-          <VerifyUserListItem key={user.userId} {...user} />
+          <VerifyUserListItem key={user.user_id} {...user} />
         ))}
       </ul>
     </div>
@@ -47,11 +47,11 @@ const VerifyUserListItems = (props: VerifyUserListItemsProps) => {
 };
 
 const VerifyUserListItem = (props: UserDisplay) => {
-  const { userId, name, role, img } = props;
+  const { user_id, name, role, profile_picture } = props;
   const navigate = useNavigate();
 
   const handleOnClick = () => {
-    navigate(`/admin/verify-user/${userId}`);
+    navigate(`/admin/verify-user/${user_id}`);
   };
 
   return (
@@ -62,8 +62,12 @@ const VerifyUserListItem = (props: UserDisplay) => {
       {/* Photo */}
       <div className="bg-gray-300 w-14 h-14 rounded-full flex justify-center items-center">
         <img
-          src={img?.src ? img.src : "https://picsum.photos/id/237/200/300"}
-          alt={img?.alt ? img.alt : "profile pic"}
+          src={
+            profile_picture
+              ? profile_picture
+              : "https://picsum.photos/id/237/200/300"
+          }
+          alt={profile_picture ? `${name}'s profile pic` : "profile pic"}
           className="w-12 aspect-square rounded-full object-cover object-center"
         />
       </div>

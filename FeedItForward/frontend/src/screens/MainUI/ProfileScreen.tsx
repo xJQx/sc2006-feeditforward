@@ -8,7 +8,9 @@ export const ProfileScreen = () => {
   const [editMode, setEditMode] = useState(false);
   const [address, setAddress] = useState(user?.address ?? "");
   const [email, setEmail] = useState(user?.email ?? "");
-  const [contactNumber, setContactNumber] = useState(user?.contactNumber ?? "");
+  const [contactNumber, setContactNumber] = useState(
+    user?.contact_number ?? ""
+  );
 
   const handleEditProfile = () => {
     setEditMode(true);
@@ -32,8 +34,8 @@ export const ProfileScreen = () => {
           {/* Uneditable Profile Info */}
           <div className="flex gap-4">
             <img
-              src={user.img.src}
-              alt={user.img.alt}
+              src={user.profile_picture}
+              alt={`${user.name}'s profile pic`}
               className="w-28 h-36 object-cover"
             />
             <div className="flex flex-col justify-center">

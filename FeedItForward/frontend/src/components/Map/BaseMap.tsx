@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { useCurrentGeoLocation } from "../../hooks";
 import { MapMarkerUser } from "./MapMarkerUser";
 import useFetch from "../../hooks/useFetch";
-import { Hawker } from "../../utils/schema";
+import { Hawker } from "../../schemas/hawker";
 import {
   MapHawkerModal,
   MapHawkerSearchModal,
@@ -73,8 +73,8 @@ export const BaseMap = () => {
           {/* Hawker Markers */}
           {hawkersList?.map(hawker => (
             <Marker
-              icon={MapMarkerHawkerIcon(hawker.isRegistered)}
-              key={`${hawker.businessName}-${hawker.geometry.latitude}-${hawker.geometry.longitude}`}
+              icon={MapMarkerHawkerIcon(hawker.is_registered)}
+              key={`${hawker.business_name}-${hawker.geometry.latitude}-${hawker.geometry.longitude}`}
               position={[hawker.geometry.latitude, hawker.geometry.longitude]}
               eventHandlers={{
                 click: () => {

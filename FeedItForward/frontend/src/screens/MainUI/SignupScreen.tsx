@@ -10,7 +10,7 @@ import {
 } from "../../components";
 import toast from "react-hot-toast";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-import { Role } from "../../utils/schema";
+import { Role } from "../../schemas/user";
 
 export const SignupScreen = () => {
   const navigate = useNavigate();

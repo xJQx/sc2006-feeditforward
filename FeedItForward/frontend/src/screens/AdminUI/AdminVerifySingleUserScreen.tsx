@@ -7,7 +7,7 @@ import {
 } from "../../components";
 import { useParams } from "react-router-dom";
 import { userToVerifyData } from "../../data/adminData";
-import { UserDisplay } from "../../utils/schema";
+import { UserDisplay } from "../../schemas/user";
 
 export const AdminVerifySingleUserScreen = () => {
   let { userId } = useParams();
@@ -16,7 +16,7 @@ export const AdminVerifySingleUserScreen = () => {
   useEffect(() => {
     // TODO: Fetch data from Backend
     const user: UserDisplay = userToVerifyData.filter(
-      user => user.userId === userId
+      user => user.user_id.toString() === userId
     )[0];
     setUser(user);
   }, [userId]);

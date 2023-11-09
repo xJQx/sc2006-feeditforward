@@ -1,5 +1,5 @@
 import React from "react";
-import { UserDisplay } from "../utils/schema";
+import { UserDisplay } from "../schemas/user";
 
 interface AdminUserDisplayCardProps {
   user: UserDisplay;
@@ -14,11 +14,15 @@ export const AdminUserDisplayCard = (props: AdminUserDisplayCardProps) => {
       <div className="bg-gray-300 w-12 h-12 rounded-full flex justify-center items-center">
         <img
           src={
-            user?.img?.src
-              ? user?.img.src
+            user?.profile_picture
+              ? user?.profile_picture
               : "https://picsum.photos/id/237/200/300"
           }
-          alt={user?.img?.alt ? user?.img.alt : "profile pic"}
+          alt={
+            user?.profile_picture
+              ? `${user?.name}'s profile pic`
+              : "profile pic"
+          }
           className="w-10 aspect-square rounded-full object-cover object-center"
         />
       </div>

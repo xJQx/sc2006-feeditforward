@@ -1,61 +1,38 @@
 from pydantic import BaseModel
+from typing import Optional
+from enum import Enum
 
-from .food import FoodRequest, HawkerFood
-from .misc import CustomerServiceSupportHistory, Review, PriorityRequest, Geometry, Image
-
+class Role(Enum):
+    ADMIM = "Admin"
+    CONSUMER = "Consumer"
+    HAWKER = "Hawker"
+    DRIVER = "Driver"
 
 class UserBase(BaseModel):
     name: str
     email: str
-    password: str
-    contactNumber: str
+    contact_number: str
     address: str
-    img: Image
 
 class User(UserBase):
-    userId: int
-
-    role: str
-    css_history: 'list[CustomerServiceSupportHistory]' = []
+    user_id: int
+    profile_picture: Optional[str] = ""
+    role: Role
+    ban: Optional[bool] = False
 
     class Config:
         orm_mode = True
 
 class UserCreate(UserBase):
-    username: str
     password: str
+    role: Role
+    ban: Optional[bool] = False
 
-class Admin(User):
-    adminId: int
+class UserUpdate(UserBase):
+    user_id: int
+    profile_picture: Optional[str] = ""
+    ban: bool
 
-class Hawker(User):
-    hawkerId: int
-    overallRating: float
-    businessName: str
-    operatingHours: str
-    foodType: str
-    geometry: Geometry
-    isRegistered: bool
-
-    hawkerFoods: list[HawkerFood] = []
-    reviews: list[Review] = []
-
-class Driver(User):
-    driverId: int
-    vehicle: str
-
-    food_requests: list[FoodRequest] = []
-
-    class Config:
-        orm_mode = True
-
-class Consumer(User):
-    consumerId: int
-    priority: bool = False
-
-    foodRequests: list[FoodRequest] = []
-    reviews: list[Review] = []
-    priorityRequest: list[PriorityRequest] = []
-
-    class Config:
-        orm_mode = True
+class UserLogin(BaseModel):
+    email: str
+    password: str

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { SearchBar } from "../SearchBar";
 import { GoDotFill } from "react-icons/go";
 import { simpleSearch } from "../../utils/search";
-import { Hawker } from "../../utils/schema";
+import { Hawker } from "../../schemas/hawker";
 import { ModalCloseButton } from "./ModalCloseButton";
 
 interface MapHawkerSearchModalProps {
@@ -26,7 +26,7 @@ export const MapHawkerSearchModal = (props: MapHawkerSearchModalProps) => {
   const handleHawkersSearch = (searchKey: string) => {
     // Simple Search
     const filteredHawker = simpleSearch(hawkersList, searchKey, [
-      "businessName",
+      "business_name",
       "operatingHours",
       "address",
       "foodType"
@@ -62,7 +62,7 @@ export const MapHawkerSearchModal = (props: MapHawkerSearchModalProps) => {
               <div className="flex flex-col gap-1">
                 {hawkersFiltered.map(hawker => (
                   <div
-                    key={`${hawker.hawkerId}-${hawker.businessName}`}
+                    key={`${hawker.hawker_id}-${hawker.business_name}`}
                     className="flex"
                     onClick={() => handleFilteredHawkerOnClick(hawker)}
                   >
@@ -70,7 +70,7 @@ export const MapHawkerSearchModal = (props: MapHawkerSearchModalProps) => {
                       <GoDotFill className="w-[10px] h-[10px] translate-y-[5px]" />
                     </span>
                     &nbsp;
-                    <span>{hawker.businessName}</span>
+                    <span>{hawker.business_name}</span>
                   </div>
                 ))}
               </div>

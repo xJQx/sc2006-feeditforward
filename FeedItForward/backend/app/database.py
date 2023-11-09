@@ -2,15 +2,16 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
+from factory.database import DatabaseFactory
 
-engine = create_engine(
-    SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
-)
-SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+database = DatabaseFactory.getDatabase("sqlite")
+database.connect() # connect to database
 
-Base = declarative_base()
+engine = database.engine
+Base = database.Base
+SessionLocal = database.SessionLocal
 
+# Dependency
 def get_db():
     db = SessionLocal()
     try:

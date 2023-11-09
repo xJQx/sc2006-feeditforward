@@ -6,7 +6,7 @@ import {
   ScreenTitle
 } from "../../components";
 import { useNavigate, useParams } from "react-router-dom";
-import { UserDisplay } from "../../utils/schema";
+import { UserDisplay } from "../../schemas/user";
 import { userToVerifyData } from "../../data/adminData";
 
 export const AdminBanSingleUserScreen = () => {
@@ -17,7 +17,7 @@ export const AdminBanSingleUserScreen = () => {
   useEffect(() => {
     // TODO: Fetch data from Backend
     const user: UserDisplay = userToVerifyData.filter(
-      user => user.userId === userId
+      user => user.user_id.toString() === userId
     )[0];
     setUser(user);
   }, [userId]);
