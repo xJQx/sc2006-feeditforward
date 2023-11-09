@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Button,
   FormButton,
@@ -11,10 +11,18 @@ import {
 import toast from "react-hot-toast";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { Role } from "../../schemas/user";
+import useFetch from "../../hooks/useFetch";
+import { AdminCreate } from "../../schemas/admin";
+import { ConsumerCreate } from "../../schemas/consumer";
+import { DriverCreate } from "../../schemas/driver";
+import { HawkerCreate } from "../../schemas/hawker";
+import { Geometry } from "../../schemas/misc";
 
 export const SignupScreen = () => {
   const navigate = useNavigate();
+  const fetch = useFetch();
 
+  // Common Inputs
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [address, setAddress] = useState<string>("");
@@ -23,13 +31,32 @@ export const SignupScreen = () => {
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
 
+  // Driver Inputs
+  const [vehicleNumber, setVehicleNumber] = useState<string>("");
+  const [licenceNumber, setLicenceNumber] = useState<string>("");
+
+  // Hawker Inputs
+  const [businessName, setBusinessName] = useState<string>("");
+  const [operatingHours, setOperatingHours] = useState<string>("");
+  const [foodType, setFoodType] = useState<string>("");
+  const [postalCode, setPostalCode] = useState<string>(""); // Helper for geometry. Will be coverting to Geometry with the help of OneMap API
+
+  // Steps Navigation
   const [currentStep, setCurrentStep] = useState<number>(1);
-  const totalSteps = 2;
+  const [totalSteps, setTotalSteps] = useState<number>(2);
+
+  useEffect(() => {
+    if (role === "Driver" || role === "Hawker") {
+      setTotalSteps(3);
+    } else {
+      setTotalSteps(2);
+    }
+  }, [role]);
 
   const handlePreviousStep = () => {
     if (currentStep === 1) {
       navigate(-1);
-    } else if (currentStep === 2) {
+    } else if (currentStep <= totalSteps) {
       setCurrentStep(prevStep => prevStep - 1);
     }
   };
@@ -41,10 +68,22 @@ export const SignupScreen = () => {
       }
 
       setCurrentStep(prevStep => prevStep + 1);
+    } else if (currentStep === 2) {
+      // Input Validation
+      if (!role || !password || !confirmPassword) {
+        return toast.error("Please input all fields.");
+      } else if (password.length < 8 || confirmPassword.length < 8) {
+        return toast.error("Password must be at least 8 characters.");
+      } else if (password !== confirmPassword) {
+        return toast.error("Password and Confirm Password must match.");
+      }
+
+      if (role === "Hawker" || role === "Driver")
+        setCurrentStep(prevStep => prevStep + 1);
     }
   };
 
-  const handleSignup = () => {
+  const handleSignup = async () => {
     // Input Validation
     if (!role || !password || !confirmPassword) {
       return toast.error("Please input all fields.");
@@ -54,10 +93,114 @@ export const SignupScreen = () => {
       return toast.error("Password and Confirm Password must match.");
     }
 
-    // TODO: Link to backend
+    // Input Validation for Driver
+    if (role === "Driver" && (!vehicleNumber || !licenceNumber)) {
+      return toast.error("Please input all fields.");
+    }
 
-    toast.success("Signup Successfully.");
-    navigate("/auth/login");
+    // Input Validation for Hawker
+    if (
+      role === "Hawker" &&
+      (!businessName || !operatingHours || !foodType || !postalCode)
+    ) {
+      return toast.error("Please input all fields.");
+    }
+
+    // Signup
+    let success = false;
+    try {
+      switch (role) {
+        case "Admin":
+          const admin: AdminCreate = {
+            name: name,
+            email: email,
+            address: address,
+            contact_number: contactNumber,
+            password: password,
+            role: role
+          };
+          const adminResponse = await fetch.post("/auth/signup/admin", admin);
+          if (adminResponse) success = true;
+          break;
+        case "Consumer":
+          const consumer: ConsumerCreate = {
+            name: name,
+            email: email,
+            address: address,
+            contact_number: contactNumber,
+            password: password,
+            role: role
+          };
+          const consumerResponse = await fetch.post(
+            "/auth/signup/consumer",
+            consumer
+          );
+          if (consumerResponse) success = true;
+          break;
+        case "Driver":
+          const driver: DriverCreate = {
+            name: name,
+            email: email,
+            address: address,
+            contact_number: contactNumber,
+            password: password,
+            role: role,
+            vehicle_number: vehicleNumber,
+            licence_number: licenceNumber
+          };
+          const driverResponse = await fetch.post(
+            "/auth/signup/driver",
+            driver
+          );
+          if (driverResponse) success = true;
+          break;
+        case "Hawker":
+          // Convert Postal Code to Latitude and Longtitude
+          const geoCodedResponse = await fetch.get(`/geo-coding/${postalCode}`);
+
+          if (geoCodedResponse) {
+            const geometry: Geometry = {
+              type: "Point",
+              latitude: parseFloat(geoCodedResponse.latitude),
+              longitude: parseFloat(geoCodedResponse.longitude)
+            };
+
+            // Hawker Signup
+            const hawker: HawkerCreate = {
+              name: name,
+              email: email,
+              address: address,
+              contact_number: contactNumber,
+              password: password,
+              role: role,
+              business_name: businessName,
+              operating_hours: operatingHours,
+              food_type: foodType,
+              geometry: geometry
+            };
+
+            const hawkerResponse = await fetch.post(
+              "/auth/signup/hawker",
+              hawker
+            );
+            if (hawkerResponse) success = true;
+          } else {
+            return toast.error("Invalid Postal Code!");
+          }
+          break;
+      }
+    } catch (e: any) {
+      console.log(e);
+      if (Array.isArray(e.detail)) toast.error(e.detail[0].msg);
+      else toast.error(e.detail);
+    }
+
+    if (success) {
+      toast.success("Signup Successfully.");
+      navigate("/auth/login");
+    } else {
+      toast.error("Failed to signup!");
+    }
   };
 
   return (
@@ -71,13 +214,15 @@ export const SignupScreen = () => {
         </div>
       </div>
 
-      <div className="px-4">
+      <div className="px-4 pb-6">
         {/* Header */}
         <div>
           <div className="text-brand-dark text-[32px] font-bold">Sign up</div>
           <div className="text-gray-500"></div>
           Already have an account?&nbsp;
-          <span className="text-brand-primary">Login</span>
+          <Link to="/auth/login" className="text-brand-primary">
+            Login
+          </Link>
         </div>
         {/* Login with Email */}
         <FormContainer onFormSubmit={handleSignup}>
@@ -103,6 +248,26 @@ export const SignupScreen = () => {
                 setPassword={setPassword}
                 confirmPassword={confirmPassword}
                 setConfirmPassword={setConfirmPassword}
+              />
+            )}
+            {currentStep === 3 && role === "Driver" && (
+              <StepThreeDriverInputs
+                vehicleNumber={vehicleNumber}
+                setVehicleNumber={setVehicleNumber}
+                licenceNumber={licenceNumber}
+                setLicenceNumber={setLicenceNumber}
+              />
+            )}
+            {currentStep === 3 && role === "Hawker" && (
+              <StepThreeHawkerInputs
+                businessName={businessName}
+                setBusinessName={setBusinessName}
+                operatingHours={operatingHours}
+                setOperatingHours={setOperatingHours}
+                foodType={foodType}
+                setFoodType={setFoodType}
+                postalCode={postalCode}
+                setPostalCode={setPostalCode}
               />
             )}
 
@@ -251,6 +416,99 @@ const StepTwoInputs = (props: StepTwoInputsProps) => {
         placeholder="Enter your password"
         value={confirmPassword}
         setValue={setConfirmPassword}
+      />
+    </>
+  );
+};
+
+interface StepThreeDriverInputsProps {
+  vehicleNumber: string;
+  setVehicleNumber: React.Dispatch<React.SetStateAction<string>>;
+  licenceNumber: string;
+  setLicenceNumber: React.Dispatch<React.SetStateAction<string>>;
+}
+const StepThreeDriverInputs = (props: StepThreeDriverInputsProps) => {
+  const { vehicleNumber, setVehicleNumber, licenceNumber, setLicenceNumber } =
+    props;
+
+  return (
+    <>
+      {/* Vehicle Number */}
+      <FormInput
+        label="Vehicle Number"
+        type="text"
+        placeholder="Enter your vehicle number"
+        value={vehicleNumber}
+        setValue={setVehicleNumber}
+      />
+
+      {/* Licence Number */}
+      <FormInput
+        label="Licence Number"
+        type="text"
+        placeholder="Enter your licence number"
+        value={licenceNumber}
+        setValue={setLicenceNumber}
+      />
+    </>
+  );
+};
+
+interface StepThreeHawkerInputsProps {
+  businessName: string;
+  setBusinessName: React.Dispatch<React.SetStateAction<string>>;
+  operatingHours: string;
+  setOperatingHours: React.Dispatch<React.SetStateAction<string>>;
+  foodType: string;
+  setFoodType: React.Dispatch<React.SetStateAction<string>>;
+  postalCode: string;
+  setPostalCode: React.Dispatch<React.SetStateAction<string>>;
+}
+const StepThreeHawkerInputs = (props: StepThreeHawkerInputsProps) => {
+  const {
+    businessName,
+    setBusinessName,
+    operatingHours,
+    setOperatingHours,
+    foodType,
+    setFoodType,
+    postalCode,
+    setPostalCode
+  } = props;
+
+  return (
+    <>
+      {/* Business Name */}
+      <FormInput
+        label="Business Name"
+        type="text"
+        placeholder="Enter your business name"
+        value={businessName}
+        setValue={setBusinessName}
+      />
+      {/* Operating Hours */}
+      <FormInput
+        label="Operating Hours"
+        type="text"
+        placeholder="Enter your operating hours"
+        value={operatingHours}
+        setValue={setOperatingHours}
+      />
+      {/* Food Type */}
+      <FormInput
+        label="Food Type"
+        type="text"
+        placeholder="Enter your food type"
+        value={foodType}
+        setValue={setFoodType}
+      />
+      {/* Postal Code */}
+      <FormInput
+        label="Postal Code"
+        type="text"
+        placeholder="Enter your postal code"
+        value={postalCode}
+        setValue={setPostalCode}
       />
     </>
   );
