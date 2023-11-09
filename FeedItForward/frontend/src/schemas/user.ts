@@ -31,6 +31,7 @@ export interface UserCreate {
   role: string;
   contact_number: string;
   address: string;
+  profile_picture: string;
 }
 
 export interface UserUpdate {
@@ -40,4 +41,9 @@ export interface UserUpdate {
   contact_number: string;
   address: string;
   profile_picture?: string;
+}
+
+export interface UserLogin {
+  email: string;
+  password: string;
 }

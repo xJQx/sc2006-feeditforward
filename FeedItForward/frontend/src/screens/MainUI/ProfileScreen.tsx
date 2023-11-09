@@ -1,16 +1,37 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, HorizontalDivider, ScreenTitle } from "../../components";
 import { useAuthContext } from "../../contexts/AuthContext";
 import toast from "react-hot-toast";
+import useFetch from "../../hooks/useFetch";
 
 export const ProfileScreen = () => {
   const { user } = useAuthContext();
+  const fetch = useFetch();
+
   const [editMode, setEditMode] = useState(false);
   const [address, setAddress] = useState(user?.address ?? "");
   const [email, setEmail] = useState(user?.email ?? "");
   const [contactNumber, setContactNumber] = useState(
     user?.contact_number ?? ""
   );
+  const [profilePictureUrl, setProfilePictureUrl] = useState("");
+
+  // Get Profile Picture
+  useEffect(() => {
+    const getImageFile = async () => {
+      if (user) {
+        try {
+          const filePath = user.profile_picture;
+
+          const imageUrl = await fetch.retrieve_image(filePath);
+          setProfilePictureUrl(imageUrl);
+        } catch (e: any) {
+          console.log(e);
+        }
+      }
+    };
+    getImageFile();
+  }, []);
 
   const handleEditProfile = () => {
     setEditMode(true);
@@ -34,7 +55,11 @@ export const ProfileScreen = () => {
           {/* Uneditable Profile Info */}
           <div className="flex gap-4">
             <img
-              src={user.profile_picture}
+              src={
+                profilePictureUrl
+                  ? profilePictureUrl
+                  : "/images/profile-picture-placeholder.jpg"
+              }
               alt={`${user.name}'s profile pic`}
               className="w-28 h-36 object-cover"
             />
