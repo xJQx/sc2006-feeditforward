@@ -3,6 +3,8 @@ import json
 from datetime import datetime, time
 from fastapi import HTTPException
 
+from schemas.misc import Geometry
+
 class ExternalAPIController:
   def getWeatherForecast24Hr(date: str):
     '''
@@ -85,3 +87,25 @@ class ExternalAPIController:
         raise HTTPException(status_code=404, detail="4 Day Weather Forecast not available")
 
       return weather_data_4_day
+    
+  def geoCoding(postal_code: str):
+    oneMapApi = "https://developers.onemap.sg/commonapi/search?searchVal={0}&returnGeom=Y&getAddrDetails=Y".format(postal_code)
+
+    with httpx.Client() as client:
+      res = client.get(oneMapApi)
+      geoCoded_location_json = json.loads(res.text)
+
+      # parse data
+      if geoCoded_location_json and geoCoded_location_json["found"] > 0:
+        latitude = geoCoded_location_json["results"][0]["LATITUDE"]
+        longitude = geoCoded_location_json["results"][0]["LONGITUDE"]
+
+        geometry: Geometry = {
+          "type": "Point",
+          "latitude": latitude,
+          "longitude": longitude
+        }
+
+        return geometry
+
+      raise HTTPException(status_code=400, detail="Invalid Postal Code")
