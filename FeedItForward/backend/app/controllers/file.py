@@ -16,11 +16,6 @@ class FileUploadResponse(BaseModel):
 class FileController:
     # ----- File ----- #
     def uploadFile(user_id: int, file: UploadFile, db: Session):
-        # user_id must be valid
-        db_user = users_services.get_user_by_id(db, user_id)
-        if not db_user:
-            raise HTTPException(status_code=404, detail="Invalid user_id")
-
         # Validate file type - Must be Image
         if file.content_type not in ["image/jpeg", "image/png", "image/gif"]:
             raise HTTPException(status_code=400, detail="Invalid file type. File type must be jpeg, png, or gif")
