@@ -17,6 +17,7 @@ import { ConsumerCreate } from "../../schemas/consumer";
 import { DriverCreate } from "../../schemas/driver";
 import { HawkerCreate } from "../../schemas/hawker";
 import { Geometry } from "../../schemas/misc";
+import FormImagePicker from "../../components/Form/FormImagePicker";
 
 export const SignupScreen = () => {
   const navigate = useNavigate();
@@ -30,6 +31,7 @@ export const SignupScreen = () => {
   const [role, setRole] = useState<Role>("Consumer");
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [profilePictures, setProfilePictures] = useState<string[]>([]);
 
   // Driver Inputs
   const [vehicleNumber, setVehicleNumber] = useState<string>("");
@@ -43,13 +45,13 @@ export const SignupScreen = () => {
 
   // Steps Navigation
   const [currentStep, setCurrentStep] = useState<number>(1);
-  const [totalSteps, setTotalSteps] = useState<number>(2);
+  const [totalSteps, setTotalSteps] = useState<number>(3);
 
   useEffect(() => {
     if (role === "Driver" || role === "Hawker") {
-      setTotalSteps(3);
+      setTotalSteps(4);
     } else {
-      setTotalSteps(2);
+      setTotalSteps(3);
     }
   }, [role]);
 
@@ -69,6 +71,12 @@ export const SignupScreen = () => {
 
       setCurrentStep(prevStep => prevStep + 1);
     } else if (currentStep === 2) {
+      if (profilePictures.length === 0) {
+        return toast.error("Please upload a photo.");
+      }
+
+      setCurrentStep(prevStep => prevStep + 1);
+    } else if (currentStep === 3) {
       // Input Validation
       if (!role || !password || !confirmPassword) {
         return toast.error("Please input all fields.");
@@ -117,7 +125,8 @@ export const SignupScreen = () => {
             address: address,
             contact_number: contactNumber,
             password: password,
-            role: role
+            role: role,
+            profile_picture: profilePictures[0]
           };
           const adminResponse = await fetch.post("/auth/signup/admin", admin);
           if (adminResponse) success = true;
@@ -129,7 +138,8 @@ export const SignupScreen = () => {
             address: address,
             contact_number: contactNumber,
             password: password,
-            role: role
+            role: role,
+            profile_picture: profilePictures[0]
           };
           const consumerResponse = await fetch.post(
             "/auth/signup/consumer",
@@ -145,6 +155,7 @@ export const SignupScreen = () => {
             contact_number: contactNumber,
             password: password,
             role: role,
+            profile_picture: profilePictures[0],
             vehicle_number: vehicleNumber,
             licence_number: licenceNumber
           };
@@ -173,6 +184,7 @@ export const SignupScreen = () => {
               contact_number: contactNumber,
               password: password,
               role: role,
+              profile_picture: profilePictures[0],
               business_name: businessName,
               operating_hours: operatingHours,
               food_type: foodType,
@@ -242,6 +254,12 @@ export const SignupScreen = () => {
             )}
             {currentStep === 2 && (
               <StepTwoInputs
+                profilePictures={profilePictures}
+                setProfilePictures={setProfilePictures}
+              />
+            )}
+            {currentStep === 3 && (
+              <StepThreeInputs
                 role={role}
                 setRole={setRole}
                 password={password}
@@ -250,16 +268,16 @@ export const SignupScreen = () => {
                 setConfirmPassword={setConfirmPassword}
               />
             )}
-            {currentStep === 3 && role === "Driver" && (
-              <StepThreeDriverInputs
+            {currentStep === 4 && role === "Driver" && (
+              <StepFourDriverInputs
                 vehicleNumber={vehicleNumber}
                 setVehicleNumber={setVehicleNumber}
                 licenceNumber={licenceNumber}
                 setLicenceNumber={setLicenceNumber}
               />
             )}
-            {currentStep === 3 && role === "Hawker" && (
-              <StepThreeHawkerInputs
+            {currentStep === 4 && role === "Hawker" && (
+              <StepFourHawkerInputs
                 businessName={businessName}
                 setBusinessName={setBusinessName}
                 operatingHours={operatingHours}
@@ -375,6 +393,25 @@ const StepOneInputs = (props: StepOneInputsProps) => {
 };
 
 interface StepTwoInputsProps {
+  profilePictures: string[];
+  setProfilePictures: React.Dispatch<React.SetStateAction<string[]>>;
+}
+const StepTwoInputs = (props: StepTwoInputsProps) => {
+  const { profilePictures, setProfilePictures } = props;
+
+  return (
+    <>
+      <FormImagePicker
+        label="Profile Picture"
+        labelClassNames="font-bold text-[18px]"
+        filePaths={profilePictures}
+        setFilePaths={setProfilePictures}
+      />
+    </>
+  );
+};
+
+interface StepThreeInputsProps {
   role: Role;
   setRole: React.Dispatch<React.SetStateAction<Role>>;
   password: string;
@@ -382,7 +419,7 @@ interface StepTwoInputsProps {
   confirmPassword: string;
   setConfirmPassword: React.Dispatch<React.SetStateAction<string>>;
 }
-const StepTwoInputs = (props: StepTwoInputsProps) => {
+const StepThreeInputs = (props: StepThreeInputsProps) => {
   const {
     role,
     setRole,
@@ -421,13 +458,13 @@ const StepTwoInputs = (props: StepTwoInputsProps) => {
   );
 };
 
-interface StepThreeDriverInputsProps {
+interface StepFourDriverInputsProps {
   vehicleNumber: string;
   setVehicleNumber: React.Dispatch<React.SetStateAction<string>>;
   licenceNumber: string;
   setLicenceNumber: React.Dispatch<React.SetStateAction<string>>;
 }
-const StepThreeDriverInputs = (props: StepThreeDriverInputsProps) => {
+const StepFourDriverInputs = (props: StepFourDriverInputsProps) => {
   const { vehicleNumber, setVehicleNumber, licenceNumber, setLicenceNumber } =
     props;
 
@@ -454,7 +491,7 @@ const StepThreeDriverInputs = (props: StepThreeDriverInputsProps) => {
   );
 };
 
-interface StepThreeHawkerInputsProps {
+interface StepFourHawkerInputsProps {
   businessName: string;
   setBusinessName: React.Dispatch<React.SetStateAction<string>>;
   operatingHours: string;
@@ -464,7 +501,7 @@ interface StepThreeHawkerInputsProps {
   postalCode: string;
   setPostalCode: React.Dispatch<React.SetStateAction<string>>;
 }
-const StepThreeHawkerInputs = (props: StepThreeHawkerInputsProps) => {
+const StepFourHawkerInputs = (props: StepFourHawkerInputsProps) => {
   const {
     businessName,
     setBusinessName,

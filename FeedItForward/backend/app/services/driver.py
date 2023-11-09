@@ -23,7 +23,8 @@ def create_driver(db: Session, user: driver_schemas.DriverCreate):
         address=user.address,
         password=user.password,
         role=user_schemas.Role.DRIVER,
-        ban=False
+        ban=False,
+        profile_picture=user.profile_picture
     )
     db_user = user_services.create_user(db, user_to_create)
     

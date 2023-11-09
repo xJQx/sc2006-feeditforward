@@ -57,7 +57,26 @@ const useFetch = () => {
     return handleResponse(response);
   };
 
-  return { get, post, put, _delete };
+  const retrieve_image = async (file_path: string) => {
+    const requestOptions: RequestInit = {
+      method: "POST",
+      credentials: "include"
+    };
+    const response = await fetch(
+      serverDomainUrl + `/file/retrieve?file_path=${file_path}`,
+      requestOptions
+    );
+    if (response.ok) {
+      const imageBlob = await response.blob();
+      const imageUrl = URL.createObjectURL(imageBlob);
+      return imageUrl;
+    }
+
+    // Status not ok
+    return Promise.reject(response.status);
+  };
+
+  return { get, post, put, _delete, retrieve_image };
 };
 
 export default useFetch;

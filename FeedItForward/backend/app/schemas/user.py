@@ -27,6 +27,7 @@ class UserCreate(UserBase):
     password: str
     role: Role
     ban: Optional[bool] = False
+    profile_picture: str
 
 class UserUpdate(UserBase):
     user_id: int
