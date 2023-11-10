@@ -35,7 +35,6 @@ export const LoginScreen = () => {
         password: password
       };
       const user_response = await fetch.post("/auth/login", requestBody);
-      console.log(user_response);
 
       if (user_response && user_response.user) {
         const user: UserDisplay = {
