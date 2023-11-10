@@ -43,7 +43,7 @@ const useFetch = () => {
       credentials: "include",
       body: JSON.stringify(body)
     };
-    const response = await fetch(url, requestOptions);
+    const response = await fetch(serverDomainUrl + url, requestOptions);
     return handleResponse(response);
   };
 

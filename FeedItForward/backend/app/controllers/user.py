@@ -125,3 +125,8 @@ class UserController:
         raise HTTPException(status_code=404, detail="User not found")
     return user
   
+  def updateUser(db: Session, updated_user: user_schemas.UserUpdate):
+    user = user_services.update_user(db, updated_user)
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return user

@@ -101,3 +101,7 @@ async def get_user_by_id(user_id: str, db: Session = Depends(get_db)):
 @router.get('/user/email/{email}', response_model=user_schemas.User, tags=["User (CRUD)"])
 async def get_user_by_email(email: str, db: Session = Depends(get_db)):
     return UserController.getUserByEmail(db, email)
+
+@router.put("/user/update", response_model=user_schemas.User, tags=["User (CRUD)"])
+def update_user(user: user_schemas.UserUpdate, db: Session = Depends(get_db)):
+    return UserController.updateUser(db, user)

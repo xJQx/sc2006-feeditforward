@@ -41,6 +41,7 @@ export interface UserUpdate {
   contact_number: string;
   address: string;
   profile_picture?: string;
+  ban: boolean;
 }
 
 export interface UserLogin {

@@ -3,9 +3,10 @@ import { Button, HorizontalDivider, ScreenTitle } from "../../components";
 import { useAuthContext } from "../../contexts/AuthContext";
 import toast from "react-hot-toast";
 import useFetch from "../../hooks/useFetch";
+import { UserUpdate } from "../../schemas/user";
 
 export const ProfileScreen = () => {
-  const { user } = useAuthContext();
+  const { user, setUser } = useAuthContext();
   const fetch = useFetch();
 
   const [editMode, setEditMode] = useState(false);
@@ -37,12 +38,37 @@ export const ProfileScreen = () => {
     setEditMode(true);
   };
 
-  const handleSafeProfile = () => {
+  const handleSafeProfile = async () => {
+    if (!user) return;
     if (!address || !email || !contactNumber) {
       return toast.error("Please input all fields!");
     }
 
-    // TODO: Save profile changes to Backend
+    // Save profile changes to Backend
+    const updatedUser: UserUpdate = {
+      user_id: user.user_id,
+      name: user.name,
+      profile_picture: user.profile_picture,
+      ban: user.ban,
+      address: address,
+      email: email,
+      contact_number: contactNumber
+    };
+    try {
+      const res = await fetch.put("/user/update", updatedUser);
+      if (res) toast.success("Changes saved.");
+      else toast.error("Failed to save changes");
+    } catch (e) {
+      console.log(e);
+      toast.error("Failed to save changes");
+    }
+
+    setUser({
+      ...user,
+      address: address,
+      email: email,
+      contact_number: contactNumber
+    });
 
     setEditMode(false);
   };
