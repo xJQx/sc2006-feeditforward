@@ -50,5 +50,9 @@ class FileController:
     def retrieveFile(file_path: str):
         # Full File Path
         full_file_path = os.path.join(server_upload_base_directory, file_path)
+        
+        # For database seeding
+        if file_path.startswith("[Seed]"):
+            full_file_path = os.path.join(os.getcwd(), "assets", "database_seed", "images", file_path.removeprefix("[Seed]"))
 
         return FileResponse(full_file_path)

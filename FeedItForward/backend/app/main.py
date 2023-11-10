@@ -1,10 +1,13 @@
-from typing import Union
-
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from routers import auth, user, admin, consumer, driver, hawker, review, leftover_food, pickup_job, priority_request, notification, customer_service_support, external_api, file
 from database import Base, engine
+from assets.database_seed.helper import add_event_listener_to_seed_database
+
+# Seed database
+# Uncomment the line below if you want to seed the database
+# add_event_listener_to_seed_database()
 
 app = FastAPI()
 
