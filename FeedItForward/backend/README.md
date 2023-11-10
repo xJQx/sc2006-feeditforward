@@ -26,6 +26,16 @@ uvicorn main:app --reload
 
 And you are ready to start using the FeedItForward Backend! The server application is running on http://127.0.0.1:8000/
 
+## Database Seeding
+
+If you would like to seed the database with pre-configured data, please uncomment the following line in the `backend/app/main.py`
+
+```python
+# app/main.py
+# Uncomment this line 👇🏻
+# add_event_listener_to_seed_database()
+```
+
 ## API Docs
 
 The FeedItForward Backend application uses FastAPI, which comes with an in-built documentation for API routes created. You may access it via http://127.0.0.1:8000/docs#/
