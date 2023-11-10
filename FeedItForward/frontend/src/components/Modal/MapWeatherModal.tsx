@@ -164,7 +164,7 @@ const RegionWeatherForecast24HrRow = (
       <div className="flex flex-wrap justify-between w-full gap-x-3 row-y-0">
         {weather24HrForecasts.periods.map(forecast => (
           <div
-            key={`${forecast.time}-${forecast.regions[region]}`}
+            key={`${forecast.time.startDate}-${forecast.time.start}-${forecast.regions[region]}`}
             className="flex flex-col items-center"
           >
             {getWeatherIcon(forecast.regions[region])}

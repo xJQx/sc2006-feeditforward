@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { AiFillStar } from "react-icons/ai";
 import { BiSolidDirectionRight } from "react-icons/bi";
@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { Button } from "../Button";
 import { useNavigate } from "react-router-dom";
 import { ModalCloseButton } from "./ModalCloseButton";
-import { reviewData } from "../../data/reviewData";
+import useFetch from "../../hooks/useFetch";
 
 interface MapHawkerModalProps {
   hawker: Hawker;
@@ -18,11 +18,40 @@ interface MapHawkerModalProps {
 export const MapHawkerModal = (props: MapHawkerModalProps) => {
   const { hawker, isModalOpen, setModalOpen } = props;
   const navigate = useNavigate();
+  const fetch = useFetch();
 
-  // To Remove
-  const hawkerReviewsCount = reviewData.filter(
-    review => review.hawker_id === hawker.hawker_id
-  ).length;
+  const [hawkerReviewsCount, setHawkerReviewsCount] = useState(0);
+
+  const [profilePictureUrl, setProfilePictureUrl] = useState(
+    "https://placehold.co/600x400/EEE/31343C?text=No Photo"
+  );
+  // Get Profile Picture
+  useEffect(() => {
+    const getImageFile = async () => {
+      if (!hawker.user.profile_picture.includes("http")) {
+        try {
+          const filePath = hawker.user.profile_picture;
+
+          const imageUrl = await fetch.retrieve_image(filePath);
+          setProfilePictureUrl(imageUrl);
+        } catch (e: any) {
+          console.log(e);
+        }
+      }
+    };
+    getImageFile();
+  }, [hawker]);
+
+  // Count Review
+  useEffect(() => {
+    const getHawkerReviewsCount = async () => {
+      const reviewsData = await fetch.get(
+        `/reviews/hawkerid/${hawker.hawker_id}`
+      );
+      setHawkerReviewsCount(reviewsData.length);
+    };
+    getHawkerReviewsCount();
+  }, [hawker]);
 
   const handleDirectionOnClick = () => {
     // TODO
@@ -111,12 +140,8 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
 
           {/* Image */}
           <img
-            src={
-              hawker.user.profile_picture
-                ? hawker.user.profile_picture
-                : "https://placehold.co/600x400/EEE/31343C?text=No Photo"
-            }
-            alt={`${hawker.user.name}'s pic`}
+            src={profilePictureUrl}
+            alt={`${hawker.business_name}'s pic`}
             className="h-[200px] w-full m-auto object-cover rounded-sm"
           />
 

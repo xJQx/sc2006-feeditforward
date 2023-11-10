@@ -12,7 +12,6 @@ import {
 import { MapMarkerHawkerIcon } from "./MapMarkerHawkerIcon";
 import { BiSearchAlt } from "react-icons/bi";
 import { TiWeatherCloudy } from "react-icons/ti";
-import { hawkersData } from "../../data/hawkersData";
 
 export const BaseMap = () => {
   const userLocation = useCurrentGeoLocation();
@@ -25,11 +24,12 @@ export const BaseMap = () => {
 
   useEffect(() => {
     const getAllPublicHawkers = async () => {
-      const res = await fetch.get("/hawkers/public");
-      setHawkersList(res);
+      const publicHawkersData = await fetch.get(
+        "/user-controller/get-all-public-hawkers"
+      );
+      const hawkersData = await fetch.get("/user-controller/get-all-hawkers");
 
-      // TODO: Add Registered Hawkers from backend
-      setHawkersList(prev => [...prev, ...hawkersData]);
+      setHawkersList([...hawkersData, ...publicHawkersData]);
     };
 
     getAllPublicHawkers();

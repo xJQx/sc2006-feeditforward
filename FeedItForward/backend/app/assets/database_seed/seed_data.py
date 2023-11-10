@@ -178,7 +178,7 @@ DATABASE_SEED_DATA = {
       "business_name": "North Spine Koufu - Cai Fan Store",
       "operating_hours": "8am - 8pm",
       "food_type": "Cai Fan",
-      "geometry": '{"type": "Point","latitude": 1.34713,"longitude": 103.68003}',
+      "geometry": '{"type": "Point","latitude": 1.34713048855579,"longitude": 103.680033789538}',
       "is_registered": True,
       "user_id": 6
     },
@@ -188,7 +188,7 @@ DATABASE_SEED_DATA = {
       "business_name": "The Crowded Bowl",
       "operating_hours": "8am - 8pm",
       "food_type": "Modern Vegetarian",
-      "geometry": '{"type": "Point","latitude": 1.34713048855579,"longitude": 103.680033789538}',
+      "geometry": '{"type": "Point","latitude": 1.34703048855579,"longitude": 103.680523789538}',
       "is_registered": True,
       "user_id": 7
     },
