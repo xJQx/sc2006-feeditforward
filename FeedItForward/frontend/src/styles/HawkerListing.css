@@ -1,0 +1,70 @@
+.backgroundimage{
+    position:relative;
+    background-image: url(../assets/bbq.jpeg);
+    height:25vh;
+    background-size: cover;
+    background-position: center;
+    z-index:0;
+}
+
+.reviewImg{
+    position:relative;
+    background-image: url(../assets/bbq.jpeg);
+    height:50px;
+    width:50px;
+    background-size: cover;
+    background-position: center;
+    z-index:0;
+    border-radius: 5px;
+}
+
+.hawkerListingCard{
+    position:relative;
+    left: 50px; 
+    top: -13vh;
+    border-radius: 10px;
+    box-shadow: 1px;
+    height: 170px;
+    width: 250px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    text-align:center;
+    z-index: 1;
+    padding: 10px;
+}
+
+.hawkerListingCard h1{
+    border-bottom: 1px solid lightgrey;
+    padding: 3px;
+}
+
+.hawkerItem {
+    border-radius: 15px;
+    width: 140px;
+    height: 125px;
+  }
+  .hawkerItem:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 1.5);
+    transition: 0.3s ease-in;
+    cursor: pointer;
+  }
+  
+  .hawkerItem div {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+    
+  @media only screen and (max-width: 1000px) {
+    .hawkerList {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .hawkerItem p {
+    display: flex;
+  } 

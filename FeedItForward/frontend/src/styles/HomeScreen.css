@@ -15,12 +15,21 @@
   justify-content: center;
   gap: 10%;
   padding-bottom: 5%;
+  height: 40px;
 }
+.buttonResize {
+  border-radius: 30px;
+}
+
 .button-container {
   display: flex;
   justify-content: center;
 }
-
+.viewall {
+  display: flex;
+  margin-right: 0;
+  margin-left: auto;
+}
 .menu {
     width: 100%;
     height: auto;
@@ -30,12 +39,7 @@
     flex-direction: column;
     margin-bottom: 20%;
   }
-  .viewall {
-    font-family: cursive;
-    font-size: 15px;
-    margin-left: auto;
-    margin-right: 5%;
-  }
+
   
   .menuList {
     font-size: 12px;
@@ -73,8 +77,11 @@
   
  
   .menuItem p {
-    padding-top: 2%;
-    margin-left: 7%;
+    display: flex;
+  } 
+
+  .menuText {
+    padding: 5%;
   }
 
   
