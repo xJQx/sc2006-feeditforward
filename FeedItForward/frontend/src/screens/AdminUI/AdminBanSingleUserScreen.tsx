@@ -2,32 +2,49 @@ import React, { useEffect, useState } from "react";
 import {
   AdminUserDisplayCard,
   Button,
+  FormSelect,
   ScreenSubTitle,
   ScreenTitle
 } from "../../components";
 import { useNavigate, useParams } from "react-router-dom";
 import { UserDisplay } from "../../schemas/user";
-import { userToVerifyData } from "../../data/adminData";
+import useFetch from "../../hooks/useFetch";
+import toast from "react-hot-toast";
 
 export const AdminBanSingleUserScreen = () => {
   let { userId } = useParams();
   const [user, setUser] = useState<UserDisplay>();
   const navigate = useNavigate();
+  const fetch = useFetch();
+
+  const [banReason, setBanReason] = useState("");
+  const [banDuration, setBanDuration] = useState("Forever");
 
   useEffect(() => {
-    // TODO: Fetch data from Backend
-    const user: UserDisplay = userToVerifyData.filter(
-      user => user.user_id.toString() === userId
-    )[0];
-    setUser(user);
+    const getUserData = async () => {
+      const user = await fetch.get(`/user-controller/get-user-by-id/${userId}`);
+      setUser(user);
+    };
+    getUserData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId]);
 
   const handleCancel = () => {
     navigate(-1);
   };
-  const handleBan = () => {
-    // TODO
-    console.log("handleBan");
+  const handleBan = async () => {
+    if (!banReason) return toast.error("Please enter ban reason");
+    else if (!banDuration) return toast.error("Please enter ban duration");
+
+    const bannedUser: UserDisplay = await fetch.get(
+      `/admin-controller/ban-user/${userId}`
+    );
+    if (bannedUser.ban) {
+      toast.success(`User ${user?.name} banned.`);
+      navigate(-1);
+    } else {
+      toast.error("Failed to ban user.");
+    }
   };
 
   return (
@@ -42,15 +59,26 @@ export const AdminBanSingleUserScreen = () => {
       )}
 
       {/* Offenses */}
-      <ScreenSubTitle title="Offenses" />
-      <div className="mt-1 p-2 w-full border h-[150px]">Placeholder (TODO)</div>
+      <ScreenSubTitle title="Reason" />
+      <textarea
+        className="mt-1 p-2 w-full border h-[150px]"
+        placeholder="Explain why you are banning this user..."
+        value={banReason}
+        onChange={e => setBanReason(e.target.value)}
+      />
 
-      {/* Order History */}
-      <ScreenSubTitle title="Order History" />
-      <div className="mt-1 p-2 w-full border h-[150px]">Placeholder (TODO)</div>
+      {/* Ban Duration */}
+      <ScreenSubTitle title="Ban Duration" />
+      <FormSelect
+        label=""
+        placeholder="Forever"
+        value={banDuration}
+        setValue={setBanDuration}
+        optionsList={["Forever"]}
+      />
 
       {/* Buttons */}
-      <div className="flex flex-row gap-4 justify-center mt-6">
+      <div className="flex flex-row gap-4 justify-center mt-12">
         <Button
           label="Cancel"
           className="!bg-brand-gray"

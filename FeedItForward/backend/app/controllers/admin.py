@@ -6,12 +6,14 @@ import services.user as user_services
 import services.priority_request as priority_request_services
 import services.notification as notification_services
 import services.review as review_services
+import services.consumer as consumer_services
 
 import schemas.admin as admin_schemas
 import schemas.user as user_schemas
 import schemas.priority_request as priority_request_schemas
 import schemas.notification as notification_schemas
 import schemas.review as review_schemas
+import schemas.consumer as consumer_schemas
 
 class AdminController:
   # -------------------------------------------------------- #
@@ -39,7 +41,8 @@ class AdminController:
     if not admin_services.get_admin_by_admin_id(db, admin_id):
       raise HTTPException(status_code=400, detail="Invalid admin_id")
     
-    if not user_services.get_user_by_id(db, user_id):
+    consumer = consumer_services.get_consumer_by_user_id(db, user_id)
+    if not consumer:
       raise HTTPException(status_code=400, detail="Invalid user_id")
     
     db_priority_request: priority_request_schemas.PriorityRequest = priority_request_services.get_priority_request_by_priority_request_id(db, priority_request_id)
@@ -69,6 +72,21 @@ class AdminController:
           description="Congratulations! Your request for food priority has been approved!"
         )
         AdminController.notifyUser(db, new_notification)
+
+        # Update Consumer's Priority Status
+        updatedConsumer = consumer_schemas.ConsumerUpdate(
+          user_id=user_id,
+          address=consumer.user.address,
+          email=consumer.user.email,
+          name=consumer.user.name,
+          contact_number=consumer.user.contact_number,
+          profile_picture=consumer.user.profile_picture,
+          ban=consumer.user.ban,
+
+          consumer_id=consumer.consumer_id,
+          priority=True
+        )
+        consumer_services.update_consumer(db, updatedConsumer)
       case priority_request_schemas.PriorityRequestActionEnum.REQUEST:
         # Update Status
         updated_priority_request.status = priority_request_schemas.PriorityRequestStatusEnum.PENDING
@@ -118,14 +136,14 @@ class AdminController:
       flagged_reason=db_review.flagged_reason
     )
 
-    match action:
-      case review_schemas.ReviewAction.DELETE:
+    match action.value:
+      case review_schemas.ReviewAction.DELETE.value:
         review_services.delete_review(db, review_id=review_id)
-      case review_schemas.ReviewAction.IGNORE:
+      case review_schemas.ReviewAction.IGNORE.value:
         updated_review.flagged = False
         updated_review.flagged_reason = ""
         review_services.update_review(db, updated_review)
-      case review_schemas.ReviewAction.CANCEL:
+      case review_schemas.ReviewAction.CANCEL.value:
         pass
     
     return updated_review

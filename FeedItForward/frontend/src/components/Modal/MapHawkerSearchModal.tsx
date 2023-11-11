@@ -54,6 +54,7 @@ export const MapHawkerSearchModal = (props: MapHawkerSearchModalProps) => {
             searchItemPlaceholder="hawkers..."
             handleSearch={handleHawkersSearch}
             className="text-[12px] !p-[6px] !border bg-white"
+            handleOnClear={() => setHawkersFiltered([])}
           />
           {/* Results */}
           {hawkersFiltered.length > 0 && (

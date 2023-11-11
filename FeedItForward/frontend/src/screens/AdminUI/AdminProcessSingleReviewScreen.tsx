@@ -1,57 +1,104 @@
 import React, { useEffect, useState } from "react";
-import { Button, ScreenTitle } from "../../components";
+import { Button, ScreenSubTitle, ScreenTitle } from "../../components";
 import { useNavigate, useParams } from "react-router-dom";
-import { reviewsToProcessData } from "../../data/adminData";
 import { UserDisplay } from "../../schemas/user";
-import { Review } from "../../schemas/review";
-import { usersData } from "../../data/usersData";
+import { REVIEW_ACTION, Review } from "../../schemas/review";
+import useFetch from "../../hooks/useFetch";
+import toast from "react-hot-toast";
 
 export const AdminProcessSingleReviewScreen = () => {
   let { reviewId } = useParams();
-  const [review, setReview] = useState<Review>();
-  const [user, setUser] = useState<UserDisplay>();
   const navigate = useNavigate();
+  const fetch = useFetch();
 
+  const [review, setReview] = useState<Review>();
+  const [consumerUser, setConsumerUser] = useState<UserDisplay>();
+  const [imageUrl, setImageUrl] = useState("");
+
+  // Fetch data from backend
   useEffect(() => {
-    // TODO: Fetch data from Backend
-    const review: Review = reviewsToProcessData.filter(
-      review => review.review_id.toString() === reviewId
-    )[0];
-    setReview(review);
+    const getReviewData = async () => {
+      const data: Review = await fetch.get(`/review/${reviewId}`);
+      setReview(data);
+      setConsumerUser(data.consumer.user);
+    };
 
-    const user: UserDisplay = usersData.filter(
-      user => user.user_id === review?.consumer.user_id
-    )[0];
-    setUser(user);
+    getReviewData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [reviewId]);
 
-  const handleIgnore = () => {
+  useEffect(() => {
+    const getImageFile = async () => {
+      if (consumerUser) {
+        try {
+          const url = await fetch.retrieve_image(consumerUser.profile_picture);
+          setImageUrl(url);
+        } catch (e: any) {
+          console.log(e);
+        }
+      }
+    };
+    getImageFile();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [consumerUser]);
+
+  const handleCancel = () => {
     navigate(-1);
   };
-  const handleDelete = () => {
-    // TODO
-    console.log("handleDelete");
+  const handleIgnore = async () => {
+    const ignoredReview: Review = await fetch.post(
+      `/admin-controller/process-review/${reviewId}`,
+      {
+        review_id: reviewId,
+        action: REVIEW_ACTION[1]
+      }
+    );
+
+    if (ignoredReview.flagged === false) {
+      toast.success("Review ignored");
+      navigate(-1);
+    } else {
+      toast.error("Failed to ignore review");
+    }
+  };
+  const handleDelete = async () => {
+    const deletedReview: Review = await fetch.post(
+      `/admin-controller/process-review/${reviewId}`,
+      {
+        review_id: reviewId,
+        action: REVIEW_ACTION[0]
+      }
+    );
+
+    if (deletedReview.flagged === true) {
+      toast.success("Review deleted");
+      navigate(-1);
+    } else {
+      toast.error("Failed to delete review");
+    }
   };
 
   return (
     <div className="mb-12">
       <ScreenTitle title="Process Review" />
 
+      <ScreenSubTitle title="Flagged Review" />
+
       {/* Review Card */}
       {review && (
-        <div className="mt-8 flex flex-row gap-3 px-3 py-2 items-center justify-start border shadow-md rounded-lg">
+        <div className="mt-6 flex flex-row gap-3 px-3 py-2 items-center justify-start border shadow-md rounded-lg">
           <div className="flex flex-row gap-2 w-[40%]">
             {/* Photo */}
             <div className="bg-gray-300 w-12 h-12 rounded-full flex justify-center items-center">
               <img
                 src={
-                  user?.profile_picture
-                    ? user?.profile_picture
+                  consumerUser?.profile_picture
+                    ? imageUrl
                     : "https://picsum.photos/id/237/200/300"
                 }
                 alt={
-                  user?.profile_picture
-                    ? `${user?.profile_picture}'s profile pic`
+                  consumerUser?.profile_picture
+                    ? `${consumerUser?.profile_picture}'s profile pic`
                     : "profile pic"
                 }
                 className="w-10 aspect-square rounded-full object-cover object-center"
@@ -60,8 +107,12 @@ export const AdminProcessSingleReviewScreen = () => {
 
             {/* Name and Role */}
             <div className="flex flex-col">
-              <span className="text-[18px] font-bold">{user?.name}</span>
-              <span className="text-gray-500 text-[14px]">{user?.role}</span>
+              <span className="text-[18px] font-bold">
+                {consumerUser?.name}
+              </span>
+              <span className="text-gray-500 text-[14px]">
+                {consumerUser?.role}
+              </span>
             </div>
           </div>
 
@@ -73,10 +124,15 @@ export const AdminProcessSingleReviewScreen = () => {
       )}
 
       {/* Buttons */}
-      <div className="flex flex-row gap-4 justify-center mt-6">
+      <div className="flex flex-row gap-4 justify-center my-12">
+        <Button
+          label="Cancel"
+          className="!bg-brand-gray"
+          onClick={handleCancel}
+        />
         <Button
           label="Ignore"
-          className="!bg-brand-gray"
+          className="!bg-brand-secondary"
           onClick={handleIgnore}
         />
         <Button

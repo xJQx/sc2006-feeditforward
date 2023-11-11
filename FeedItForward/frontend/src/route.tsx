@@ -53,7 +53,7 @@ export const router = createBrowserRouter([
       { path: "/admin", element: <AdminScreen /> },
       { path: "/admin/verify-user", element: <AdminVerifyUsersScreen /> },
       {
-        path: "/admin/verify-user/:userId",
+        path: "/admin/verify-user/:priorityRequestId",
         element: <AdminVerifySingleUserScreen />
       },
       { path: "/admin/ban-users", element: <AdminBanUsersScreen /> },

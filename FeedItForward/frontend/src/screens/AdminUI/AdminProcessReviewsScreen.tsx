@@ -1,24 +1,41 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ScreenTitle } from "../../components";
 import { SearchBar } from "../../components";
 import { Review } from "../../schemas/review";
 import { useNavigate } from "react-router-dom";
-import { reviewsToProcessData } from "../../data/adminData";
-import { usersData } from "../../data/usersData";
+import useFetch from "../../hooks/useFetch";
+import { useGetServerImage } from "../../hooks";
 
 export const AdminProcessReviewsScreen = () => {
-  // TODO: fetch data from backend
-  const [filteredReviewsToProcessData, setFilteredReviewsToProcessData] = useState<Review[]>(reviewsToProcessData);
+  const fetch = useFetch();
+  const [reviewsToProcessData, setReviewsToProcessData] = useState<Review[]>(
+    []
+  );
+  const [filteredReviewsToProcessData, setFilteredReviewsToProcessData] =
+    useState<Review[]>([]);
+  const [isSearch, setIsSearch] = useState<boolean>(false);
 
-  const handleSearchReviews = (searchKey: string) => {
-    // TODO: Search for reviews
-    const filteredReviews = reviewsToProcessData.filter((review) => {
-      const user = usersData.find((user) => user.userId === review.userId);
+  // Get users to verify
+  useEffect(() => {
+    const getReviewsToProcessData = async () => {
+      const reviews: Review[] = await fetch.get("/reviews");
+      setReviewsToProcessData(
+        reviews.filter(review => review.flagged === true)
+      );
+    };
+    getReviewsToProcessData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
+  // Search Feature
+  const handleSearchReviews = (searchQuery: string) => {
+    const filteredReviews = reviewsToProcessData.filter(review => {
+      // search for user or description
       if (
-        review.description.toLowerCase().includes(searchKey.toLowerCase()) ||
-        (user && user.name.toLowerCase().includes(searchKey.toLowerCase()))
+        review.consumer.user.name
+          .toLowerCase()
+          .includes(searchQuery.toLowerCase()) ||
+        review.description.toLowerCase().includes(searchQuery.toLowerCase())
       ) {
         return true;
       }
@@ -27,9 +44,11 @@ export const AdminProcessReviewsScreen = () => {
     });
 
     setFilteredReviewsToProcessData(filteredReviews);
-  
-
-    console.log(`Search for reviews with searchKey ${searchKey}`);
+    setIsSearch(true);
+  };
+  const handleOnSearchClear = () => {
+    setFilteredReviewsToProcessData([]);
+    setIsSearch(false);
   };
 
   return (
@@ -39,8 +58,15 @@ export const AdminProcessReviewsScreen = () => {
         <SearchBar
           searchItemPlaceholder="reviews or user"
           handleSearch={handleSearchReviews}
+          handleOnClear={handleOnSearchClear}
         />
-        <ReviewsToProcess reviewsToProcessData={filteredReviewsToProcessData} />
+        {isSearch ? (
+          <ReviewsToProcess
+            reviewsToProcessData={filteredReviewsToProcessData}
+          />
+        ) : (
+          <ReviewsToProcess reviewsToProcessData={reviewsToProcessData} />
+        )}
       </div>
     </div>
   );
@@ -57,13 +83,9 @@ const ReviewsToProcess = (props: ReviewsToProcessProps) => {
   return (
     <div className="border-2 border-brand-darkgray rounded-lg max-h-[25rem] min-h-[22rem] overflow-y-auto">
       <ul className="list-none">
-        {reviewsToProcessData.map(review => {
-          return (
-            review.flagged && (
-              <ReviewToProcessItem key={review.consumer_id} {...review} />
-            )
-          );
-        })}
+        {reviewsToProcessData.map(review => (
+          <ReviewToProcessItem key={review.review_id} {...review} />
+        ))}
       </ul>
     </div>
   );
@@ -71,10 +93,9 @@ const ReviewsToProcess = (props: ReviewsToProcessProps) => {
 
 const ReviewToProcessItem = (props: Review) => {
   const { review_id, consumer, description } = props;
-  const { name, role, profile_picture } = usersData.filter(
-    user => user.user_id === consumer.user_id
-  )[0];
+  const { name, role, profile_picture } = consumer.user;
   const navigate = useNavigate();
+  const profilePictureImageUrl = useGetServerImage(profile_picture);
 
   const handleOnClick = () => {
     navigate(`/admin/process-review/${review_id}`);
@@ -91,7 +112,7 @@ const ReviewToProcessItem = (props: Review) => {
           <img
             src={
               profile_picture
-                ? profile_picture
+                ? profilePictureImageUrl
                 : "https://picsum.photos/id/237/200/300"
             }
             alt={profile_picture ? `${name}'s profile pic` : "profile pic"}

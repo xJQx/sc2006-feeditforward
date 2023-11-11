@@ -1,23 +1,47 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ScreenTitle } from "../../components";
 import { SearchBar } from "../../components";
 import { UserDisplay } from "../../schemas/user";
 import { useNavigate } from "react-router-dom";
-import { usersData } from "../../data/usersData";
+import useFetch from "../../hooks/useFetch";
+import { simpleSearch } from "../../utils/search";
+import { useGetServerImage } from "../../hooks";
 
 export const AdminBanUsersScreen = () => {
-  // TODO: fetch data from backend
-  const [filteredUserData, setFilteredUserData] = useState<UserDisplay[]>(usersData);
+  const fetch = useFetch();
 
-  const handleSearchUsersToBan = (searchKey: string) => {
-    // TODO: Search for users to ban
-    const filteredUsers = usersData.filter((user) =>
-      user.name.toLowerCase().includes(searchKey.toLowerCase())
-    );
+  const [usersData, setUsersData] = useState<UserDisplay[]>([]);
+  const [filteredUsersData, setFilteredUsersData] = useState<UserDisplay[]>([]);
+  const [isSearch, setIsSearch] = useState<boolean>(false);
 
-    setFilteredUserData(filteredUsers);
-    console.log(`Search for users to ban with searchKey ${searchKey}`);
+  // Get Users from backend
+  useEffect(() => {
+    const getUsersData = async () => {
+      const data: UserDisplay[] = await fetch.get(
+        "/user-controller/get-all-users"
+      );
+      setUsersData(
+        data
+          .filter(user => user.role !== "Admin")
+          .filter(user => user.ban === false)
+      );
+    };
+    getUsersData();
+  }, []);
+
+  // Search Feature
+  const handleSearchUsers = (searchQuery: string) => {
+    const filteredUsers = simpleSearch(usersData, searchQuery, [
+      "name",
+      "role"
+    ]);
+
+    setFilteredUsersData(filteredUsers);
+    setIsSearch(true);
+  };
+  const handleOnSearchClear = () => {
+    setFilteredUsersData([]);
+    setIsSearch(false);
   };
 
   return (
@@ -26,9 +50,14 @@ export const AdminBanUsersScreen = () => {
       <div className="flex flex-col justify-center mt-12 gap-10">
         <SearchBar
           searchItemPlaceholder="user to ban"
-          handleSearch={handleSearchUsersToBan}
+          handleSearch={handleSearchUsers}
+          handleOnClear={handleOnSearchClear}
         />
-        <UserListItems usersData={filteredUserData} />
+        {isSearch ? (
+          <UserListItems usersData={filteredUsersData} />
+        ) : (
+          <UserListItems usersData={usersData} />
+        )}
       </div>
     </div>
   );
@@ -56,6 +85,7 @@ const UserListItems = (props: UserListItemsProps) => {
 const UserListItem = (props: UserDisplay) => {
   const { user_id, name, role, profile_picture } = props;
   const navigate = useNavigate();
+  const profilePictureImageUrl = useGetServerImage(profile_picture);
 
   const handleOnClick = () => {
     navigate(`/admin/ban-user/${user_id}`);
@@ -71,7 +101,7 @@ const UserListItem = (props: UserDisplay) => {
         <img
           src={
             profile_picture
-              ? profile_picture
+              ? profilePictureImageUrl
               : "https://picsum.photos/id/237/200/300"
           }
           alt={profile_picture ? `${name}'s profile pic` : "profile pic"}

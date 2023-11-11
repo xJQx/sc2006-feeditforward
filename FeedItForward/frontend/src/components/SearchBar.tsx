@@ -4,15 +4,23 @@ import { FaSearch, FaArrowRight } from "react-icons/fa";
 interface SearchBarProps {
   searchItemPlaceholder: string;
   handleSearch: (_searchKey: string) => void;
+  handleOnClear?: () => void;
   className?: string;
 }
 
 export const SearchBar = (props: SearchBarProps) => {
-  const { searchItemPlaceholder, handleSearch, className } = props;
+  const { searchItemPlaceholder, handleSearch, handleOnClear, className } =
+    props;
   const [searchKey, setSearchKey] = useState("");
 
-  const onSearchButtonClick = () => {
-    handleSearch(searchKey);
+  const handleValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchKey(e.target.value);
+
+    if (e.target.value.length > 2) {
+      handleSearch(e.target.value);
+    } else {
+      if (handleOnClear) handleOnClear();
+    }
   };
 
   return (
@@ -26,15 +34,14 @@ export const SearchBar = (props: SearchBarProps) => {
       <input
         className="outline-none w-full"
         placeholder={"Search " + searchItemPlaceholder}
-        onChange={e => setSearchKey(e.target.value)}
+        onChange={handleValueChange}
       />
       <FaArrowRight
         className={`mr-1 ${
-          searchKey.length > 3
+          searchKey.length > 2
             ? "text-black animate-pulse"
             : "text-brand-darkgray"
         }`}
-        onClick={onSearchButtonClick}
       />
     </div>
   );

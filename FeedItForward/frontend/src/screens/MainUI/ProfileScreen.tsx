@@ -4,6 +4,7 @@ import { useAuthContext } from "../../contexts/AuthContext";
 import toast from "react-hot-toast";
 import useFetch from "../../hooks/useFetch";
 import { UserUpdate } from "../../schemas/user";
+import { useGetServerImage } from "../../hooks";
 
 export const ProfileScreen = () => {
   const { user, setUser } = useAuthContext();
@@ -15,23 +16,20 @@ export const ProfileScreen = () => {
   const [contactNumber, setContactNumber] = useState(
     user?.contact_number ?? ""
   );
-  const [profilePictureUrl, setProfilePictureUrl] = useState("");
+  const profilePictureUrl = useGetServerImage(user?.profile_picture ?? "");
+  const [consumerPriority, setConsumerPriority] = useState(false);
 
-  // Get Profile Picture
   useEffect(() => {
-    const getImageFile = async () => {
-      if (user) {
-        try {
-          const filePath = user.profile_picture;
-
-          const imageUrl = await fetch.retrieve_image(filePath);
-          setProfilePictureUrl(imageUrl);
-        } catch (e: any) {
-          console.log(e);
-        }
+    const getConsumerData = async () => {
+      const consumer = await fetch.get(`/consumer/${user?.user_id}`);
+      if (consumer) {
+        console.log(consumer);
+        setConsumerPriority(consumer.priority);
       }
     };
-    getImageFile();
+    if (user?.role === "Consumer") {
+      getConsumerData();
+    }
   }, []);
 
   const handleEditProfile = () => {
@@ -91,7 +89,14 @@ export const ProfileScreen = () => {
             />
             <div className="flex flex-col justify-center">
               <div className="font-bold text-[24px]">{user.name}</div>
-              <div className="text-[14px]">{user.role}</div>
+              <div className="flex gap-2 items-center">
+                <span className="text-[14px]">{user.role}</span>
+                {consumerPriority && (
+                  <span className="bg-brand-tertiary px-[6px] py-[2px] text-[12px] w-max rounded font-bold">
+                    Priority
+                  </span>
+                )}
+              </div>
               <Button
                 label={editMode ? "Save Profile" : "Edit Profile"}
                 className={`text-white !font-roboto !font-normal !rounded-none !px-8 mt-3 ${

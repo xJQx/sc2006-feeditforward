@@ -1,23 +1,57 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { ScreenTitle } from "../../components";
 import { SearchBar } from "../../components";
 import { UserDisplay } from "../../schemas/user";
 import { useNavigate } from "react-router-dom";
-import { userToVerifyData } from "../../data/adminData";
+import useFetch from "../../hooks/useFetch";
+import { PriorityRequest } from "../../schemas/priorityRequest";
+import { simpleSearch } from "../../utils/search";
+import { useGetServerImage } from "../../hooks";
+
+interface UserToVerifySchmea extends UserDisplay {
+  priority_request_id: number;
+}
 
 export const AdminVerifyUsersScreen = () => {
-  // TODO: fetch data from backend
-  const [filteredUserToVerifyData, setFilteredUserToVerifyData] = useState<UserDisplay[]>(userToVerifyData);
-  
-  const handleSearchUsersToVerify = (searchKey: string) => {
-    // TODO: Search for users to verify
-    const filteredUsers = userToVerifyData.filter((user) =>
-      user.name.toLowerCase().includes(searchKey.toLowerCase())
-    );
+  const fetch = useFetch();
 
-    setFilteredUserToVerifyData(filteredUsers);
-    console.log(`Search for users to verify with searchKey ${searchKey}`);
+  const [usersToVerifyData, setUsersToVerifyData] = useState<
+    UserToVerifySchmea[]
+  >([]);
+  const [filteredUsersToVerifyData, setFilteredUsersToVerifyData] = useState<
+    UserToVerifySchmea[]
+  >([]);
+  const [isSearch, setIsSearch] = useState<boolean>(false);
+
+  // Get users to verify
+  useEffect(() => {
+    const getUsersToVerifyData = async () => {
+      const priorityRequestsData: PriorityRequest[] = await fetch.get(
+        "/priority-requests/status/Pending"
+      );
+      setUsersToVerifyData(
+        priorityRequestsData.map(request => ({
+          priority_request_id: request.priority_request_id,
+          ...request.consumer.user
+        }))
+      );
+    };
+    getUsersToVerifyData();
+  }, []);
+
+  // Search Feature
+  const handleSearchUsersToVerify = (searchQuery: string) => {
+    const filteredUsers = simpleSearch(usersToVerifyData, searchQuery, [
+      "name"
+    ]);
+
+    setFilteredUsersToVerifyData(filteredUsers);
+    setIsSearch(true);
+  };
+  const handleOnSearchClear = () => {
+    setFilteredUsersToVerifyData([]);
+    setIsSearch(false);
   };
 
   return (
@@ -27,8 +61,13 @@ export const AdminVerifyUsersScreen = () => {
         <SearchBar
           searchItemPlaceholder="user"
           handleSearch={handleSearchUsersToVerify}
+          handleOnClear={handleOnSearchClear}
         />
-        <VerifyUserListItems userToVerifyData={filteredUserToVerifyData} />
+        {isSearch ? (
+          <VerifyUserListItems usersToVerifyData={filteredUsersToVerifyData} />
+        ) : (
+          <VerifyUserListItems usersToVerifyData={usersToVerifyData} />
+        )}
       </div>
     </div>
   );
@@ -36,29 +75,30 @@ export const AdminVerifyUsersScreen = () => {
 
 // ---------- Helper Components ---------- //
 interface VerifyUserListItemsProps {
-  userToVerifyData: UserDisplay[];
+  usersToVerifyData: UserToVerifySchmea[];
 }
 
 const VerifyUserListItems = (props: VerifyUserListItemsProps) => {
-  const { userToVerifyData } = props;
+  const { usersToVerifyData } = props;
 
   return (
     <div className="border-2 border-brand-darkgray rounded-lg max-h-[25rem] min-h-[22rem] overflow-y-auto">
       <ul className="list-none">
-        {userToVerifyData.map(user => (
-          <VerifyUserListItem key={user.user_id} {...user} />
+        {usersToVerifyData.map(data => (
+          <VerifyUserListItem key={data.user_id} {...data} />
         ))}
       </ul>
     </div>
   );
 };
 
-const VerifyUserListItem = (props: UserDisplay) => {
-  const { user_id, name, role, profile_picture } = props;
+const VerifyUserListItem = (props: UserToVerifySchmea) => {
+  const { priority_request_id, name, role, profile_picture } = props;
   const navigate = useNavigate();
+  const profilePictureImageUrl = useGetServerImage(profile_picture);
 
   const handleOnClick = () => {
-    navigate(`/admin/verify-user/${user_id}`);
+    navigate(`/admin/verify-user/${priority_request_id}`);
   };
 
   return (
@@ -71,7 +111,7 @@ const VerifyUserListItem = (props: UserDisplay) => {
         <img
           src={
             profile_picture
-              ? profile_picture
+              ? profilePictureImageUrl
               : "https://picsum.photos/id/237/200/300"
           }
           alt={profile_picture ? `${name}'s profile pic` : "profile pic"}

@@ -10,7 +10,7 @@ import {
 } from "../../components";
 import toast from "react-hot-toast";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-import { Role } from "../../schemas/user";
+import { ROLES, Role } from "../../schemas/user";
 import useFetch from "../../hooks/useFetch";
 import { AdminCreate } from "../../schemas/admin";
 import { ConsumerCreate } from "../../schemas/consumer";
@@ -437,6 +437,7 @@ const StepThreeInputs = (props: StepThreeInputsProps) => {
         placeholder="Enter your role"
         value={role}
         setValue={setRole}
+        optionsList={[...ROLES]}
       />
       {/* Password */}
       <FormInput
