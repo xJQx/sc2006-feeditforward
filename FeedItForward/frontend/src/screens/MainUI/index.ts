@@ -1,4 +1,5 @@
 export { CustomerServiceSupportScreen } from "./CustomerServiceSupportScreen";
+export { CustomerServiceSupportSingleChatScreen } from "./CustomerServiceSupportSingleChatScreen";
 export { HawkerListingScreen } from "./HawkerListingScreen";
 export { HomeScreen } from "./HomeScreen";
 export { LoginScreen } from "./LoginScreen";
