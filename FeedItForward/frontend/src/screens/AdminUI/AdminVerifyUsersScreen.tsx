@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { ScreenTitle } from "../../components";
 import { SearchBar } from "../../components";
 import { UserDisplay } from "../../schemas/user";
@@ -7,9 +8,15 @@ import { userToVerifyData } from "../../data/adminData";
 
 export const AdminVerifyUsersScreen = () => {
   // TODO: fetch data from backend
-
+  const [filteredUserToVerifyData, setFilteredUserToVerifyData] = useState<UserDisplay[]>(userToVerifyData);
+  
   const handleSearchUsersToVerify = (searchKey: string) => {
     // TODO: Search for users to verify
+    const filteredUsers = userToVerifyData.filter((user) =>
+      user.name.toLowerCase().includes(searchKey.toLowerCase())
+    );
+
+    setFilteredUserToVerifyData(filteredUsers);
     console.log(`Search for users to verify with searchKey ${searchKey}`);
   };
 
@@ -21,7 +28,7 @@ export const AdminVerifyUsersScreen = () => {
           searchItemPlaceholder="user"
           handleSearch={handleSearchUsersToVerify}
         />
-        <VerifyUserListItems userToVerifyData={userToVerifyData} />
+        <VerifyUserListItems userToVerifyData={filteredUserToVerifyData} />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { ScreenTitle } from "../../components";
 import { SearchBar } from "../../components";
 import { UserDisplay } from "../../schemas/user";
@@ -7,9 +8,15 @@ import { usersData } from "../../data/usersData";
 
 export const AdminBanUsersScreen = () => {
   // TODO: fetch data from backend
+  const [filteredUserData, setFilteredUserData] = useState<UserDisplay[]>(usersData);
 
   const handleSearchUsersToBan = (searchKey: string) => {
     // TODO: Search for users to ban
+    const filteredUsers = usersData.filter((user) =>
+      user.name.toLowerCase().includes(searchKey.toLowerCase())
+    );
+
+    setFilteredUserData(filteredUsers);
     console.log(`Search for users to ban with searchKey ${searchKey}`);
   };
 
@@ -21,7 +28,7 @@ export const AdminBanUsersScreen = () => {
           searchItemPlaceholder="user to ban"
           handleSearch={handleSearchUsersToBan}
         />
-        <UserListItems usersData={usersData} />
+        <UserListItems usersData={filteredUserData} />
       </div>
     </div>
   );

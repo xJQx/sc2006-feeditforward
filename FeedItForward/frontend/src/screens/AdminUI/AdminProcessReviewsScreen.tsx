@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { ScreenTitle } from "../../components";
 import { SearchBar } from "../../components";
 import { Review } from "../../schemas/review";
@@ -8,9 +9,26 @@ import { usersData } from "../../data/usersData";
 
 export const AdminProcessReviewsScreen = () => {
   // TODO: fetch data from backend
+  const [filteredReviewsToProcessData, setFilteredReviewsToProcessData] = useState<Review[]>(reviewsToProcessData);
 
   const handleSearchReviews = (searchKey: string) => {
     // TODO: Search for reviews
+    const filteredReviews = reviewsToProcessData.filter((review) => {
+      const user = usersData.find((user) => user.userId === review.userId);
+
+      if (
+        review.description.toLowerCase().includes(searchKey.toLowerCase()) ||
+        (user && user.name.toLowerCase().includes(searchKey.toLowerCase()))
+      ) {
+        return true;
+      }
+
+      return false;
+    });
+
+    setFilteredReviewsToProcessData(filteredReviews);
+  
+
     console.log(`Search for reviews with searchKey ${searchKey}`);
   };
 
@@ -19,10 +37,10 @@ export const AdminProcessReviewsScreen = () => {
       <ScreenTitle title="Process Review" />
       <div className="flex flex-col justify-center mt-12 gap-10">
         <SearchBar
-          searchItemPlaceholder="reviews"
+          searchItemPlaceholder="reviews or user"
           handleSearch={handleSearchReviews}
         />
-        <ReviewsToProcess reviewsToProcessData={reviewsToProcessData} />
+        <ReviewsToProcess reviewsToProcessData={filteredReviewsToProcessData} />
       </div>
     </div>
   );
