@@ -8,6 +8,7 @@ import schemas.user as user_schemas
 import schemas.hawker as hawker_schemas
 import schemas.review as review_schemas
 import schemas.notification as notification_schemas
+import schemas.misc as misc_schemas
 
 router = APIRouter()
 
@@ -76,8 +77,8 @@ async def query_weather(start_location: str, end_location: str):
 
 # ---------- Review ---------- #
 @router.put("/user-controller/flag-review", response_model=review_schemas.Review, tags=["User Controller"])
-def flag_review(review_id: int, flagged_reason: str, db: Session = Depends(get_db)):
-    return UserController.flagReview(db, review_id=review_id, flagged_reason=flagged_reason)
+def flag_review(requestBody: misc_schemas.UserFlagReviewSchema, db: Session = Depends(get_db)):
+    return UserController.flagReview(db, review_id=requestBody.review_id, flagged_reason=requestBody.flagged_reason)
 
 # ---------- Notification ---------- #
 @router.get("/user-controller/get-all-notifications/{user_id}", response_model=list[notification_schemas.Notification], tags=["User Controller"])

@@ -9,7 +9,7 @@ export interface Review {
 
   description: string;
   rating: number;
-  photos?: string[];
+  photos: string[];
   flagged: boolean;
   flagged_reason?: string;
 

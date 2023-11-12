@@ -23,3 +23,7 @@ class ReviewAction(Enum):
 class AdminProcessReviewSchema(BaseModel):
     review_id: int
     action: ReviewAction
+
+class UserFlagReviewSchema(BaseModel):
+    review_id: int
+    flagged_reason: str

@@ -123,6 +123,12 @@ export const AdminProcessSingleReviewScreen = () => {
         </div>
       )}
 
+      {/* Flag Reason */}
+      <ScreenSubTitle title="Flagged Reason" />
+      {review && review.flagged && (
+        <div className="text-[14px] mt-2">{review.flagged_reason}</div>
+      )}
+
       {/* Buttons */}
       <div className="flex flex-row gap-4 justify-center my-12">
         <Button
