@@ -50,7 +50,7 @@ export const HawkerListingScreen = () => {
   };
 
   return (
-    <div>
+    <div className="mb-6">
       {hawker && (
         <div className="">
           <HawkerBanner

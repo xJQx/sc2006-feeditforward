@@ -90,7 +90,7 @@ export const router = createBrowserRouter([
       // HawkerUI
       { path: "/reviews/:hawkerId", element: <ReviewsScreen /> },
       {
-        path: "/leftover-food/submit/:leftoverFoodId",
+        path: "/leftover-food/submit",
         element: <LeftoverFoodSubmitScreen />
       }
     ]
