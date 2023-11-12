@@ -122,6 +122,7 @@ export const HomeScreen = () => {
             return (
               <HawkerCard
                 key={hawker.hawker_id}
+                hawkerId={hawker.hawker_id}
                 image={hawker.user.profile_picture}
                 name={hawker.business_name}
                 foodType={hawker.food_type}

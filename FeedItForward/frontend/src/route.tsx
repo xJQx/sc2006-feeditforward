@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
       { path: "/settings/notification", element: <NotificationScreen /> },
       { path: "/settings/language", element: <LanguageScreen /> },
       { path: "/map", element: <MapScreen /> },
-      { path: "/hawker/listings", element: <HawkerListingScreen /> },
+      { path: "/hawker/:hawkerId/listings", element: <HawkerListingScreen /> },
       {
         path: "/customer-service-support",
         element: <CustomerServiceSupportScreen />
@@ -84,7 +84,10 @@ export const router = createBrowserRouter([
 
       // HawkerUI
       { path: "/reviews/:hawkerId", element: <ReviewsScreen /> },
-      { path: "/leftover-food/submit", element: <LeftoverFoodSubmitScreen /> }
+      {
+        path: "/leftover-food/submit/:leftoverFoodId",
+        element: <LeftoverFoodSubmitScreen />
+      }
     ]
   }
 ]);

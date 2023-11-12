@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useGetServerImage } from "../../hooks";
 
 interface HawkerCardProps {
+  hawkerId: number;
   image: string;
   name: string;
   foodType: string;
@@ -12,14 +13,21 @@ interface HawkerCardProps {
 }
 
 export const HawkerCard = (props: HawkerCardProps) => {
-  const { image, name, foodType, operatingHours, overallRating, address } =
-    props;
+  const {
+    hawkerId,
+    image,
+    name,
+    foodType,
+    operatingHours,
+    overallRating,
+    address
+  } = props;
 
   const navigate = useNavigate();
   const imageUrl = useGetServerImage(image);
 
   const handleClick = () => {
-    navigate("/hawker/listings");
+    navigate(`/hawker/${hawkerId}/listings`);
   };
 
   return (
