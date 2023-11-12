@@ -18,7 +18,7 @@ export const ScreenTitle = ({ title, backNav = true }: ScreenTitleProps) => {
           <ButtonBackNavigation />
         </div>
       )}
-      <div className="text-[28px] font-nunito font-bold text-center">
+      <div className="text-[28px] font-nunito font-bold text-center leading-tight">
         {title}
       </div>
     </div>

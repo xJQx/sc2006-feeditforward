@@ -23,7 +23,6 @@ export const ProfileScreen = () => {
     const getConsumerData = async () => {
       const consumer = await fetch.get(`/consumer/${user?.user_id}`);
       if (consumer) {
-        console.log(consumer);
         setConsumerPriority(consumer.priority);
       }
     };

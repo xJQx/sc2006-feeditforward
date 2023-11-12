@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, HorizontalDivider, ScreenTitle } from "../../components";
 import { BsPersonGear, BsBell, BsGlobe2 } from "react-icons/bs";
+import { PiBowlFood } from "react-icons/pi";
 import { IconType } from "react-icons/lib";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
@@ -54,6 +55,19 @@ export const SettingsScreen = () => {
           title="Support"
           href="/customer-service-support"
         />
+
+        {authContext.user?.role === "Consumer" && (
+          <>
+            <HorizontalDivider className="my-2" />
+
+            {/* Priority Request */}
+            <SettingsRowComponent
+              icon={<PiBowlFood className="w-full h-full" />}
+              title="Priority Request"
+              href="/request/food-priority"
+            />
+          </>
+        )}
       </div>
 
       {/* Logout Button */}

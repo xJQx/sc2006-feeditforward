@@ -24,6 +24,16 @@ class ConsumerController:
   # -------------------------------------------------------- #
   def submitPriorityRequest(db: Session, priority_request: priority_request_schemas.PriorityRequestCreate):
     db_priority_request = priority_request_services.create_priority_request(db, priority_request)
+    
+    # Notification for Consumer
+    db_admin = admin_services.get_all_admins(db, 0, 1)[0];
+    consumer_notification = notification_schemas.NotificationCreate(
+      admin_id=db_admin.admin_id,
+      receiver_user_id=priority_request.consumer_id,
+      title="[Pending] Food Priority Request",
+      description="Your request for food priority has been submitted. Please be patience while our staff verify your details."
+    )
+    notification_services.create_notification(db, consumer_notification)
     return db_priority_request
 
   def submitReview(db: Session, review: review_schemas.ReviewCreate):
