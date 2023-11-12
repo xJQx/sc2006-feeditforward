@@ -32,10 +32,10 @@ export const SettingsScreen = () => {
         />
         <HorizontalDivider className="my-2" />
 
-        {/* Notification */}
+        {/* Notifications */}
         <SettingsRowComponent
           icon={<BsBell className="w-full h-full" />}
-          title="Notification"
+          title="Notifications"
           href="/settings/notification"
         />
         <HorizontalDivider className="my-2" />

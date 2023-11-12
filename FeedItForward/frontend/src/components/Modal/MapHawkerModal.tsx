@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Modal from "react-modal";
 import { AiFillStar } from "react-icons/ai";
-import { BiSolidDirectionRight } from "react-icons/bi";
+import { BiLinkExternal, BiSolidDirectionRight } from "react-icons/bi";
 import { Hawker } from "../../schemas/hawker";
 import toast from "react-hot-toast";
 import { Button } from "../Button";
@@ -53,10 +53,6 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
     getHawkerReviewsCount();
   }, [hawker]);
 
-  const handleDirectionOnClick = () => {
-    // TODO
-    toast("TODO: Show Directions");
-  };
   const handleAddReview = () => {
     if (hawker.hawker_id === 0) {
       return toast.error(
@@ -66,14 +62,8 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
 
     navigate(`/review/add/${hawker.hawker_id}`);
   };
-  const handleViewReviews = () => {
-    if (hawker.hawker_id === 0) {
-      return toast.error(
-        `Sorry. ${hawker.business_name} is not registered with FeedItForward.`
-      );
-    }
-
-    navigate(`/reviews/${hawker.hawker_id}`);
+  const handleViewHawker = () => {
+    navigate(`/hawker/${hawker.hawker_id}/listings`);
   };
 
   return (
@@ -123,8 +113,12 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
           </div>
 
           {/* Subtitle - Type of Food */}
-          <div className="text-center italic text-[12px]">
-            {hawker.food_type}
+          <div className="flex items-center justify-center gap-1 italic text-[12px]">
+            <span>{hawker.food_type}</span>
+            <BiLinkExternal
+              className="text-brand-primary-active"
+              onClick={handleViewHawker}
+            />
           </div>
 
           {/* Ratings */}
@@ -160,10 +154,7 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
               <span className="ml-1 leading-tight text-[12px]">
                 {hawker.user.address}
               </span>
-              <span
-                className="ml-1 translate-y-[3px] inline-block"
-                onClick={handleDirectionOnClick}
-              >
+              <span className="ml-1 translate-y-[3px] inline-block">
                 <BiSolidDirectionRight className="text-brand-primary-active" />
               </span>
             </div>
@@ -177,9 +168,9 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
               onClick={handleAddReview}
             />
             <Button
-              label="View Reviews"
+              label="View Hawker"
               className="!font-roboto !font-normal !rounded !bg-brand-tertiary-active"
-              onClick={handleViewReviews}
+              onClick={handleViewHawker}
             />
           </div>
         </div>
