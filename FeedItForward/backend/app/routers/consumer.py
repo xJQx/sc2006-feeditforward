@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+from typing import Union
 
 from database import get_db
 from controllers.consumer import ConsumerController
@@ -8,6 +9,7 @@ import schemas.consumer as consumer_schemas
 import schemas.review as review_schemas
 import schemas.priority_request as priority_request_schemas
 import schemas.pickup_job as pickup_job_schemas
+import schemas.consumer_controller as consumer_controller_schemas
 
 router = APIRouter()
 
@@ -37,9 +39,15 @@ def submit_review(review: review_schemas.ReviewCreate, db: Session = Depends(get
 def edit_review(review: review_schemas.ReviewUpdate, db: Session = Depends(get_db)):
     return ConsumerController.editReview(db, review)
 
-@router.post("/consumer-controller/request-food", response_model=pickup_job_schemas.PickupJob, tags=["Consumer Controller"])
-def request_food(pickup_job: pickup_job_schemas.PickupJobCreate, db: Session = Depends(get_db)):
-    return ConsumerController.requestFood(db, pickup_job)
+@router.post("/consumer-controller/request-food", response_model=Union[pickup_job_schemas.PickupJob, bool], tags=["Consumer Controller"])
+def request_food(requestBody: consumer_controller_schemas.ConsumerRequestFoodSchema, db: Session = Depends(get_db)):
+    return ConsumerController.requestFood(
+        db,
+        pickup_job=requestBody.pickup_job,
+        leftover_food_id=requestBody.leftover_food_id,
+        amount_requested=requestBody.amount_requested,
+        option=requestBody.option
+    )
 
 
 # ------------------------------------------------------------ #

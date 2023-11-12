@@ -17,7 +17,7 @@ export const HawkerListingLeftoverFoodCard = (
   const photoUrl = useGetServerImage(leftoverFood.photo);
 
   const handleOnClick = () => {
-    navigate(`/leftover-food/submit/${leftoverFood.leftover_food_id}`);
+    navigate(`/leftover-food/${leftoverFood.leftover_food_id}/request`);
   };
 
   return (
@@ -36,7 +36,7 @@ export const HawkerListingLeftoverFoodCard = (
           <div className="flex flex-row items-center gap-1">
             <FaClock className="w-3 h-3 text-gray-300" />
             <div className="text-[12px] text-gray-400">
-              Cooked {leftoverFood.time_passed}
+              Cooked {leftoverFood.time_passed} ago
             </div>
           </div>
         </div>

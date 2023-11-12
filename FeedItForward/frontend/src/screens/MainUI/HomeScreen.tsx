@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { HawkerCard } from "../../components/Cards";
-import { Button } from "../../components";
+import { DeliveryOptionButtonsGroup } from "../../components";
 import { ScreenTitle, SearchBar } from "../../components";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -12,7 +12,6 @@ export const HomeScreen = () => {
   const navigate = useNavigate();
   const fetch = useFetch();
 
-  const [isDeliverySelected, setIsDeliverySelected] = useState(true);
   const [hawkers, setHawkers] = useState<Hawker[]>([]);
   const [filteredHawkers, setFilteredHawkers] = useState<Hawker[]>([]);
 
@@ -41,21 +40,6 @@ export const HomeScreen = () => {
     setFilteredHawkers(hawkers);
   };
 
-  const handleDeliverOptionButtonOnClick = (
-    option: "Delivery" | "Self Pickup"
-  ) => {
-    switch (option) {
-      case "Delivery":
-        setIsDeliverySelected(true);
-        toast.success("Delivery selected");
-        break;
-      case "Self Pickup":
-        setIsDeliverySelected(false);
-        toast.success("Self pickup selected");
-        break;
-    }
-  };
-
   const handleViewAll = () => {
     navigate("/leftover-food");
   };
@@ -74,18 +58,7 @@ export const HomeScreen = () => {
       />
 
       {/* Delivery Option Buttons */}
-      <div className="flex justify-start gap-2 pb-[5%] h-[40px]">
-        <DeliverOptionButton
-          label="Delivery"
-          active={isDeliverySelected}
-          handleOnClick={handleDeliverOptionButtonOnClick}
-        />
-        <DeliverOptionButton
-          label="Self Pickup"
-          active={!isDeliverySelected}
-          handleOnClick={handleDeliverOptionButtonOnClick}
-        />
-      </div>
+      <DeliveryOptionButtonsGroup />
 
       {/* Food Options Icons */}
       <div className="flex gap-8 my-2">
@@ -139,31 +112,6 @@ export const HomeScreen = () => {
 };
 
 // Helper Components
-interface DeliverOptionButtonProps {
-  label: "Delivery" | "Self Pickup";
-  active: boolean;
-  handleOnClick: (_option: "Delivery" | "Self Pickup") => void;
-}
-
-const DeliverOptionButton = (props: DeliverOptionButtonProps) => {
-  const { label, active, handleOnClick } = props;
-
-  const activeClassName =
-    "!rounded-md !bg-brand-light border border-brand-primary !text-black !px-4 !py-3 text-[14px] !font-roboto !font-normal";
-  const inactiveClassName =
-    "!rounded-md !bg-brand-gray border border-brand-gray !text-gray-400 !px-4 !py-3 text-[14px] !font-roboto !font-normal";
-
-  return (
-    <>
-      <Button
-        className={active ? activeClassName : inactiveClassName}
-        label={label}
-        onClick={() => handleOnClick(label)}
-      />
-    </>
-  );
-};
-
 interface FoodOptionButtonProps {
   icon: {
     src: string;

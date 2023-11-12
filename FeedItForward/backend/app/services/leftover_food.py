@@ -12,7 +12,6 @@ def get_leftover_food_by_leftover_food_id(db: Session, leftover_food_id: int):
     # convert geometry json to dict
     if db_leftover_food.hawker:
         db_leftover_food.hawker.geometry = json.loads(db_leftover_food.hawker.geometry)
-
     return db_leftover_food
 
 def get_leftover_foods_by_hawker_id(db: Session, hawker_id: int):
@@ -81,6 +80,10 @@ def update_leftover_food(db: Session, updated_leftover_food: leftover_food_schem
     updated_leftover_food_data = updated_leftover_food.model_dump(exclude_unset=True)
     for key, value in updated_leftover_food_data.items():
         setattr(db_leftover_food, key, value)
+
+    # convert geometry dict to json
+    if db_leftover_food.hawker and isinstance(db_leftover_food.hawker.geometry, dict):
+        db_leftover_food.hawker.geometry = json.dumps(db_leftover_food.hawker.geometry)
     
     db.add(db_leftover_food)
     db.commit()

@@ -16,3 +16,4 @@ export { AppLayout } from "./AppLayout";
 export { SearchBar } from "./SearchBar";
 export { AdminUserDisplayCard } from "./AdminUserDisplayCard";
 export { HorizontalDivider } from "./HorizontalDivider";
+export { DeliveryOptionButtonsGroup } from "./DeliveryOptionButtonsGroup";

@@ -93,6 +93,11 @@ def create_pickup_job(db: Session, pickup_job: pickup_job_schemas.PickupJobCreat
         consumer_id=pickup_job.consumer_id,
         photo_proofs=""
     )
+
+    # convert geometry dict to json
+    db_pickup_job.leftover_food = db_leftover_food
+    if db_pickup_job.leftover_food.hawker and isinstance(db_pickup_job.leftover_food.hawker.geometry, dict):
+        db_pickup_job.leftover_food.hawker.geometry = json.dumps(db_pickup_job.leftover_food.hawker.geometry)
     
     db.add(db_pickup_job)
     db.commit()

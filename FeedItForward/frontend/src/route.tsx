@@ -21,6 +21,7 @@ import {
   AdminBanSingleUserScreen
 } from "./screens/AdminUI";
 import {
+  LeftoverFoodRequestScreen,
   LeftoverFoodScreen,
   PriorityRequestSubmitScreen,
   ReviewAddScreen,
@@ -72,6 +73,10 @@ export const router = createBrowserRouter([
 
       //  ConsumerUI
       { path: "/leftover-food", element: <LeftoverFoodScreen /> },
+      {
+        path: "/leftover-food/:leftoverFoodId/request",
+        element: <LeftoverFoodRequestScreen />
+      },
       {
         path: "/request/food-priority",
         element: <PriorityRequestSubmitScreen />
