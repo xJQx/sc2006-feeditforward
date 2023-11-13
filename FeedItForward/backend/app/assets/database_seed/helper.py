@@ -33,3 +33,4 @@ def add_event_listener_to_seed_database():
   
   event.listen(PriorityRequest.__table__, 'after_create', seed_table)
   event.listen(Notification.__table__, 'after_create', seed_table)
+  event.listen(PickupJob.__table__, 'after_create', seed_table)

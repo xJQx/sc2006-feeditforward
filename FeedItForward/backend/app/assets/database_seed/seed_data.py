@@ -1,5 +1,6 @@
 from schemas.user import Role
 from schemas.priority_request import PriorityRequestHouseCategory, PriorityRequestStatusEnum
+from schemas.pickup_job import PickupJobStatus
 
 import bcrypt
 
@@ -483,4 +484,30 @@ DATABASE_SEED_DATA = {
       "receiver_user_id": 4,
     },
   ],
+  # ---------- Notification ---------- #
+  "pickup_jobs": [
+    # ----- A Hot Hideout ----- #
+    {
+      "pickup_job_id": 1,
+      "start_location": '{"type": "Point","latitude": 1.35397,"longitude": 103.68779}',
+      "end_location": '{"type": "Point","latitude": 0,"longitude": 0}',
+      "description": "Deliver Mala (Dry) 3xBowl from 60 Nanyang Cres, Blk 20A #03-02, Singapore 636957 (A Hot Hideout (NTU) - Hawker) to 2 Bukit Merah Central 21st Floor (Janice - Consumer).\n          Estimated to collect food from hawker in 15mins and drop off food at consumer in 30mins.",
+      "status": PickupJobStatus.AVAILABLE,
+      "photo_proofs": "",
+      "leftover_food_id": 1,
+      "consumer_id": 2,
+      "driver_id": None,
+    },
+    {
+      "pickup_job_id": 2,
+      "start_location": '{"type": "Point","latitude": 1.34713048855579,"longitude": 103.680033789538}',
+      "end_location": '{"type": "Point","latitude": 0,"longitude": 0}',
+      "description": "Deliver Cai Fan (2 Meat, 1 Veg) 5xPackets from 76 Nanyang Drive, N2.1, #02-03, Nanyang Technological University, 637331 (North Spine Koufu - Cai Fan Store - Hawker) to HDB Tampines 214 Tampines Street 23 #06-65 (Alicia - Consumer).\n          Estimated to collect food from hawker in 15mins and drop off food at consumer in 30mins.",
+      "status": PickupJobStatus.AVAILABLE,
+      "photo_proofs": "",
+      "leftover_food_id":3,
+      "consumer_id": 3,
+      "driver_id": None,
+    },
+  ]
 }
