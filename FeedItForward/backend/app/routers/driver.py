@@ -6,6 +6,7 @@ from controllers.driver import DriverController
 
 import schemas.driver as driver_schemas
 import schemas.pickup_job as pickup_job_schemas
+import schemas.driver_controller as driver_controller_schemas
 
 router = APIRouter()
 
@@ -23,18 +24,14 @@ tags_metadata = [
 # -------------------------------------------------------- #
 # -------------------- Business Logic -------------------- #
 # -------------------------------------------------------- #
-@router.post("/driver-controller/process-pickup_job", response_model=pickup_job_schemas.PickupJobUpdate, tags=["Driver Controller"])
-def get_all_drivers(action: pickup_job_schemas.PickupJobAction,
-                    pickup_job_id: int,
-                    driver_id: int,
-                    photo_proofs: list[str],
-                    db: Session = Depends(get_db)):
+@router.post("/driver-controller/process-pickup-job", response_model=pickup_job_schemas.PickupJobUpdate, tags=["Driver Controller"])
+def process_pickup_job(requestBody: driver_controller_schemas.DriverProcessPickupJobSchema, db: Session = Depends(get_db)):
     return DriverController.processPickupJob(
         db,
-        action=action,
-        pickup_job_id=pickup_job_id,
-        driver_id=driver_id,
-        photo_proofs=photo_proofs)
+        action=requestBody.action,
+        pickup_job_id=requestBody.pickup_job_id,
+        driver_id=requestBody.driver_id,
+        photo_proofs=requestBody.photo_proofs)
 
 # ------------------------------------------------------------ #
 # -------------------- Driver (CRUD) ------------------------- #

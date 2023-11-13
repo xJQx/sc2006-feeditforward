@@ -15,7 +15,7 @@ export const NarbarRoleSpecificIcon = () => {
       href = "/leftover-food";
       break;
     case "Driver":
-      href = "/job-pickup/:jobId";
+      href = "/pickup-jobs";
       break;
     case "Hawker":
       href = "/leftover-food/submit";

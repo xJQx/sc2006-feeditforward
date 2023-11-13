@@ -7,7 +7,7 @@ import { Button } from "@mui/material";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import { ScreenTitle } from "../../components";
 
-export const JobPickupScreen = () => {
+export const PickupJobScreen = () => {
   const [text, setText] = useState("");
   const [currentStep, setCurrentStep] = useState(1);
   const totalSteps = 2;
