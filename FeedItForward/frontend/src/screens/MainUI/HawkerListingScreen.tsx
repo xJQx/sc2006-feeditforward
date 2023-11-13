@@ -11,9 +11,11 @@ import { useGetServerImage } from "../../hooks";
 import { ButtonBackNavigation, ScreenSubTitle } from "../../components";
 import { FaPlus } from "react-icons/fa6";
 import { Review } from "../../schemas/review";
+import { useAuthContext } from "../../contexts/AuthContext";
 
 export const HawkerListingScreen = () => {
   const { hawkerId } = useParams();
+  const { user } = useAuthContext();
   const navigate = useNavigate();
   const fetch = useFetch();
 
@@ -21,9 +23,9 @@ export const HawkerListingScreen = () => {
   const [hawker, setHawker] = useState<Hawker>();
   const [reviews, setReviews] = useState<Review[]>([]);
 
-  // Get Hawker's Leftover Food
+  // Get Hawker + Hawker's Leftover Food
   useEffect(() => {
-    const getHawkerLeftoverFoodsData = async () => {
+    const getData = async () => {
       try {
         let data: LeftoverFood[] = await fetch.get(
           `/leftover-foods/hawkerid/${hawkerId}`
@@ -31,8 +33,10 @@ export const HawkerListingScreen = () => {
         data = data.filter(food => food.available === true);
         if (data.length > 0) {
           setLeftoverFoods(data);
-          setHawker(data[0].hawker);
         }
+
+        const hawkerData: Hawker = await fetch.get(`/hawker/${hawkerId}`);
+        setHawker(hawkerData);
 
         // Get Review Count
         const hawkerReviews = await fetch.get(`/reviews/hawkerid/${hawkerId}`);
@@ -41,9 +45,13 @@ export const HawkerListingScreen = () => {
         console.log(e);
       }
     };
-    getHawkerLeftoverFoodsData();
+    getData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hawkerId]);
+
+  const handleAddLeftoverFood = () => {
+    navigate("/leftover-food/submit");
+  };
 
   const handleAddReview = () => {
     navigate(`/review/add/${hawkerId}`);
@@ -91,8 +99,13 @@ export const HawkerListingScreen = () => {
       )}
 
       {/* Leftover Foods */}
-      <div className="mt-[32vh]">
-        <ScreenSubTitle title="Leftover Food" />
+      <div className="mt-[30vh]">
+        <div className="flex items-center gap-1">
+          <ScreenSubTitle title="Leftover Food" />
+          {user?.user_id.toString() === hawkerId && (
+            <FaPlus className="mt-5" onClick={handleAddLeftoverFood} />
+          )}
+        </div>
         {leftoverFoods.length > 0 ? (
           <div className="grid grid-cols-2 gap-y-4 gap-x-4 mt-2">
             {leftoverFoods.map(leftoverFood => {

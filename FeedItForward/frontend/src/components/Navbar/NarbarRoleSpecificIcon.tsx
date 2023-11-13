@@ -18,7 +18,7 @@ export const NarbarRoleSpecificIcon = () => {
       href = "/pickup-jobs";
       break;
     case "Hawker":
-      href = "/leftover-food/submit";
+      href = `/hawker/${user.user_id}/listings`;
       break;
     default:
       href = "/leftover-food";
