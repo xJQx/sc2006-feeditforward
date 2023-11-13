@@ -11,7 +11,7 @@ export {
   FormSelect,
   GoogleLoginButton
 } from "./Form";
-export { JobConfirmationModal, MapHawkerModal } from "./Modal";
+export { MapHawkerModal } from "./Modal";
 export { AppLayout } from "./AppLayout";
 export { SearchBar } from "./SearchBar";
 export { AdminUserDisplayCard } from "./AdminUserDisplayCard";

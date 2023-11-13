@@ -86,7 +86,7 @@ export const router = createBrowserRouter([
 
       // DriverUI
       { path: "/pickup-jobs", element: <PickupJobSelectionScreen /> },
-      { path: "/pickup-job/:jobId", element: <PickupJobScreen /> },
+      { path: "/pickup-job/:pickupJobId", element: <PickupJobScreen /> },
 
       // HawkerUI
       { path: "/reviews/:hawkerId", element: <ReviewsScreen /> },
