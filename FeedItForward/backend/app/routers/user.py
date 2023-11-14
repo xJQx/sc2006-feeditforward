@@ -70,11 +70,6 @@ async def query_weather(date: str, period: str):
         case _:
             return UserController.queryWeather(date, "24-hours");
 
-# ---------- Direction ---------- #
-@router.post('/user-controller/query-direction', tags=["User Controller"])
-async def query_weather(start_location: str, end_location: str):
-    return UserController.queryDirections(start_location=start_location, end_location=end_location)
-
 # ---------- Review ---------- #
 @router.put("/user-controller/flag-review", response_model=review_schemas.Review, tags=["User Controller"])
 def flag_review(requestBody: misc_schemas.UserFlagReviewSchema, db: Session = Depends(get_db)):

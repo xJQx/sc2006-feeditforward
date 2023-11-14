@@ -7,6 +7,7 @@ import React, {
   useEffect
 } from "react";
 import { UserDisplay } from "../schemas/user";
+import { GoogleAuthDetails } from "../schemas/auth";
 
 // Define context type
 interface IAuthContext {
@@ -14,6 +15,8 @@ interface IAuthContext {
   setIsLoggedIn: Dispatch<SetStateAction<boolean>>;
   user: UserDisplay | null;
   setUser: Dispatch<SetStateAction<UserDisplay | null>>;
+  googleAuthDetails: GoogleAuthDetails | null;
+  setGoogleAuthDetails: Dispatch<SetStateAction<GoogleAuthDetails | null>>;
 }
 
 // Create context
@@ -34,7 +37,7 @@ export const AuthContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // ---------- IsLoggedIn ---------- //
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(() => {
     const authStateJson = localStorage.getItem("FeedItForward_authState");
     if (authStateJson) {
@@ -52,6 +55,7 @@ export const AuthContextProvider = ({
     );
   }, [isLoggedIn]);
 
+  // ---------- User ---------- //
   const [user, setUser] = useState<UserDisplay | null>(() => {
     const userStateJson = localStorage.getItem("FeedItForward_userState");
     if (userStateJson) {
@@ -69,13 +73,35 @@ export const AuthContextProvider = ({
     );
   }, [user]);
 
-  // const [user, setUser] = useState<User | null>(null);
+  // ---------- Google Auth ---------- //
+  const [googleAuthDetails, setGoogleAuthDetails] =
+    useState<GoogleAuthDetails | null>(() => {
+      const googleAuthStateJson = localStorage.getItem(
+        "FeedItForward_googleAuthState"
+      );
+      if (googleAuthStateJson) {
+        const googleAuthState = JSON.parse(googleAuthStateJson);
+        return googleAuthState.googleAuthDetails;
+      }
+      return null;
+    });
 
+  useEffect(() => {
+    // Save the state to local storage
+    localStorage.setItem(
+      "FeedItForward_googleAuthState",
+      JSON.stringify({ googleAuthDetails: googleAuthDetails })
+    );
+  }, [googleAuthDetails]);
+
+  // ---------- Context Value ---------- //
   const contextValue: IAuthContext = {
     isLoggedIn,
     setIsLoggedIn,
     user,
-    setUser
+    setUser,
+    googleAuthDetails,
+    setGoogleAuthDetails
   };
 
   return (

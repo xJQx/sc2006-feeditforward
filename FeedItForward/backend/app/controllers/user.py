@@ -92,11 +92,6 @@ class UserController:
       case _:
         raise HTTPException(status_code=400, detail="Queried period not found")
   
-  # ----- Directions ----- #
-  def queryDirections(start_location: str, end_location: str):
-    # TODO
-    return None
-  
   # ----- Review ----- #
   def flagReview(db: Session, review_id: int, flagged_reason: str):
     db_review = review_services.get_review_by_review_id(db, review_id=review_id)

@@ -18,6 +18,7 @@ import { DriverCreate } from "../../schemas/driver";
 import { HawkerCreate } from "../../schemas/hawker";
 import { Geometry } from "../../schemas/misc";
 import FormImagePicker from "../../components/Form/FormImagePicker";
+import { useAuthContext } from "../../contexts/AuthContext";
 
 export const SignupScreen = () => {
   const navigate = useNavigate();
@@ -54,6 +55,15 @@ export const SignupScreen = () => {
       setTotalSteps(3);
     }
   }, [role]);
+
+  // Google Auth
+  const { googleAuthDetails } = useAuthContext();
+  useEffect(() => {
+    if (googleAuthDetails?.authenticated) {
+      setName(googleAuthDetails.name);
+      setEmail(googleAuthDetails.email);
+    }
+  }, [googleAuthDetails]);
 
   const handlePreviousStep = () => {
     if (currentStep === 1) {
@@ -353,6 +363,7 @@ const StepOneInputs = (props: StepOneInputsProps) => {
     contactNumber,
     setContactNumber
   } = props;
+  const { googleAuthDetails } = useAuthContext();
 
   return (
     <>
@@ -363,6 +374,7 @@ const StepOneInputs = (props: StepOneInputsProps) => {
         placeholder="Enter your name"
         value={name}
         setValue={setName}
+        disabled={googleAuthDetails?.authenticated}
       />
       {/* Email */}
       <FormInput
@@ -371,6 +383,7 @@ const StepOneInputs = (props: StepOneInputsProps) => {
         placeholder="Enter your email"
         value={email}
         setValue={setEmail}
+        disabled={googleAuthDetails?.authenticated}
       />
       {/* Address */}
       <FormInput

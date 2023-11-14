@@ -47,8 +47,7 @@ async def signup_hawker(user: hawker_schemas.HawkerCreate, db: Session = Depends
 def login(user: user_schemas.UserLogin, db: Session = Depends(get_db)):
     return AuthController.login(db, user)
 
-@router.post("/login-google", response_model=Union[user_schemas.User, admin_schemas.Admin, consumer_schemas.Consumer, driver_schemas.Driver, hawker_schemas.Hawker], tags=["Auth Controller"])
-def login_with_google():
-    # TODO: Login with Google
-    return AuthController.loginWithGoogle()
+@router.get("/login-google", response_model=bool, tags=["Auth Controller"])
+def login_with_google(email: str, db: Session = Depends(get_db)):
+    return AuthController.loginWithGoogle(db, email)
 

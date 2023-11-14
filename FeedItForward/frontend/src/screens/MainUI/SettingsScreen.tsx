@@ -15,6 +15,7 @@ export const SettingsScreen = () => {
   const handleLogout = () => {
     authContext.setUser(null);
     authContext.setIsLoggedIn(false);
+    authContext.setGoogleAuthDetails(null);
     navigate("/auth/login");
     toast.success("Logout successfully.");
   };

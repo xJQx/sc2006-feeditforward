@@ -46,6 +46,6 @@ class AuthController:
        
     return db_user
     
-  def loginWithGoogle():
-    # TODO: Login with Google
-    raise HTTPException(status_code=404, detail="Login with Google not implemented yet.")
+  def loginWithGoogle(db: Session, email: str):
+    user = user_services.get_user_by_email(db, email)
+    return True if user else False
