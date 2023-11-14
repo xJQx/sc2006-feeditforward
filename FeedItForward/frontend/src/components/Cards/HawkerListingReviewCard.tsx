@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Review } from "../../schemas/review";
 import { useGetServerImage } from "../../hooks";
-import { FaRegFlag, FaFlag } from "react-icons/fa6";
+import { FaRegFlag, FaFlag, FaPencil } from "react-icons/fa6";
 import { Button } from "../Button";
 import useFetch from "../../hooks/useFetch";
 import { FormInput } from "../Form";
 import toast from "react-hot-toast";
 import { useAuthContext } from "../../contexts/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 interface HawkerListingReviewCardProps {
   review: Review;
@@ -16,13 +17,19 @@ export const HawkerListingReviewCard = (
   props: HawkerListingReviewCardProps
 ) => {
   const { review } = props;
+  const { user } = useAuthContext();
   const photoUrl = useGetServerImage(review.photos[0]);
+  const navigate = useNavigate();
 
   const [isConfirmationModalOpen, setIsConfirmationModalOpen] = useState(false);
   const [isReviewFlagged, setIsReviewFlagged] = useState(review.flagged);
 
   const handleConfirmFlagReview = () => {
     setIsConfirmationModalOpen(true);
+  };
+
+  const handleEditReview = () => {
+    navigate(`/review/edit/${review.review_id}`);
   };
 
   return (
@@ -35,6 +42,14 @@ export const HawkerListingReviewCard = (
       <div className="flex flex-1 flex-col justify-center px-3">
         <div className="flex flex-row items-center gap-1 font-bold">
           {review.consumer.user.name}
+          {/* Edit Icon */}
+          {review.consumer_id === user?.user_id && (
+            <FaPencil
+              className="w-3 h-3 text-brand-primary-active"
+              onClick={handleEditReview}
+            />
+          )}
+          {/* Flag Icon */}
           {isReviewFlagged ? (
             <FaFlag
               className="w-3 h-3 text-red-500"

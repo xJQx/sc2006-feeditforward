@@ -1,6 +1,5 @@
 import React, { useCallback } from "react";
 import { useDropzone } from "react-dropzone";
-import "../../styles/FormStyles.css";
 import { IoImageOutline } from "react-icons/io5";
 import { FaPencilAlt, FaTimes } from "react-icons/fa";
 import { FaPlus, FaFileImage } from "react-icons/fa6";
@@ -62,7 +61,7 @@ const FormImagePicker = (props: FormImagePickerProps) => {
 
       {/* Upload Container */}
       <div
-        className="dashed-outline-container"
+        className="border-[2px] border-dashed border-[#CCC] rounded-[8px] p-[20px] w-full h-[180px] flex justify-center items-center mt-[5px]"
         style={{ position: "relative" }}
       >
         <div

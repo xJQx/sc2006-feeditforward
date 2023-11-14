@@ -1,30 +1,27 @@
 import React from "react";
 import { TextareaAutosize } from "@mui/base/TextareaAutosize";
-import "../../styles/FormStyles.css";
 import { FaPencilAlt } from "react-icons/fa";
+
 interface FormTextAreaProps {
+  label: string;
   value: string;
-  onChange: (value: string) => void;
+  setValue: React.Dispatch<React.SetStateAction<string>>;
   isEdit?: boolean;
 }
 
-const FormTextArea: React.FC<FormTextAreaProps> = ({
-  value,
-  onChange,
-  isEdit
-}) => {
+export const FormTextArea = (props: FormTextAreaProps) => {
+  const { label, value, setValue, isEdit } = props;
+
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newValue = event.target.value;
-    onChange(newValue);
-    console.log(newValue); // Log user's input to console
+    setValue(event.target.value);
   };
 
   return (
-    <div style={{ marginBottom: "20px", position: "relative" }}>
-      <p>Review</p>
-      <div style={{ position: "relative" }}>
+    <div className="relative mb-4">
+      <p>{label}</p>
+      <div className="relative">
         <TextareaAutosize
-          className="textarea-custom"
+          className="border border-[#CCC] rounded-[8px] p-[15px] w-full !h-[175px]"
           value={value}
           onChange={handleInputChange}
           placeholder="Enter your review..."
@@ -46,5 +43,3 @@ const FormTextArea: React.FC<FormTextAreaProps> = ({
     </div>
   );
 };
-
-export default FormTextArea;

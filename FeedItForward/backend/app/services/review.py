@@ -110,7 +110,7 @@ def update_review(db: Session, updated_review: review_schemas.ReviewUpdate):
             setattr(db_review, key, value)
     
     # convert geometry to json for storing into database
-    if db_review.hawker:
+    if db_review.hawker and isinstance(db_review.hawker.geometry, dict):
         db_review.hawker.geometry = json.dumps(db_review.hawker.geometry)
 
     db.add(db_review)

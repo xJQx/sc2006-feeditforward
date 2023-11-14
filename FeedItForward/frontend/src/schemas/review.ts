@@ -24,6 +24,9 @@ export interface ReviewCreate {
   description: string;
   rating: number;
   photos: string[];
+
+  consumer_id: number;
+  hawker_id: number;
 }
 
 export interface ReviewUpdate {
