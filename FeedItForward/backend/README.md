@@ -42,13 +42,15 @@ And you are ready to start using the FeedItForward Backend! The server applicati
 
 # Database Seeding
 
-If you would like to seed the database with pre-configured data, please uncomment the following line in the `backend/app/main.py`
+If you would like to seed the database with pre-configured data, please uncomment the following line in the `backend/app/main.py` before re-starting the application.
 
 ```python
 # app/main.py
 # Uncomment this line 👇🏻
 # add_event_listener_to_seed_database()
 ```
+
+_Note: Please ensure that the `sql_app.db` in the app directory is deleted before re-starting the application._
 
 ## Pre-configured Users
 
@@ -123,12 +125,12 @@ _Please refer to the the [API Docs page](#api-docs) for the specific endpoints a
 ## External APIs
 
 1. **Singapore's OneMap API**
-   a. Map (https://www.onemap.gov.sg/docs/maps/)
-   b. Geocoding (https://developers.onemap.sg/commonapi/search?searchVal=639798&returnGeom=Y&getAddrDetails=Y)
+   1. Map (https://www.onemap.gov.sg/docs/maps/)
+   2. Geocoding (https://developers.onemap.sg/commonapi/search?searchVal=639798&returnGeom=Y&getAddrDetails=Y)
 2. **Weather API (Live)**
-   a. 24-hour Weather Forecast (https://beta.data.gov.sg/datasets/d_50d2bbe678607d78d74a0fe6e8b5b6dd/view)
-   b. 4-day Weather Forecast (https://beta.data.gov.sg/datasets/d_1efe4728b2dad26fd7729c5e4eff7802/view)
+   1. 24-hour Weather Forecast (https://beta.data.gov.sg/datasets/d_50d2bbe678607d78d74a0fe6e8b5b6dd/view)
+   2. 4-day Weather Forecast (https://beta.data.gov.sg/datasets/d_1efe4728b2dad26fd7729c5e4eff7802/view)
 3. **Hawker GeoJson Dataset**
-   a. https://beta.data.gov.sg/collections/1445/datasets/d_4a086da0a5553be1d89383cd90d07ecd/view
+   1. https://beta.data.gov.sg/collections/1445/datasets/d_4a086da0a5553be1d89383cd90d07ecd/view
 4. **Google OAuth 2.0 API**
-   a. https://developers.google.com/identity/protocols/oauth2
+   1. https://developers.google.com/identity/protocols/oauth2
