@@ -37,6 +37,8 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
         } catch (e: any) {
           console.log(e);
         }
+      } else {
+        setProfilePictureUrl(hawker.user.profile_picture);
       }
     };
     getImageFile();
@@ -63,6 +65,11 @@ export const MapHawkerModal = (props: MapHawkerModalProps) => {
     navigate(`/review/add/${hawker.hawker_id}`);
   };
   const handleViewHawker = () => {
+    if (hawker.hawker_id === 0) {
+      return toast.error(
+        `Sorry. ${hawker.business_name} is not registered with FeedItForward.`
+      );
+    }
     navigate(`/hawker/${hawker.hawker_id}/listings`);
   };
 

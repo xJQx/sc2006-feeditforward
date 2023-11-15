@@ -8,7 +8,7 @@ from schemas.misc import Geometry
 class ExternalAPIController:
   def getWeatherForecast24Hr(date: str):
     '''
-    @param date: YYYY-YMM-DD
+    @param date: YYYY-MM-DD
     '''
     # weatherApi for new day only updates after 6am in the morning. So `day-1` to get the latest weather forecast
     if datetime.now().time() < time(6,0,0):

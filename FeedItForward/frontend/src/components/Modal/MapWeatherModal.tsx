@@ -28,11 +28,12 @@ export const MapWeatherModal = (props: MapWeatherModalProps) => {
 
   useEffect(() => {
     const handleWeatherQuery = async () => {
-      const currentDate = date.toLocaleDateString();
-      const dateString = `${currentDate.substring(
-        6,
-        10
-      )}-${currentDate.substring(3, 5)}-${currentDate.substring(0, 2)}`;
+      const dateString = `${String(date.getFullYear()).padStart(
+        4,
+        "0"
+      )}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(
+        date.getDate()
+      ).padStart(2, "0")}`;
 
       const weather24HrForecastsData = await fetch.get(
         `/weather/24-hour/${dateString}`
