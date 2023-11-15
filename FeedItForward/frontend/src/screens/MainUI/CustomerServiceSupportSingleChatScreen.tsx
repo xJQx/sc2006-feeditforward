@@ -1,93 +1,167 @@
 import React, { useState, useEffect } from "react";
-import {IoSend, IoCallOutline} from "react-icons/io5";
+import { IoSend } from "react-icons/io5";
+import { LuPhone } from "react-icons/lu";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { FaUserCircle } from "react-icons/fa";
-import {
-  FormButton,
-  FormContainer,
-  FormInput,
-  HorizontalDivider,
-  Logo
-} from "../../components";
 import { ButtonBackNavigation } from "../../components";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import { CustomerServiceSupportHistory } from "../../schemas/customerServiceSupportHistory";
-import { messagesData, historyWithMessages } from "../../data/messagesData";
+import { CSSMessage } from "../../schemas/cssMessage";
+import useFetch from "../../hooks/useFetch";
+import toast from "react-hot-toast";
+import { useGetServerImage } from "../../hooks";
 
-
-//havent add  websocket connection 
+// TODO: Add Websocket connection
+// havent add  websocket connection
 
 export const CustomerServiceSupportSingleChatScreen = () => {
   const { css_history_id } = useParams();
-  const [selectedChat, setSelectedChat] = useState<CustomerServiceSupportHistory | null>(null);
-  const [inputMessage, setInputMessage] = useState('');
+  const fetch = useFetch();
 
-  const sendMessage = () => {
-    setInputMessage('');
-  };
+  const [selectedChat, setSelectedChat] =
+    useState<CustomerServiceSupportHistory>();
+  const [chatMessages, setChatMessages] = useState<CSSMessage[]>([]);
+  const [inputMessage, setInputMessage] = useState("");
 
+  // Fetch chat history + chat messages data
   useEffect(() => {
-    // Fetch from backend, using mock data for noww
-    const fetchData = async () => {
-      try {
-        // Simulating delay
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-
-        setSelectedChat(historyWithMessages);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
+    const getChatHistoryData = async () => {
+      const chatHistoryData = await fetch.get(
+        `/customer-service-support/css-history/${css_history_id}`
+      );
+      setSelectedChat(chatHistoryData);
+    };
+    const getChatMessagesData = async () => {
+      const chatMessagesData = await fetch.get(
+        `/customer-service-support-controller/get-chat-messages/${css_history_id}`
+      );
+      setChatMessages(chatMessagesData);
     };
 
-    fetchData();
-  }, [css_history_id]);
+    getChatHistoryData();
+    getChatMessagesData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const sendMessage = () => {
+    setInputMessage("");
+  };
+
+  // Web socket
+  // useEffect(() => {
+  //   // Fetch from backend, using mock data for noww
+  //   const fetchData = async () => {
+  //     try {
+  //       // Simulating delay
+  //       await new Promise(resolve => setTimeout(resolve, 1000));
+
+  //       // setSelectedChat();
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, [css_history_id]);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+    <div className="flex flex-col py-4 h-full">
+      <div className="absolute left-0 top-0 bg-brand-light w-[100vw] h-full -z-10" />
       {/* Header */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '40px', padding: '10px', borderBottom: '1px solid #ccc', marginBottom:'10px' }}>
-        <ButtonBackNavigation />
+      <div className="flex">
+        <div>
+          <ButtonBackNavigation />
+        </div>
         {selectedChat && (
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '20px' }}>
-            <div className="text-[28px] font-nunito font-bold text-left">{selectedChat.admin.user.name}</div>
-            <div style={{display: 'flex'}}>
-            <IoCallOutline style={{ marginLeft: '10px', fontSize: '24px', color: '#333' }} />
-            <BsThreeDotsVertical style={{ marginLeft: '10px', fontSize: '24px', color: '#333' }} /></div>
+          <div className="flex items-center justify-between w-full ml-6">
+            <div className="text-[24px] font-bold text-left">
+              {selectedChat.admin.user.name}
+            </div>
+
+            {/* Icons */}
+            <div className="flex gap-2">
+              <LuPhone
+                className="text-[24px]"
+                onClick={() => toast("💡 Coming soon...")}
+              />
+              <BsThreeDotsVertical
+                className="text-[24px]"
+                onClick={() => toast("💡 Coming soon...")}
+              />
+            </div>
           </div>
         )}
       </div>
-  
-      {/* Chat */}
-      {selectedChat?.messages && (
-        <div style={{overflowY: 'auto', height: '550px'}}>
-          {selectedChat.messages.map((message) => (
+
+      {/* Chat message */}
+      <div className="flex-grow my-4 overflow-y-scroll">
+        {selectedChat && <ChatMessages selectedChat={selectedChat} />}
+      </div>
+
+      {/* Input */}
+      <div className="flex justify-between items-center gap-4 py-3 px-4 border border-brand-tertiary-active rounded-xl">
+        <input
+          type="text"
+          value={inputMessage}
+          onChange={e => setInputMessage(e.target.value)}
+          placeholder="Type your message..."
+          className="!text-brand-tertiary-active bg-transparent outline-none w-full placeholder-brand-tertiary-active"
+        />
+        <IoSend
+          className="text-brand-tertiary-active w-6 h-6"
+          onClick={sendMessage}
+        />
+      </div>
+    </div>
+  );
+};
+
+interface ChatMessagesProps {
+  selectedChat: CustomerServiceSupportHistory;
+}
+
+const ChatMessages = (props: ChatMessagesProps) => {
+  const { selectedChat } = props;
+  const adminProfilePictureUrl = useGetServerImage(
+    selectedChat.admin.user.profile_picture
+  );
+
+  return (
+    <>
+      {selectedChat.messages && (
+        <div className="">
+          {selectedChat.messages.map(message => (
             <div
               key={message.css_message_id}
               style={{
-                display: 'flex',
-                justifyContent: message.sender_user_id === selectedChat.admin.user.user_id ? 'flex-start' : 'flex-end',
-               
+                display: "flex",
+                justifyContent:
+                  message.sender_user_id === selectedChat.admin.user_id
+                    ? "flex-start"
+                    : "flex-end"
               }}
             >
+              {/* Admin Profile Picture */}
               {message.sender_user_id === selectedChat.admin.user.user_id && (
-                <div style={{ margin: '5px' }}>
-                  
-                  <img
-                      src={selectedChat.admin.user.profile_picture}
-                      alt={selectedChat.admin.user.name}
-                      className="w-10 h-10 rounded-lg object-cover object-center"
-                    />
-                </div>
+                <img
+                  src={adminProfilePictureUrl}
+                  alt={selectedChat.admin.user.name}
+                  className="w-10 h-10 rounded-lg object-cover object-center m-[5px]"
+                />
               )}
+
+              {/* Text Message */}
               <div
+                className="py-2 px-3 rounded-lg mx-[5px] mt-[5px] mb-[12px] max-w-[70%]"
                 style={{
-                  backgroundColor: message.sender_user_id === selectedChat.admin.user.user_id ? '#E5E5EA' : '#BAE8E8',
-                  color: message.sender_user_id === selectedChat.admin.user.user_id ? '#000000' : 'black',
-                  padding: '8px',
-                  borderRadius: '10px',
-                  margin: '5px',
-                  maxWidth: '70%',
-                  wordWrap: 'break-word',
+                  backgroundColor:
+                    message.sender_user_id === selectedChat.admin.user.user_id
+                      ? "#EBECF0"
+                      : "#BAE8E8",
+                  color:
+                    message.sender_user_id === selectedChat.admin.user.user_id
+                      ? "#000000"
+                      : "black",
+                  wordWrap: "break-word"
                 }}
               >
                 {message.text}
@@ -96,21 +170,6 @@ export const CustomerServiceSupportSingleChatScreen = () => {
           ))}
         </div>
       )}
-      <div style={{ display: 'flex', alignItems: 'center', padding: '10px' }}>
-      <input
-        type="text"
-        value={inputMessage}
-        onChange={(e) => setInputMessage(e.target.value)}
-        placeholder="Type your message..."
-        style={{ flex: 1, borderRadius: '8px', padding: '8px', border: '2px solid #BAE8E8' }}
-      />
-      <button onClick={sendMessage} style={{ border: 'none', background: 'transparent', marginLeft: '5px' }}>
-        <IoSend style={{ color: '#1BCCCC' }} />
-      </button>
-    </div>
-    </div>
+    </>
   );
-  
-  
 };
-
