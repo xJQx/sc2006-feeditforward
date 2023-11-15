@@ -9,6 +9,7 @@ import { Admin } from "../../schemas/admin";
 import useFetch from "../../hooks/useFetch";
 import { useGetServerImage } from "../../hooks";
 import { useAuthContext } from "../../contexts/AuthContext";
+import { User } from "../../schemas/user";
 
 export const CustomerServiceSupportScreen = () => {
   const { user } = useAuthContext();
@@ -25,10 +26,13 @@ export const CustomerServiceSupportScreen = () => {
 
   // Fetch admin and chat history data + create Chats that does not exist
   useEffect(() => {
-    const getData = async () => {
+    const getDataForUser = async () => {
       // Chat History Data
       let chatHistoriesData: CustomerServiceSupportHistory[] = await fetch.get(
         "/customer-service-support-controller/get-all-chats"
+      );
+      chatHistoriesData = chatHistoriesData.filter(
+        chat => chat.user_id === user?.user_id
       );
 
       // Admin Data
@@ -39,6 +43,7 @@ export const CustomerServiceSupportScreen = () => {
         const admin = adminData[i];
         if (!chatHistoriesData.find(chat => chat.admin_id === admin.admin_id)) {
           try {
+            console.log(user?.user_id);
             const newChat = await fetch.post(
               "/customer-service-support-controller/start-new-chat",
               {
@@ -57,9 +62,25 @@ export const CustomerServiceSupportScreen = () => {
       setChatHistories(chatHistoriesData);
       setChatFilteredHistories(chatHistoriesData);
     };
+    const getDataForAdmin = async () => {
+      // Chat History Data
+      let chatHistoriesData: CustomerServiceSupportHistory[] = await fetch.get(
+        "/customer-service-support-controller/get-all-chats"
+      );
+      chatHistoriesData = chatHistoriesData.filter(
+        chat => chat.admin_id === user?.user_id
+      );
+
+      setChatHistories(chatHistoriesData);
+      setChatFilteredHistories(chatHistoriesData);
+    };
 
     try {
-      getData();
+      if (user?.role === "Admin") {
+        getDataForAdmin();
+      } else {
+        getDataForUser();
+      }
     } catch (e) {
       console.log(e);
     }
@@ -94,7 +115,12 @@ export const CustomerServiceSupportScreen = () => {
       <ScreenTitle title="Message Support" />
 
       {/* Admin List */}
-      <AdminList admins={admins} />
+      {admins.length !== 0 && (
+        <div className="mt-6">
+          <ScreenSubTitle title="Admins" className="mb-2" />
+          <AdminList admins={admins} />
+        </div>
+      )}
 
       {/* Past Conversions */}
       <div className="flex flex-col justify-center gap-2">
@@ -115,7 +141,9 @@ export const CustomerServiceSupportScreen = () => {
         </div>
 
         {/* Chat History List */}
-        <ChatList chatHistories={chatFilteredHistories} />
+        {chatFilteredHistories && (
+          <ChatList chatHistories={chatFilteredHistories} />
+        )}
       </div>
     </div>
   );
@@ -129,7 +157,7 @@ const AdminList = (props: AdminListProps) => {
   const { admins } = props;
 
   return (
-    <div className="mt-6 pb-2 overflow-scroll">
+    <div className="pb-2 overflow-scroll">
       <div className="flex gap-3 w-max">
         {admins.map(admin => (
           <AdminListItem key={admin.admin_id} admin={admin} />
@@ -145,16 +173,16 @@ interface AdminListItemProps {
 
 const AdminListItem = (props: AdminListItemProps) => {
   const { admin } = props;
-  const profile_picture_url = useGetServerImage(admin.user.profile_picture);
+  const adminPhotoUrl = useGetServerImage(admin.user.profile_picture);
 
   return (
     <div className="relative">
       <img
-        src={profile_picture_url}
+        src={adminPhotoUrl}
         alt={admin.user.name}
-        className="w-20 h-20 object-cover object-center rounded-2xl"
+        className="w-14 h-14 object-cover object-center rounded-xl"
       />
-      <GreenDot />
+      <GreenDot size={4} />
     </div>
   );
 };
@@ -189,12 +217,24 @@ interface ChatHistoryItemProps {
 }
 
 const ChatHistoryItem = ({ history, onClick }: ChatHistoryItemProps) => {
-  const profile_picture_url = useGetServerImage(
-    history.admin.user.profile_picture
-  );
   const lastMessage = history.messages?.[
     history.messages.length - 1
   ] as CSSMessage;
+  const fetch = useFetch();
+  const { user: loggedInUser } = useAuthContext();
+  const [user, setUser] = useState<User>();
+
+  // get User for Admins
+  useEffect(() => {
+    const getUser = async () => {
+      const data = await fetch.get(`/user/${history.user_id}`);
+      setUser(data);
+    };
+    if (loggedInUser?.role === "Admin") {
+      getUser();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [history]);
 
   return (
     <li
@@ -202,20 +242,29 @@ const ChatHistoryItem = ({ history, onClick }: ChatHistoryItemProps) => {
       onClick={onClick}
     >
       <div className="flex flex-row items-center gap-4">
-        {/* Image */}
-        <div className="relative w-20 h-20">
-          <img
-            src={profile_picture_url}
-            alt={history.admin.user.name}
-            className="w-full h-full object-cover object-center rounded-2xl"
+        {/* Image - For Admin -> Display User */}
+        {loggedInUser?.role === "Admin" && user && (
+          <ProfilePhotoSquare
+            profilePicture={user.profile_picture}
+            alt={user.name}
+            size={20}
           />
-          <GreenDot />
-        </div>
+        )}
+        {/* Image - For User -> Display Admin */}
+        {loggedInUser && loggedInUser?.role !== "Admin" && (
+          <ProfilePhotoSquare
+            profilePicture={history.admin.user.profile_picture}
+            alt={history.admin.user.name}
+            size={20}
+          />
+        )}
 
         {/* Name and text */}
         <div className="flex-grow">
           <div className="text-[20px] font-bold mb-2">
-            {history.admin.user.name}
+            {loggedInUser?.role === "Admin"
+              ? user?.name
+              : history.admin.user.name}
           </div>
           <div className="w-full text-[12px] text-gray-500">
             {lastMessage?.text ?? "Start chat..."}
@@ -226,8 +275,36 @@ const ChatHistoryItem = ({ history, onClick }: ChatHistoryItemProps) => {
   );
 };
 
-const GreenDot = () => {
+interface ProfilePhotoSquareProps {
+  profilePicture: string;
+  alt: string;
+  size: number;
+}
+
+const ProfilePhotoSquare = (props: ProfilePhotoSquareProps) => {
+  const { profilePicture, alt, size } = props;
+  const photoUrl = useGetServerImage(profilePicture);
+
   return (
-    <div className="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 w-5 h-5 bg-brand-primary rounded-full" />
+    <div className={`relative w-${size} h-${size}`}>
+      <img
+        src={photoUrl}
+        alt={alt}
+        className="w-full h-full object-cover object-center rounded-2xl"
+      />
+      <GreenDot size={5} />
+    </div>
+  );
+};
+
+interface GreenDotProps {
+  size: number;
+}
+
+const GreenDot = ({ size }: GreenDotProps) => {
+  return (
+    <div
+      className={`absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 bg-brand-primary rounded-full w-${size} h-${size}`}
+    />
   );
 };

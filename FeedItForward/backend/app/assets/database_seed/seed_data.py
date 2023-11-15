@@ -22,6 +22,17 @@ DATABASE_SEED_DATA = {
       "role": Role.ADMIM,
       "ban": False,
     },
+    {
+      "user_id": 12,
+      "name": "Doggo",
+      "email": "admin2@gmail.com",
+      "contact_number": "99061882",
+      "address": "112 Animal Lane BLK 2A #01-12",
+      "password": common_password,
+      "profile_picture": "[Seed]profile-dog-1.jpg",
+      "role": Role.ADMIM,
+      "ban": False,
+    },
     # ---------- Consumer ---------- #
     {
       "user_id": 2,
@@ -141,7 +152,11 @@ DATABASE_SEED_DATA = {
     {
       "admin_id": 1,
       "user_id": 1,
-    }
+    },
+    {
+      "admin_id": 12,
+      "user_id": 12,
+    },
   ],
   # ---------- Consumer ---------- #
   "consumers": [
@@ -508,6 +523,75 @@ DATABASE_SEED_DATA = {
       "leftover_food_id":3,
       "consumer_id": 3,
       "driver_id": None,
+    },
+  ],
+  # ---------- Customer Service Support Histories ---------- #
+  "customer_service_support_histories": [
+    {
+      "css_history_id": 1,
+      "admin_id": 1,
+      "user_id": 2
+    },
+    {
+      "css_history_id": 2,
+      "admin_id": 12,
+      "user_id": 2
+    },
+    {
+      "css_history_id": 3,
+      "admin_id": 1,
+      "user_id": 3
+    },
+    {
+      "css_history_id": 4,
+      "admin_id": 12,
+      "user_id": 3
+    },
+    {
+      "css_history_id": 5,
+      "admin_id": 1,
+      "user_id": 4
+    },
+    {
+      "css_history_id": 6,
+      "admin_id": 12,
+      "user_id": 4
+    },
+  ],
+  # ---------- Customer Service Support Messages ---------- #
+  # ----- admin_id 1 + user_id 2 ----- #
+  "css_messages": [
+    {
+      "css_message_id": 1,
+      "text": "Hi, how may I help you?",
+      "sender_user_id": 1,
+      "receiver_user_id": 2,
+      "datetime": "2023-11-10 08:00:00.020909",
+      "css_history_id": 1
+    },
+    {
+      "css_message_id": 2,
+      "text": "How do I submit a request for food priority?",
+      "sender_user_id": 2,
+      "receiver_user_id": 1,
+      "datetime": "2023-11-10 08:01:00.020909",
+      "css_history_id": 1
+    },
+    {
+      "css_message_id": 3,
+      "text": "You can do so by going to the settings page and click on the 'Food Priority' tab to submit a request!",
+      "sender_user_id": 1,
+      "receiver_user_id": 2,
+      "datetime": "2023-11-10 08:01:30.020909",
+      "css_history_id": 1
+    },
+    {
+      "css_message_id": 4,
+      "text": "Thank you! :)",
+      "sender_user_id": 2,
+      "receiver_user_id": 1,
+      "datetime": "2023-11-10 08:02:00.020909",
+      "css_history_id": 1
     },
   ]
 }
