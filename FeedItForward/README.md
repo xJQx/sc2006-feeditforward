@@ -1,22 +1,59 @@
-# FeedItForward (Backend)
+# FeedItForward 🍚
 
-_This README.md assumes that you have already cloned the repo._
+Welcome to the official repository for NTU SC2006 Software Engineering group project **_FeedItForward_**.
+
+<p align='center'>
+  <img src="public/card.png" width=150 />
+</p>
+
+<p align="center">
+    <a href="https://github.com/softwarelab3/2006-SCSX-FeedItForward/tree/main/FeedItForward/frontend">Frontend</a>
+    |
+    <a href="https://github.com/softwarelab3/2006-SCSX-FeedItForward/tree/main/FeedItForward/backend">Backend</a>
+</p>
+
+FeedItForward is a **community-driven initiative** that connects the surplus food from local hawkers directly to families in need. It not only reduces **food waste** but also ensures that **nutritious meals reach those most vulnerable** in our society.
+
+This project applied **software engineering best practices** and **design patterns** to ensure high reliability, performance, and extensibility for future enhancements.
 
 **Table of Content**
 
-- [FeedItForward (Backend)](#feeditforward-backend)
+- [FeedItForward 🍚](#feeditforward-)
 - [Setup Instructions](#setup-instructions)
-- [Database Seeding](#database-seeding)
-  - [Pre-configured Users](#pre-configured-users)
+  - [Frontend](#frontend)
+  - [Backend](#backend)
+    - [Database Seeding](#database-seeding)
+- [Pre-configured Users](#pre-configured-users)
+- [Documentation](#documentation)
 - [API Docs](#api-docs)
   - [API Endpoints](#api-endpoints)
-- [App Design (Backend)](#app-design-backend)
+- [App Design](#app-design)
+  - [Frontend](#frontend-1)
+  - [Backend](#backend-1)
   - [Design Patterns](#design-patterns)
-  - [Folder Architecture](#folder-architecture)
+  - [SOLID Principles](#solid-principles)
   - [Tech Stack](#tech-stack)
-  - [External APIs](#external-apis)
+- [External APIs](#external-apis)
 
 # Setup Instructions
+
+## Frontend
+
+1. In the `/frontend` directory, install the required node modules.
+
+```bash
+npm install
+```
+
+2. Start the application.
+
+```bash
+npm run start
+```
+
+And you are ready to start using the FeedItForward Frontend! The frontend application is running on http://localhost:3000/
+
+## Backend
 
 1. In the `/backend` directory, create a python virtual environment and activate it.
 
@@ -40,7 +77,7 @@ uvicorn main:app --reload
 
 And you are ready to start using the FeedItForward Backend! The server application is running on http://127.0.0.1:8000/
 
-# Database Seeding
+### Database Seeding
 
 If you would like to seed the database with pre-configured data, please uncomment the following line in the `backend/app/main.py`
 
@@ -50,7 +87,7 @@ If you would like to seed the database with pre-configured data, please uncommen
 # add_event_listener_to_seed_database()
 ```
 
-## Pre-configured Users
+# Pre-configured Users
 
 | Name                                     | Role     | Email               | Password  |
 | ---------------------------------------- | -------- | ------------------- | --------- |
@@ -64,11 +101,13 @@ If you would like to seed the database with pre-configured data, please uncommen
 | Tim                                      | Driver   | driver1@gmail.com   | 123123123 |
 | Thomas                                   | Driver   | driver2@gmail.com   | 123123123 |
 
+# Documentation
+
 # API Docs
 
 The FeedItForward Backend application uses FastAPI, which comes with an in-built documentation for API routes created. You may access it via http://127.0.0.1:8000/docs#/
 
-![docs preview](public/docs-preview.png)
+![docs preview](backend/public/docs-preview.png)
 
 ## API Endpoints
 
@@ -80,18 +119,17 @@ The FeedItForward API Endpoints consists of 3 main category - `Controller`, `CRU
 
 _Please refer to the the [API Docs page](#api-docs) for the specific endpoints and the required request body and expected response._
 
-# App Design (Backend)
+# App Design
 
-## Design Patterns
+## Frontend
 
-1. **`Strategy + Factory Patterns`** for Database Implementation.
-   a. Refer to `backend/app/factory/database.py`
-2. **`Facade Pattern`** via the Controllers.
-   a. Refer to `backend/app/controllers/*.py`
-3. **`Publisher-Subscriber Pattern`** for real-time text messaging communication between different users (websocket).
-   a. Refer to `backend/app/websocket.py`
+The frontend (React.js) mainly consists of the different **User Interfaces** (Screens), which are structured and categorized into **AdminUI**, **ConsumerUI**, **DriverUI**, **HawkerUI**, and **MainUI** as designed in the class diagrams. More detailed sub-screens can be found in the respective UI screen folders. They can be found in the `/src/screens` directory.
 
-## Folder Architecture
+The `/src/App.tsx` is the entry point of the frontend application.
+
+Other folders such as `/components`, `/contexts`, `/data`, `/utils`, `/schemas`, `/hooks`, and `/contexts` contains helper files that makes the frontend code more organized and easier to read for ease of collaboration (as recommended by the React.js framework).
+
+## Backend
 
 - `📁 app/assets`
   - Contains server assets like data files and uploads.
@@ -114,13 +152,42 @@ _Please refer to the the [API Docs page](#api-docs) for the specific endpoints a
 - `📁 app/websocket.py`
   - Implements the Publisher-Subscriber Pattern via websockets for real-time text messaging communication between different users.
 
+## Design Patterns
+
+1. **`Strategy + Factory Patterns`** for Database Implementation.
+   a. Refer to `backend/app/factory/database.py`
+2. **`Facade Pattern`** via the Controllers.
+   a. Refer to `backend/app/controllers/*.py`
+3. **`Publisher-Subscriber Pattern`** for real-time text messaging communication between different users (websocket).
+   a. Refer to `backend/app/websocket.py`
+
+## SOLID Principles
+
+1. **`Single Responsibility Principle (SRP)`**
+   a. Different packages with different distinct responsibilities are created. Specific classes in each package are responsible for a specific business model or logic group.
+2. **`Open-Closed Principle (OCP)`**
+   a. The application is open to extension through the use of strategy pattern (database) as well as facade pattern (controllers).
+3. **`Interface Segregation Principle (ISP)`**
+   a. Numerous small and specific interfaces are used.
+   b. For example, in `backend/app/schemas/consumer.py`, there are `Consumer`, `ConsumerCreate`, and `ConsumerUpdate` interfaces which are used for different purposes (Display, Creation, and Update).
+4. **`Dependency Inversion Principle (DIP)`**
+   a. High level and low level modules depends on abstractions through the use of the interfaces (`backend/app/schemas` and `frontend/src/schemas`).
+
 ## Tech Stack
+
+**Frontend:**
+
+- React.js
+- TypeScript
+- Tailwind CSS
+
+**Backend:**
 
 - FastAPI
 - Python
 - MySQL
 
-## External APIs
+# External APIs
 
 1. **Singapore's OneMap API**
    a. Map (https://www.onemap.gov.sg/docs/maps/)

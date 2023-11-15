@@ -29,7 +29,7 @@ import {
   ReviewEditScreen
 } from "./screens/ConsumerUI";
 import { PickupJobSelectionScreen, PickupJobScreen } from "./screens/DriverUI";
-import { LeftoverFoodSubmitScreen, ReviewsScreen } from "./screens/HawkerUI";
+import { LeftoverFoodSubmitScreen } from "./screens/HawkerUI";
 import { AppLayout } from "./components";
 
 export const router = createBrowserRouter([
@@ -94,7 +94,6 @@ export const router = createBrowserRouter([
       { path: "/pickup-job/:pickupJobId", element: <PickupJobScreen /> },
 
       // HawkerUI
-      { path: "/reviews/:hawkerId", element: <ReviewsScreen /> },
       {
         path: "/leftover-food/submit",
         element: <LeftoverFoodSubmitScreen />
