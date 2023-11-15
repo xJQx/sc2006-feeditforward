@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
 
 from routers import auth, user, admin, consumer, driver, hawker, review, leftover_food, pickup_job, priority_request, notification, customer_service_support, external_api, file
@@ -41,3 +41,18 @@ app.include_router(file.router)
 @app.get("/")
 def read_root():
     return {"API Docs": "http://127.0.0.1:8000/docs#/"}
+
+# Web Socket
+from websocket import WebSocketConnectionManager
+web_socket_manager = WebSocketConnectionManager()
+
+from database import get_db
+from fastapi import Depends
+from sqlalchemy.orm import Session
+
+from websocket import process_websocket_endpoint
+
+@app.websocket("/ws/{client_id}")
+async def websocket_endpoint(websocket: WebSocket, client_id: int, db: Session=Depends(get_db)):
+    await web_socket_manager.connect(websocket)
+    await process_websocket_endpoint(web_socket_manager, websocket, client_id, db)

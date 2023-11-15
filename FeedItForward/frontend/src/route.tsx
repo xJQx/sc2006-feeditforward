@@ -5,6 +5,7 @@ import {
   SignupScreen,
   SettingsScreen,
   CustomerServiceSupportScreen,
+  CustomerServiceSupportSingleChatScreen,
   MapScreen,
   HawkerListingScreen,
   ProfileScreen,
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
       {
         path: "/customer-service-support",
         element: <CustomerServiceSupportScreen />
+      },
+      {
+        path: "/customer-service-support/:css_history_id",
+        element: <CustomerServiceSupportSingleChatScreen />
       },
 
       // AdminUI

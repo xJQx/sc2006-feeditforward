@@ -30,9 +30,9 @@ def create_customer_service_support_history(db: Session, css_history: css_histor
         raise HTTPException(status_code=400, detail="Invalid user_id")
     
     db_css_history = db.query(CustomerServiceSupportHistory).filter(
-        CustomerServiceSupportHistory.admin_id == css_history.admin_id and
-        CustomerServiceSupportHistory.user_id == css_history.user_id
-    ).first()
+        CustomerServiceSupportHistory.admin_id == css_history.admin_id
+    ).filter(CustomerServiceSupportHistory.user_id == css_history.user_id).first()
+    
     if db_css_history:
         raise HTTPException(status_code=400, detail="The Admin and User Pair already has an existing chat.")
 
