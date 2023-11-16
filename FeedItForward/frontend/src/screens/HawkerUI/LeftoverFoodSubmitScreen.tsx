@@ -18,7 +18,7 @@ export const LeftoverFoodSubmitScreen = () => {
 
   const [name, setName] = useState("");
   const [unitOfMeasurement, setUnitOfMeasurement] = useState("");
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState(0);
   const [timePassed, setTimePassed] = useState("");
   const [photos, setPhotos] = useState<string[]>([]);
 
@@ -35,6 +35,9 @@ export const LeftoverFoodSubmitScreen = () => {
       photos.length === 0
     ) {
       return toast.error("Please input all fields!");
+    }
+    if (amount <= 0) {
+      return toast.error("Amount must be a positive number.");
     }
 
     // POST Request
