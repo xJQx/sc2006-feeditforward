@@ -22,6 +22,10 @@ This project applied **software engineering best practices** and **design patter
 <summary>Demo Video</summary>
 <br>
 
+
+https://github.com/softwarelab3/2006-SCSX-FeedItForward/assets/47933193/77d6aa75-ee64-469b-b149-67f3a2a79b1b
+
+
 </details>
 
 <br>
