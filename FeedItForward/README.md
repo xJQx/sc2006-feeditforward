@@ -10,11 +10,21 @@ Welcome to the official repository for NTU SC2006 Software Engineering group pro
     <a href="https://github.com/softwarelab3/2006-SCSX-FeedItForward/tree/main/FeedItForward/frontend">Frontend</a>
     |
     <a href="https://github.com/softwarelab3/2006-SCSX-FeedItForward/tree/main/FeedItForward/backend">Backend</a>
+    |
+    <a href="https://www.youtube.com/watch?v=yMwcUj8wCmo">Demo Video</a>
 </p>
 
 FeedItForward is a **community-driven initiative** that connects the surplus food from local hawkers directly to families in need. It not only reduces **food waste** but also ensures that **nutritious meals reach those most vulnerable** in our society.
 
 This project applied **software engineering best practices** and **design patterns** to ensure high reliability, performance, and extensibility for future enhancements.
+
+<details>
+<summary>Demo Video</summary>
+<br>
+
+</details>
+
+<br>
 
 **Table of Content**
 
@@ -28,12 +38,14 @@ This project applied **software engineering best practices** and **design patter
 - [API Docs](#api-docs)
   - [API Endpoints](#api-endpoints)
 - [App Design](#app-design)
+  - [Overview](#overview)
   - [Frontend](#frontend-1)
   - [Backend](#backend-1)
   - [Design Patterns](#design-patterns)
   - [SOLID Principles](#solid-principles)
   - [Tech Stack](#tech-stack)
 - [External APIs](#external-apis)
+- [Contributors](#contributors)
 
 # Setup Instructions
 
@@ -109,6 +121,8 @@ _Note: Please ensure that the `sql_app.db` in the app directory is deleted befor
 
 The FeedItForward Backend application uses FastAPI, which comes with an in-built documentation for API routes created. You may access it via http://127.0.0.1:8000/docs#/
 
+_\*Note: A total of **100 API routes** are documented._
+
 ![docs preview](backend/public/docs-preview.png)
 
 ## API Endpoints
@@ -122,6 +136,11 @@ The FeedItForward API Endpoints consists of 3 main category - `Controller`, `CRU
 _Please refer to the the [API Docs page](#api-docs) for the specific endpoints and the required request body and expected response._
 
 # App Design
+
+## Overview
+
+![App Overview Design Diagram](</public/App Overview Diagram.png>)
+_Credits: [ztjhz](https://github.com/ztjhz)_
 
 ## Frontend
 
@@ -201,3 +220,25 @@ Other folders such as `/components`, `/contexts`, `/data`, `/utils`, `/schemas`,
    1. https://beta.data.gov.sg/collections/1445/datasets/d_4a086da0a5553be1d89383cd90d07ecd/view
 4. **Google OAuth 2.0 API**
    1. https://developers.google.com/identity/protocols/oauth2
+
+# Contributors
+
+The following contributors have contributed to the whole Software Developement Life-cycle, including (not exhausive):
+
+1. Ideation and refinement
+2. Generation of functional and non-funtional requirements
+3. Generation of Use Cases and Descriptions
+4. UI/UX Mockup and Prototyping (Figma)
+5. Design of Architecture Diagram, Class Diagram, Sequence Diagrams, and Dialog Map Diagram
+6. Development of Application
+7. Black-box and White-box Testing
+8. Documentations
+
+| Name           | Github Username                               | Role       |
+| -------------- | --------------------------------------------- | ---------- |
+| Toh Jing Qiang | [xJQx](https://github.com/xJQx)               | Full-Stack |
+| Toh Jing Hua   | [ztjhz](https://github.com/ztjhz)             | Backend    |
+| Denise Tay     | [denisetay8](https://github.com/denisetay8)   | Frontend   |
+| Minze          | [min-ze](https://github.com/min-ze)           | Frontend   |
+| Tommy Wee      | [toomywee](https://github.com/toomywee)       | Frontend   |
+| Pinyang        | [druggoat888](https://github.com/druggoat888) | Frontend   |

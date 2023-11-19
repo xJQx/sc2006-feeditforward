@@ -70,6 +70,8 @@ _Note: Please ensure that the `sql_app.db` in the app directory is deleted befor
 
 The FeedItForward Backend application uses FastAPI, which comes with an in-built documentation for API routes created. You may access it via http://127.0.0.1:8000/docs#/
 
+_\*Note: A total of **100 API routes** are documented._
+
 ![docs preview](public/docs-preview.png)
 
 ## API Endpoints
