@@ -17,7 +17,7 @@ Please refer to the `Software Requirements Specification.pdf` for the Software R
 
 Youtube Link: https://www.youtube.com/watch?v=yMwcUj8wCmo
 
-https://github.com/softwarelab3/2006-SCSX-FeedItForward/assets/47933193/77d6aa75-ee64-469b-b149-67f3a2a79b1b
+https://github.com/xJQx/sc2006-feeditforward/assets/47933193/e90f0b90-c276-47da-a0da-f73631a417d9
 
 ## Other Documentations
 

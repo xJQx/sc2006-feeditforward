@@ -7,9 +7,9 @@ Welcome to the official repository for NTU SC2006 Software Engineering group pro
 </p>
 
 <p align="center">
-    <a href="https://github.com/softwarelab3/2006-SCSX-FeedItForward/tree/main/FeedItForward/frontend">Frontend</a>
+    <a href="https://github.com/xJQx/sc2006-feeditforward/tree/main/FeedItForward/frontend">Frontend</a>
     |
-    <a href="https://github.com/softwarelab3/2006-SCSX-FeedItForward/tree/main/FeedItForward/backend">Backend</a>
+    <a href="https://github.com/xJQx/sc2006-feeditforward/tree/main/FeedItForward/backend">Backend</a>
     |
     <a href="https://www.youtube.com/watch?v=yMwcUj8wCmo">Demo Video</a>
 </p>
@@ -22,9 +22,7 @@ This project applied **software engineering best practices** and **design patter
 <summary>Demo Video</summary>
 <br>
 
-
-https://github.com/softwarelab3/2006-SCSX-FeedItForward/assets/47933193/77d6aa75-ee64-469b-b149-67f3a2a79b1b
-
+https://github.com/xJQx/sc2006-feeditforward/assets/47933193/e90f0b90-c276-47da-a0da-f73631a417d9
 
 </details>
 

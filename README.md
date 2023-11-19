@@ -7,9 +7,9 @@ Welcome to the official repository for NTU SC2006 Software Engineering group pro
 </p>
 
 <p align="center">
-    <a href="https://github.com/softwarelab3/2006-SCSX-FeedItForward/tree/main/FeedItForward/frontend">Frontend</a>
+    <a href="https://github.com/xJQx/sc2006-feeditforward/tree/main/FeedItForward/frontend">Frontend</a>
     |
-    <a href="https://github.com/softwarelab3/2006-SCSX-FeedItForward/tree/main/FeedItForward/backend">Backend</a>
+    <a href="https://github.com/xJQx/sc2006-feeditforward/tree/main/FeedItForward/backend">Backend</a>
     |
     <a href="https://www.youtube.com/watch?v=yMwcUj8wCmo">Demo Video</a>
 </p>
@@ -22,7 +22,7 @@ This project applied **software engineering best practices** and **design patter
 <summary>Demo Video</summary>
 <br>
 
-https://github.com/softwarelab3/2006-SCSX-FeedItForward/assets/47933193/77d6aa75-ee64-469b-b149-67f3a2a79b1b
+https://github.com/xJQx/sc2006-feeditforward/assets/47933193/e90f0b90-c276-47da-a0da-f73631a417d9
 
 </details>
 
@@ -30,10 +30,10 @@ https://github.com/softwarelab3/2006-SCSX-FeedItForward/assets/47933193/77d6aa75
 <summary>Supporting Documentations</summary>
 <br>
 
-1. [Software Requirements Specification](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Software%20Requirements%20Specification.pdf)
-2. [Code and API Documentations](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Supporting%20Documents/Documentations.pdf)
-3. [Use Case Diagram and Descriptions](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Supporting%20Documents/Use%20Case%20Diagram%20and%20Descriptions.pdf)
-4. [User Interface Mockups](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Supporting%20Documents/User%20Interface%20Mockups.pdf)
+1. [Software Requirements Specification](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Software%20Requirements%20Specification.pdf)
+2. [Code and API Documentations](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Supporting%20Documents/Documentations.pdf)
+3. [Use Case Diagram and Descriptions](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Supporting%20Documents/Use%20Case%20Diagram%20and%20Descriptions.pdf)
+4. [User Interface Mockups](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Supporting%20Documents/User%20Interface%20Mockups.pdf)
 
 </details>
 
@@ -41,13 +41,13 @@ https://github.com/softwarelab3/2006-SCSX-FeedItForward/assets/47933193/77d6aa75
 <summary>Diagrams</summary>
 <br>
 
-1. [App Overview Diagram](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Diagram%20Images/App%20Overview%20Diagram.png)
-2. [Use Case Diagram](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Diagram%20Images/Use%20Case%20Diagram.png)
-3. [Architecture Diagram](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Diagram%20Images/Architecture%20Diagram.png)
-4. [Class Diagram](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Diagram%20Images/Class%20Diagram.png)
-5. [Stereotype Class Diagram](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Diagram%20Images/Stereotype%20Class%20Diagram.png)
-6. [Sequence Diagrams](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Supporting%20Documents/Sequence%20Diagrams.pdf)
-7. [Dialog Map](https://github.com/softwarelab3/2006-SCSX-FeedItForward/blob/main/Lab%205/Diagram%20Images/Dialog%20Map.png)
+1. [App Overview Diagram](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Diagram%20Images/App%20Overview%20Diagram.png)
+2. [Use Case Diagram](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Diagram%20Images/Use%20Case%20Diagram.png)
+3. [Architecture Diagram](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Diagram%20Images/Architecture%20Diagram.png)
+4. [Class Diagram](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Diagram%20Images/Class%20Diagram.png)
+5. [Stereotype Class Diagram](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Diagram%20Images/Stereotype%20Class%20Diagram.png)
+6. [Sequence Diagrams](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Supporting%20Documents/Sequence%20Diagrams.pdf)
+7. [Dialog Map](https://github.com/xJQx/sc2006-feeditforward/blob/main/Lab%205/Diagram%20Images/Dialog%20Map.png)
 
 </details>
 
